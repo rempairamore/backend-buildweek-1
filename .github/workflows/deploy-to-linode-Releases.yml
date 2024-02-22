@@ -27,7 +27,7 @@ jobs:
 
     - name: Update Theme Name in style.css
       run: |
-        ENV_NAME=${{ steps.read-env.outputs.environment }}
+        ENV_NAME="customtheme"
         sed -i "2s/Theme Name:.*/Theme Name: $ENV_NAME/" ./customtheme/style.css
     
     - name: Copy files to Linode
