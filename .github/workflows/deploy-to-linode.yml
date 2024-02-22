@@ -18,4 +18,5 @@ jobs:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     
     - name: Copy files to Linode
-      run: rsync -avz --delete ./customtheme root@172.232.217.119:/var/www/wordpress/wp-content/themes/test555 #poi cambiare test555 con customtheme
+      run: rsync -avz -e "ssh -o StrictHostKeyChecking=no" --delete ./customtheme root@172.232.217.119:/var/www/wordpress/wp-content/themes/test555
+
