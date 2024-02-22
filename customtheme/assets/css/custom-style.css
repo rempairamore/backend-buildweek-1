@@ -46,3 +46,15 @@
     grid-area: gallery;
     background-color: aquamarine;
 }
+
+@media screen and (max-width: 768px){
+    .griglia {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+          "articoli articoli articoli"
+          "gallery gallery gallery"
+          "side side side";
+      }
+}
