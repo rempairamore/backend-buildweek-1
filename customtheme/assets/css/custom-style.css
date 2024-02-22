@@ -49,7 +49,9 @@
 
 @media screen and (max-width: 768px){
     .griglia {
-        display: block;
-
+        grid-template-areas:
+          "articoli articoli articoli"
+          "gallery gallery gallery"
+          "side side side";
       }
 }
