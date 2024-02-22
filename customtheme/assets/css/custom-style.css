@@ -39,8 +39,10 @@
 
 .side {
     grid-area: side;
+    background-color: darkkhaki;
 }
 
 .gallery{
     grid-area: gallery;
+    background-color: aquamarine;
 }
