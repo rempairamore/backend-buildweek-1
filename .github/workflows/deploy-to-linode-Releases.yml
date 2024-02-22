@@ -31,5 +31,5 @@ jobs:
         sed -i "2s/Theme Name:.*/Theme Name: $ENV_NAME/" ./customtheme/style.css
     
     - name: Copy files to Linode
-      run: rsync -avz -e "ssh -o StrictHostKeyChecking=no" --delete ./customtheme root@172.232.217.119:/var/www/wordpress/wp-content/themes/test555 #dopo cambiare test555 con niente
+      run: rsync -avz -e "ssh -o StrictHostKeyChecking=no" --delete ./customtheme root@172.232.217.119:/var/www/wordpress/wp-content/themes/ #dopo cambiare test555 con niente
 
