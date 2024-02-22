@@ -34,47 +34,53 @@
     </div>
 
 
-
-
-
-
-
-
-    <section class="articles d-flex container">
-        <article class="single-article-home d-flex">
-            <div class="article-thumbnail-home">
-
-            </div>
-            <div>
-                <h5>titolo articolo</h5>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dolore facere qui, optio ducimus fugiat similique quia iure nesciunt veritatis dolorum eligendi reprehenderit incidunt labore earum asperiores nemo eveniet ea.</p>
-            </div>
-        </article>
-        <article class="single-article-home d-flex">
-            <div class="article-thumbnail-home">
-
-            </div>
-            <div>
-                <h5>titolo articolo</h5>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dolore facere qui, optio ducimus fugiat similique quia iure nesciunt veritatis dolorum eligendi reprehenderit incidunt labore earum asperiores nemo eveniet ea.</p>
-            </div>
-        </article>
-        <article class="single-article-home d-flex">
-            <div class="article-thumbnail-home">
-
-            </div>
-            <div>
-                <h5>titolo articolo</h5>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dolore facere qui, optio ducimus fugiat similique quia iure nesciunt veritatis dolorum eligendi reprehenderit incidunt labore earum asperiores nemo eveniet ea.</p>
-            </div>
-        </article>
-    
-    </section>
-    
-    
     <section class="promozioni">
-        
+        <p>Promozioni</p>
     </section>
+
+
+    <div class="griglia">
+        <section class="articoli d-flex container">
+            <article class="single-article-home d-flex">
+                <div class="article-thumbnail-home">
+
+                </div>
+                <div>
+                    <h5>titolo articolo</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dolore facere qui, optio ducimus fugiat similique quia iure nesciunt veritatis dolorum eligendi reprehenderit incidunt labore earum asperiores nemo eveniet ea.</p>
+                </div>
+            </article>
+            <article class="single-article-home d-flex">
+                <div class="article-thumbnail-home">
+
+                </div>
+                <div>
+                    <h5>titolo articolo</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dolore facere qui, optio ducimus fugiat similique quia iure nesciunt veritatis dolorum eligendi reprehenderit incidunt labore earum asperiores nemo eveniet ea.</p>
+                </div>
+            </article>
+            <article class="single-article-home d-flex">
+                <div class="article-thumbnail-home">
+
+                </div>
+                <div>
+                    <h5>titolo articolo</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dolore facere qui, optio ducimus fugiat similique quia iure nesciunt veritatis dolorum eligendi reprehenderit incidunt labore earum asperiores nemo eveniet ea.</p>
+                </div>
+            </article>
+
+        </section>
+        <aside class="side text-center">
+            fgsfgb
+        </aside>
+        <section class="gallery text-center">
+            bfgb
+        </section>
+
+    </div>
+
+
+
 </main>
 
 <?php

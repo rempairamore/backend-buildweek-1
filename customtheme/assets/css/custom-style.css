@@ -16,3 +16,15 @@
     width: 200px;
     background-color: fuchsia;
 }
+
+.promozioni{
+    height: 300px;
+    background-color: rgb(126, 60, 71);
+}
+
+.griglia{
+    display: grid;
+    grid-template-areas: "articoli articoli side"
+                         "gallery gallery side"
+                         "gallery gallery side"
+}                                           
