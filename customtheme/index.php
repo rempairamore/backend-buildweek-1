@@ -9,7 +9,7 @@
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <h3>Titolo 1</h3>
+                    <h3>Titolo 1 trenta</h3>
                     <img src="..." class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
@@ -34,47 +34,63 @@
     </div>
 
 
-
-
-
-
-
-
-    <section class="articles d-flex container">
-        <article class="single-article-home d-flex">
-            <div class="article-thumbnail-home">
-
-            </div>
-            <div>
-                <h5>titolo articolo</h5>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dolore facere qui, optio ducimus fugiat similique quia iure nesciunt veritatis dolorum eligendi reprehenderit incidunt labore earum asperiores nemo eveniet ea.</p>
-            </div>
-        </article>
-        <article class="single-article-home d-flex">
-            <div class="article-thumbnail-home">
-
-            </div>
-            <div>
-                <h5>titolo articolo</h5>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dolore facere qui, optio ducimus fugiat similique quia iure nesciunt veritatis dolorum eligendi reprehenderit incidunt labore earum asperiores nemo eveniet ea.</p>
-            </div>
-        </article>
-        <article class="single-article-home d-flex">
-            <div class="article-thumbnail-home">
-
-            </div>
-            <div>
-                <h5>titolo articolo</h5>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dolore facere qui, optio ducimus fugiat similique quia iure nesciunt veritatis dolorum eligendi reprehenderit incidunt labore earum asperiores nemo eveniet ea.</p>
-            </div>
-        </article>
-    
-    </section>
-    
-    
     <section class="promozioni">
-        
+            
     </section>
+
+
+    <div class="griglia">
+        <section class="articoli d-flex container">
+            <article class="single-article-home d-flex">
+                <div class="article-thumbnail-home">
+
+                </div>
+                <div>
+                    <h5>titolo articolo</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dolore facere qui, optio ducimus fugiat similique quia iure nesciunt veritatis dolorum eligendi reprehenderit incidunt labore earum asperiores nemo eveniet ea.</p>
+                </div>
+            </article>
+            <article class="single-article-home d-flex">
+                <div class="article-thumbnail-home">
+
+                </div>
+                <div>
+                    <h5>titolo articolo</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dolore facere qui, optio ducimus fugiat similique quia iure nesciunt veritatis dolorum eligendi reprehenderit incidunt labore earum asperiores nemo eveniet ea.</p>
+                </div>
+            </article>
+            <article class="single-article-home d-flex">
+                <div class="article-thumbnail-home">
+
+                </div>
+                <div>
+                    <h5>titolo articolo</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dolore facere qui, optio ducimus fugiat similique quia iure nesciunt veritatis dolorum eligendi reprehenderit incidunt labore earum asperiores nemo eveniet ea.</p>
+                </div>
+            </article>
+
+        </section>
+        <aside class="side text-center">
+            <div>
+                <h4>Dove mangiare</h4>
+                <p>scopri i migliori ristoranti</p>
+            </div>
+
+            <div>
+                <h4 class="">
+                    Dove dormire
+                </h4>
+                <p>se non trovi comode le panchine del parco, chiama questi numeri</p>
+            </div>
+        </aside>
+        <section class="gallery text-center">
+            gallery
+        </section>
+
+    </div>
+    <h3>diodfvlòadfVB</h3>
+
+
 </main>
 
 <?php
