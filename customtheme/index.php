@@ -35,7 +35,7 @@
 
 
     <section class="promozioni">
-        <p>Promozioni</p>
+            
     </section>
 
 
@@ -71,14 +71,24 @@
 
         </section>
         <aside class="side text-center">
-            sidebar
+            <div>
+                <h4>Dove mangiare</h4>
+                <p>scopri i migliori ristoranti</p>
+            </div>
+
+            <div>
+                <h4 class="">
+                    Dove dormire
+                </h4>
+                <p>se non trovi comode le panchine del parco, chiama questi numeri</p>
+            </div>
         </aside>
         <section class="gallery text-center">
             gallery
         </section>
 
     </div>
-<h3>diodfvlòadfVB</h3>
+    <h3>diodfvlòadfVB</h3>
 
 
 </main>
