@@ -24,6 +24,11 @@ jobs:
         ENV=$(cat env.txt | grep ENV= | cut -d '"' -f 2)
         echo "Environment: $ENV"
         echo "::set-output name=environment::$ENV"
+        
+    - name: Update Theme Name in style.css
+      run: |
+        ENV_NAME=${{ steps.read-env.outputs.environment }}
+        sed -i "2s/Theme Name:.*/Theme Name: $ENV_NAME/" ./customtheme/style.css
 
     - name: Deploy to Server
       run: |
