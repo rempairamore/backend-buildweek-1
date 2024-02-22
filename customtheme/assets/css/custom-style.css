@@ -16,3 +16,10 @@
     width: 200px;
     background-color: fuchsia;
 }
+
+.bg404 {
+    background-color: rgba(210, 187, 32, 0.746);
+    background-image: url('/assets/img/404.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
