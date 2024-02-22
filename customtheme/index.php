@@ -71,14 +71,14 @@
 
         </section>
         <aside class="side text-center">
-            fgsfgb
+            sidebar
         </aside>
         <section class="gallery text-center">
-            bfgb
+            gallery
         </section>
 
     </div>
-
+<h3>diodfvlòadfVB</h3>
 
 
 </main>
