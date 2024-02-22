@@ -3,7 +3,7 @@ name: Deploy on Feature Branch
 on:
   push:
     branches:
-      - 'features_*'
+      - 'WP-*'
 
 jobs:
   deploy:
