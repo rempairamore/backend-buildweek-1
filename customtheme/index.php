@@ -9,7 +9,7 @@
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <h3>Titolo 1</h3>
+                    <h3>Titolo 1 trenta</h3>
                     <img src="..." class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
