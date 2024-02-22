@@ -17,6 +17,13 @@
   background-color: fuchsia;
 }
 
+.bg404 {
+  background-color: rgba(210, 187, 32, 0.746);
+  background-image: url("/assets/img/404.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
 .promozioni {
   height: 300px;
   background-color: rgb(126, 60, 71);
@@ -32,26 +39,26 @@
     "gallery gallery side";
 }
 
-.articoli{
-    grid-area: articoli;
-    background-color: #fff;
+.articoli {
+  grid-area: articoli;
+  background-color: #fff;
 }
 
 .side {
-    grid-area: side;
-    background-color: darkkhaki;
+  grid-area: side;
+  background-color: darkkhaki;
 }
 
-.gallery{
-    grid-area: gallery;
-    background-color: aquamarine;
+.gallery {
+  grid-area: gallery;
+  background-color: aquamarine;
 }
 
-@media screen and (max-width: 768px){
-    .griglia {
-        grid-template-areas:
-          "articoli articoli articoli"
-          "gallery gallery gallery"
-          "side side side";
-      }
+@media screen and (max-width: 768px) {
+  .griglia {
+    grid-template-areas:
+      "articoli articoli articoli"
+      "gallery gallery gallery"
+      "side side side";
+  }
 }
