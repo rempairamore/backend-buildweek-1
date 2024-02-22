@@ -24,8 +24,8 @@
 
 .griglia {
   display: grid;
-  grid-template-columns: 3 (1fr);
-  grid-template-rows: 3 (1fr);
+  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-template-rows: 1fr, 1fr, 1fr;
   grid-template-areas:
     "articoli articoli side"
     "gallery gallery side"
@@ -34,6 +34,7 @@
 
 .articoli{
     grid-area: articoli;
+    background-color: #fff;
 }
 
 .side {
