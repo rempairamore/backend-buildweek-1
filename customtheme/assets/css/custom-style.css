@@ -31,3 +31,15 @@
     "gallery gallery side"
     "gallery gallery side";
 }
+
+.articoli{
+    grid-area: articoli;
+}
+
+.side {
+    grid-area: side;
+}
+
+.gallery{
+    grid-area: gallery;
+}
