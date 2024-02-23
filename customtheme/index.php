@@ -55,7 +55,7 @@
                 while ($custom_query->have_posts()) {
                     $count++;
                     $custom_query->the_post();?>
-                    <article class="single-article-home d-flex col-12 col-lg-6 col-xxl-4 p-3 <?php ($count == 3) ? print("d-lg-none d-xxl-block") : ""?>">
+                    <article class="single-article-home d-flex col-12 col-lg-6 col-xxl-4 p-3 <?php ($count == 3) ? print("d-lg-none d-xxl-flex") : ""?>">
                     <div class="article-thumbnail-home">
                         <?php
                         the_post_thumbnail('custom-size-thumbnail');
