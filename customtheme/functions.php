@@ -49,7 +49,7 @@ add_image_size( 'custom-size-thumbnail', 280, 180);
 function custom_home_type(){
     register_post_type('home', array(
         'labels' => array(
-            'nome'=> 'Home',
+            'name'=> 'Home',
             'singular_name' => 'Home'
         ),
         'public' => true,
