@@ -44,7 +44,7 @@
 
             <?php
             $args = array(
-                'posts_per_page' => 3, // Retrieve only 3 posts
+                'posts_per_page' => 2, // Retrieve only 3 posts
                 'order'          => 'DESC', // Order posts in descending order (latest posts first)
             );
 
