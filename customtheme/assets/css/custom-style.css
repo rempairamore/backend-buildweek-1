@@ -66,33 +66,25 @@
 /* Custom CSS for page.php WP-10------------------- */
 
 /* Search Bar Styling */
-.search-bar {
-    margin-bottom: 20px;
+
+.featured-image {
+  position: relative;
 }
 
-.search-form {
-    position: relative;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.search-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.entry-title {
+  color: #fff;
+  z-index: 1;
 }
 
-.search-submit {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-}
 
 /* Sidebar Widget Styling */
 #sidebar-widget {
