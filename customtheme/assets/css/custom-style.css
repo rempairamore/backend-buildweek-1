@@ -62,3 +62,66 @@
       "side side side";
   }
 }
+
+/* --------FOOTER START------------ */
+footer{
+  background-color: #f4f3ef;
+}
+footer ul{
+  list-style: none;
+}
+footer ul{
+  position: relative;
+}
+footer
+footer .medium:first-child::after {
+  content: " ";
+  color:  #999;
+  display: block;
+  height: 1px;
+  width: 120px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: #999;
+}
+footer a{
+  text-decoration: none;
+}
+footer a:link {
+  color: #999;
+}
+ 
+ /* visited link */
+footer a:visited {
+   color: #999999ac;
+ }
+ 
+ /* mouse hover link */
+footer a:hover {
+   color: #b2b2b2;
+ }
+ 
+ /* selected link */
+footer a:active {
+   color: #b2b2b2;
+ }
+
+footer p{
+    font-size: 12px;
+    color: #afafaf;
+ }
+
+.accordion-button{
+  background-color: #f4f3ef;
+ }
+.accordion-button:not(.collapsed) {
+  background-color: #f4f3ef!important;
+}
+.accordion-body{
+  background-color: #f4f3ef;
+}
+.accordion-button:focus {
+  box-shadow:  0 0 0 0.25rem #999999ac;
+}
+/* --------FOOTER END------------ */
