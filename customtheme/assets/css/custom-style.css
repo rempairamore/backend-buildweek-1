@@ -70,3 +70,16 @@ footer{
 footer ul{
   list-style: none;
 }
+footer ul{
+  position: relative;
+}
+footer ul:first-child::after {
+  content:" ";
+  display: block;
+  height: 2px;
+  width: 130px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: red;
+}
