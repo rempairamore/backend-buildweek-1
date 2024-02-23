@@ -62,3 +62,26 @@
       "side side side";
   }
 }
+
+.articleTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 5rem;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.imgArticle {
+  object-fit: cover;
+  height: 20rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .articleTitle {
+      font-size: 3rem; 
+  }
+}
