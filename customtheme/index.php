@@ -40,7 +40,7 @@
 
 
     <div class="griglia">
-        <section class="articoli d-flex container row">
+        <section class="articoli d-flex container row justify-content-evenly">
 
             <?php
             $args = array(
