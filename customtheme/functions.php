@@ -39,7 +39,89 @@ add_image_size( 'custom-size-thumbnail', 280, 180);
 
 
 // Immagini per carosello
+// Aggiungi campi personalizzati nel pannello amministratore per selezionare le immagini dalla libreria multimediale
+add_action('add_meta_boxes', 'custom_image_meta_box');
+function custom_image_meta_box() {
+    add_meta_box(
+        'custom_image_meta_box',
+        'Seleziona le immagini per il carosello',
+        'render_custom_image_meta_box',
+        'page', // Cambia 'page' con il tipo di post dove desideri che compaia la meta box
+        'normal',
+        'default'
+    );
+}
 
+// Renderizza il contenuto della meta box
+function render_custom_image_meta_box($post) {
+    // Recupera gli ID delle immagini salvati come metadati del post
+    $image1_id = get_post_meta($post->ID, 'image1_id', true);
+    $image2_id = get_post_meta($post->ID, 'image2_id', true);
+    $image3_id = get_post_meta($post->ID, 'image3_id', true);
+    ?>
+    <p>Seleziona le immagini per il carosello:</p>
+    <input type="button" id="upload_image_button1" class="button" value="Carica/Seleziona Immagine 1">
+    <input type="hidden" id="image1_id" name="image1_id" value="<?php echo esc_attr($image1_id); ?>">
+    <div id="image1_preview"><?php echo wp_get_attachment_image($image1_id, 'thumbnail'); ?></div>
+    <input type="button" id="upload_image_button2" class="button" value="Carica/Seleziona Immagine 2">
+    <input type="hidden" id="image2_id" name="image2_id" value="<?php echo esc_attr($image2_id); ?>">
+    <div id="image2_preview"><?php echo wp_get_attachment_image($image2_id, 'thumbnail'); ?></div>
+    <input type="button" id="upload_image_button3" class="button" value="Carica/Seleziona Immagine 3">
+    <input type="hidden" id="image3_id" name="image3_id" value="<?php echo esc_attr($image3_id); ?>">
+    <div id="image3_preview"><?php echo wp_get_attachment_image($image3_id, 'thumbnail'); ?></div>
+
+    <script>
+    jQuery(document).ready(function($){
+        $('#upload_image_button1').click(function() {
+            var send_attachment_bkp = wp.media.editor.send.attachment;
+            wp.media.editor.send.attachment = function(props, attachment) {
+                $('#image1_id').val(attachment.id);
+                $('#image1_preview').html('<img src="' + attachment.url + '" />');
+                wp.media.editor.send.attachment = send_attachment_bkp;
+            }
+            wp.media.editor.open($(this));
+            return false;
+        });
+
+        $('#upload_image_button2').click(function() {
+            var send_attachment_bkp = wp.media.editor.send.attachment;
+            wp.media.editor.send.attachment = function(props, attachment) {
+                $('#image2_id').val(attachment.id);
+                $('#image2_preview').html('<img src="' + attachment.url + '" />');
+                wp.media.editor.send.attachment = send_attachment_bkp;
+            }
+            wp.media.editor.open($(this));
+            return false;
+        });
+
+        $('#upload_image_button3').click(function() {
+            var send_attachment_bkp = wp.media.editor.send.attachment;
+            wp.media.editor.send.attachment = function(props, attachment) {
+                $('#image3_id').val(attachment.id);
+                $('#image3_preview').html('<img src="' + attachment.url + '" />');
+                wp.media.editor.send.attachment = send_attachment_bkp;
+            }
+            wp.media.editor.open($(this));
+            return false;
+        });
+    });
+    </script>
+    <?php
+}
+
+// Salva gli ID delle immagini come metadati del post
+add_action('save_post', 'save_custom_image_meta_data');
+function save_custom_image_meta_data($post_id) {
+    if (isset($_POST['image1_id'])) {
+        update_post_meta($post_id, 'image1_id', esc_attr($_POST['image1_id']));
+    }
+    if (isset($_POST['image2_id'])) {
+        update_post_meta($post_id, 'image2_id', esc_attr($_POST['image2_id']));
+    }
+    if (isset($_POST['image3_id'])) {
+        update_post_meta($post_id, 'image3_id', esc_attr($_POST['image3_id']));
+    }
+}
 
 // end immagini per carosello
 
