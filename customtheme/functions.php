@@ -110,20 +110,19 @@ function render_custom_image_meta_box($post) {
     <?php
 }
 
-// Salva gli ID delle immagini come metadati del post
-add_action('save_post', 'save_custom_image_meta_data');
-function save_custom_image_meta_data($post_id) {
+// Salva gli ID delle immagini come opzioni del tema
+add_action('save_post', 'save_custom_image_options');
+function save_custom_image_options($post_id) {
     if (isset($_POST['image1_id'])) {
-        update_post_meta($post_id, 'image1_id', esc_attr($_POST['image1_id']));
+        update_option('image1_id', esc_attr($_POST['image1_id']));
     }
     if (isset($_POST['image2_id'])) {
-        update_post_meta($post_id, 'image2_id', esc_attr($_POST['image2_id']));
+        update_option('image2_id', esc_attr($_POST['image2_id']));
     }
     if (isset($_POST['image3_id'])) {
-        update_post_meta($post_id, 'image3_id', esc_attr($_POST['image3_id']));
+        update_option('image3_id', esc_attr($_POST['image3_id']));
     }
 }
-
 
 // end immagini per carosello
 

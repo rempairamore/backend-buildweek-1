@@ -2,20 +2,16 @@
 
 <main>
     <?php
-    // Recupera l'ID della pagina frontale
-    $page_id = get_option('page_on_front');
-
-    // Recupera gli ID delle immagini salvati come metadati del post
-    $image1_id = get_post_meta($page_id, 'image1_id', true);
-    $image2_id = get_post_meta($page_id, 'image2_id', true);
-    $image3_id = get_post_meta($page_id, 'image3_id', true);
+    // Recupera gli ID delle immagini dalle opzioni del tema
+    $image1_id = get_option('image1_id');
+    $image2_id = get_option('image2_id');
+    $image3_id = get_option('image3_id');
 
     // Ottieni le URL delle immagini
     $image1_url = wp_get_attachment_image_src($image1_id, 'full')[0];
     $image2_url = wp_get_attachment_image_src($image2_id, 'full')[0];
     $image3_url = wp_get_attachment_image_src($image3_id, 'full')[0];
     ?>
-
 
     <div class="container-fluid hero">
         <div id="carouselHome" class="carousel slide">
