@@ -73,7 +73,7 @@ footer ul{
 footer ul{
   position: relative;
 }
-footer ul:first-child::after {
+footer .medium:first-child::after {
   content: " ";
   color:  #999;
   display: block;
@@ -109,4 +109,8 @@ footer a{
  footer p{
     font-size: 12px;
     color: #afafaf;
+ }
+
+ .accordion-button{
+    background-color: #f4f3ef;
  }
