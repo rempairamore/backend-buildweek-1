@@ -28,3 +28,69 @@ function gruppo4_menus()
     register_nav_menus($locations);
 }
 add_action('init', 'gruppo4_menus');
+
+
+
+class Bootstrap_5_WP_Nav_Menu_Walker extends Walker_Nav_Menu
+{
+    function start_lvl(&$output, $depth = 0, $args = null)
+    {
+        if ($depth > 0) {
+            return;
+        }
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<ul class=\"dropdown-menu\">\n";
+    }
+
+    function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
+    {
+        if (strcasecmp($item->attr_title, 'divider') == 0 && $depth === 1) {
+            $output .= '<li class="dropdown-divider">';
+            return;
+        } elseif (strcasecmp($item->title, 'divider') == 0 && $depth === 1) {
+            $output .= '<li class="dropdown-divider">';
+            return;
+        }
+        if (strcasecmp($item->attr_title, 'dropdown-header') == 0 && $depth === 1) {
+            $output .= '<li class="dropdown-header">' . esc_attr($item->title);
+            return;
+        } elseif (strcasecmp($item->title, 'dropdown-header') == 0 && $depth === 1) {
+            $output .= '<li class="dropdown-header">' . esc_attr($item->title);
+            return;
+        }
+
+        // Aggiungi le classi nav-item e nav-link
+        $classes = empty($item->classes) ? array() : (array) $item->classes;
+        $classes[] = 'nav-item';
+
+        $output .= '<li class="' . esc_attr(implode(' ', $classes)) . '">';
+
+        $atts = array();
+        $atts['class'] = 'nav-link'; // Aggiungi la classe nav-link
+        $atts['title']  = !empty($item->attr_title) ? $item->attr_title : '';
+        $atts['target'] = !empty($item->target)     ? $item->target     : '';
+        $atts['rel']    = !empty($item->xfn)        ? $item->xfn        : '';
+        $atts['href']   = !empty($item->url)        ? $item->url        : '';
+
+        $atts = apply_filters('nav_menu_link_attributes', $atts, $item, $args);
+
+        $attributes = '';
+        foreach ($atts as $attr => $value) {
+            if (!empty($value)) {
+                $value = ('href' === $attr) ? esc_url($value) : esc_attr($value);
+                $attributes .= ' ' . $attr . '="' . $value . '"';
+            }
+        }
+
+        $title = apply_filters('the_title', $item->title, $item->ID);
+        $title = apply_filters('nav_menu_item_title', $title, $item, $args, $depth);
+
+        $item_output = $args->before;
+        $item_output .= '<a' . $attributes . '>';
+        $item_output .= $args->link_before . $title . $args->link_after;
+        $item_output .= '</a>';
+        $item_output .= $args->after;
+
+        $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
+    }
+}
