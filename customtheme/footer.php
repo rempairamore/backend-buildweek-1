@@ -1,16 +1,16 @@
     <footer class="container-fluid">
         <div class="row">
             <div class="col-md-6">
-                <h5 class="border-bottom">In Evidenza</h5>
                 <ul>
+                    <li><h5 class="border-bottom">In Evidenza</h5></li>
                     <li><a class="link" href="#">link</a></li>
                     <li><a class="link" href="#">link</a></li>
                     <li><a class="link" href="#">link</a></li>
                 </ul>
             </div>
             <div class="col-md-6">
-                <h5 class="border-bottom">Info utili</h5>
                 <ul>
+                    <li><h5 class="border-bottom">Info utili</h5></li>
                     <li><a href="#">link</a></li>
                     <li><a href="#">link</a></li>
                     <li><a href="#">link</a></li>
@@ -40,11 +40,11 @@
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                     Info utili
                 </button>
                 </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <ul class="border-bottom">
                             <li><a href="#">link</a></li>
