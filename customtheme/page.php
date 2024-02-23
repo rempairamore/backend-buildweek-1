@@ -10,23 +10,9 @@
 get_header();
 ?>
 
-<div class="container">
+<div class="container mt-5">
     <div class="row">
-        <div class="col-md-3">
-            <!-- Left Sidebar with Search Bar -->
-            <div id="sidebar">
-                <div class="search-bar">
-                    <?php get_search_form(); ?>
-                </div>
-                <div id="sidebar-widget">
-                    <?php
-                    if (is_active_sidebar('left-sidebar')) {
-                        dynamic_sidebar('left-sidebar');
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
+        
         <div class="col-md-9">
             <!-- Main Content Area -->
             <main id="main" class="site-main">
@@ -41,6 +27,18 @@ get_header();
                 endwhile;
                 ?>
             </main><!-- #main -->
+        </div>
+        <div class="col-md-3">
+            <!-- Left Sidebar with Search Bar -->
+            <div id="sidebar">
+                <div id="sidebar-widget">
+                    <?php
+                    if (is_active_sidebar('right-sidebar')) {
+                        dynamic_sidebar('right-sidebar');
+                    }
+                    ?>
+                </div>
+            </div>
         </div>
     </div><!-- .row -->
 </div><!-- .container -->
