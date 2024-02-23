@@ -73,6 +73,7 @@ footer ul{
 footer ul{
   position: relative;
 }
+footer
 footer .medium:first-child::after {
   content: " ";
   color:  #999;
@@ -119,4 +120,7 @@ footer p{
 }
 .accordion-body{
   background-color: #f4f3ef;
+}
+.accordion-button:focus {
+  box-shadow:  0 0 0 0.25rem #999999ac;
 }

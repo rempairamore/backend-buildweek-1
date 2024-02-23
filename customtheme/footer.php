@@ -1,7 +1,7 @@
     <footer class="container-fluid p-2">
         <div class="d-none d-sm-block">
-            <div class="row">
-                <div class="col-md-6">
+            <div class="d-flex justify-content-around">
+                <div>
                     <ul class="medium">
                         <li><h5>In Evidenza</h5></li>
                         <li><a class="link" href="#">link</a></li>
@@ -9,7 +9,7 @@
                         <li><a class="link" href="#">link</a></li>
                     </ul>
                 </div>
-                <div class="col-md-6">
+                <div>
                     <ul class="medium">
                         <li><h5>Info utili</h5></li>
                         <li><a href="#">link</a></li>
