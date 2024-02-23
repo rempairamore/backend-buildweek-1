@@ -10,9 +10,8 @@
 get_header();
 ?>
 
-<div class="container mt-5">
+<div class="container mt-5 pt-5">
     <div class="row">
-        
         <div class="col-md-9">
             <!-- Main Content Area -->
             <main id="main" class="site-main">
@@ -20,16 +19,30 @@ get_header();
                 // Start the loop.
                 while (have_posts()) :
                     the_post();
-                    the_content();
-                    // Include the page content template.
-                    get_template_part('template-parts/content', 'page');
+                    ?>
+                    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                        <header class="entry-header">
+                            <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+                            <?php if (has_post_thumbnail()) : ?>
+                                <div class="featured-image">
+                                    <?php the_post_thumbnail('full'); ?>
+                                </div>
+                            <?php endif; ?>
+                        </header><!-- .entry-header -->
+
+                        <div class="entry-content">
+                            <?php the_content(); ?>
+                        </div><!-- .entry-content -->
+                    </article><!-- #post-<?php the_ID(); ?> -->
+
+                <?php
                 // End of the loop.
                 endwhile;
                 ?>
             </main><!-- #main -->
         </div>
         <div class="col-md-3">
-            <!-- Left Sidebar with Search Bar -->
+            <!-- Right Sidebar -->
             <div id="sidebar">
                 <div id="sidebar-widget">
                     <?php
