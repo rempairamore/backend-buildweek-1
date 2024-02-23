@@ -51,9 +51,11 @@
             $custom_query = new WP_Query($args);
 
             if ($custom_query->have_posts()) {
+                $count = 0;
                 while ($custom_query->have_posts()) {
+                    $count++;
                     $custom_query->the_post();?>
-                    <article class="single-article-home d-flex col-12 col-lg-6 col-xxl-4 p-3">
+                    <article class="single-article-home d-flex col-12 col-lg-6 col-xxl-4 p-3 <?php ($count == 2) ? print("d-lg-none d-xxl-block") : ""?>">
                     <div class="article-thumbnail-home">
                         <?php
                         the_post_thumbnail('custom-size-thumbnail');
