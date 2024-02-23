@@ -47,7 +47,12 @@
                     the_post(); ?>
                     <article class="single-article-home d-flex col-12 col-lg-4">
                         <div class="article-thumbnail-home">
-                            <?php the_post_thumbnail(); ?>
+
+                        <?php if(get_post_thumbnail()) {
+                            the_post_thumbnail();}
+                            else {?>
+                             <img src="<?php get_template_directory_uri()?>/assets/img/" alt="">" 
+                             <?php }?> 
                         </div>
                         <div>
                             <h5><?php the_title(); ?></h5>
