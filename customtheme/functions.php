@@ -58,6 +58,29 @@ function custom_home_type(){
 }
 add_action('init', 'custom_home_type');
 
+
+
+
+add_filter('pre_option_home', 'custom_home_page');
+function custom_home_page($default) {
+    // Recupera l'ID della pagina con il post type personalizzato "home"
+    $home_page = get_posts(array(
+        'post_type' => 'home', // Imposta il post type su "home"
+        'posts_per_page' => 1, // Recupera solo una pagina
+        'fields' => 'ids', // Ottieni solo gli ID delle pagine
+    ));
+
+    // Se trova una pagina con il post type "home", imposta quella come home page
+    if (!empty($home_page)) {
+        return $home_page[0];
+    }
+
+    // Altrimenti, torna il valore predefinito
+    return $default;
+}
+
+
+
 // end add home type
 
 
