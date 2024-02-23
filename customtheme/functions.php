@@ -23,8 +23,12 @@ add_action('wp_enqueue_scripts', 'load_bootstrap_scripts');
 
 // ADD FEATURES
 
-add_theme_support('post-thumbnail');
+function custom_theme_setup() {
+    // Add theme support for post thumbnails
+    add_theme_support('post-thumbnails');
+}
 
+add_action('after_setup_theme', 'custom_theme_setup');
 function gruppo4_theme_support(){
     add_theme_support('title-tag');
 }
