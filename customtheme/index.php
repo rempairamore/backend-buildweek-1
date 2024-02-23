@@ -10,15 +10,15 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <h3>Titolo 1 trenta</h3>
-                    <img src="..." class="d-block w-100" alt="...">
+                    <img src="<?php echo get_post_meta(get_option('page_on_front'), 'image1_url', true); ?>" class="d-block w-100" alt="Immagine 1">
                 </div>
                 <div class="carousel-item">
                     <h3>Titolo 2</h3>
-                    <img src="..." class="d-block w-100" alt="...">
+                    <img src="<?php echo get_post_meta(get_option('page_on_front'), 'image2_url', true); ?>" class="d-block w-100" alt="Immagine 2">
                 </div>
                 <div class="carousel-item">
                     <h3>Titolo 3</h3>
-                    <img src="..." class="d-block w-100" alt="...">
+                    <img src="<?php echo get_post_meta(get_option('page_on_front'), 'image3_url', true); ?>" class="d-block w-100" alt="Immagine 3">
                 </div>
             </div>
 
