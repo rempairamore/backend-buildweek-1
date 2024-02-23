@@ -64,6 +64,136 @@
 }
 
 
+/* Custom CSS for page.php WP-10------------------- */
+
+/* Search Bar Styling */
+
+.featured-image {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.entry-title {
+  color: #fff;
+  z-index: 1;
+}
+
+
+/* Sidebar Widget Styling */
+#sidebar-widget {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Off-canvas Menu Toggle */
+#offcanvas-toggler {
+    display: none;
+}
+
+@media (max-width: 991.98px) {
+    /* Show off-canvas menu toggle for smaller screens */
+    #offcanvas-toggler {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 9999;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+
+/* Hide main content area for off-canvas menu */
+.offcanvas-open #main {
+    display: none;
+}
+
+/* Styling for off-canvas menu */
+.offcanvas-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #343a40;
+    z-index: 9998;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.3s;
+}
+
+.offcanvas-menu a {
+    padding: 10px 15px;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.offcanvas-menu a:hover {
+    background-color: #007bff;
+}
+
+.close-offcanvas {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Define animations */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(70px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+@keyframes fadeInRight {
+  from {
+      opacity: 0;
+      transform: translateX(150px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Apply animations to elements */
+.custom-image-wrapper, .custom-list-wrapper, .custom-article-wrapper {
+  opacity: 0; /* Start with opacity 0 */
+  animation: fadeInRight 1s ease-out forwards; /* Apply the fadeInUp animation */
+}
+
+.custom-image-wrapper{
+  max-height: 600px;
+}
+
+.featured-image {
+  opacity: 0; /* Start with opacity 0 */
+  animation: fadeInUp 1s ease-in forwards; /* Apply the fadeInUp animation */
+}
+
+
+/* fine page.php WP-10---------------------------*/
+
+
 /* Francesco articolo */
 
 .articleTitle {
@@ -153,3 +283,4 @@ footer p{
   box-shadow:  0 0 0 0.25rem #999999ac;
 }
 /* --------FOOTER END------------ */
+

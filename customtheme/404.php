@@ -6,7 +6,7 @@
             height="1020px">
         <div class="card-img-overlay d-flex justify-content-center align-items-start pt-5">
             <h1 class='card-title'>Sorry but we couldn't find the page you were looking for!
-                <button class="btn btn-outline-light" href="#home">Go back home</button></h1>
+                <button class="btn btn-outline-light" href="http://buildweek.duckdns.org/">Go back home</button></h1>
         </div>
     </div>
 
