@@ -19,6 +19,9 @@ $image3_url = wp_get_attachment_image_src($image3_id, 'full')[0];
     <div class="container-fluid hero">
         <div id="carouselHome" class="carousel slide">
 
+<?php 
+        var_dump($image1_id);
+ ?>
         <div class="carousel-inner">
     <div class="carousel-item active">
         <img src="<?php echo esc_url($image1_url); ?>" class="d-block w-100" alt="Immagine 1">
