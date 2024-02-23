@@ -1,7 +1,8 @@
     <footer>
-        <div class=d-flex>
-            <div class="text-decoration-none">
+        <div class="d-flex justify-content-around">
+            <div class="border-start">
                 <ul>
+                    <h5>In Evidenza</h5>
                     <li>1</li>
                     <li>1</li>
                     <li>1</li>
@@ -10,6 +11,7 @@
             </div>
             <div>
                 <ul>
+                    <h5>Info utili</h5>
                     <li>2</li>
                     <li>2</li>
                     <li>2</li>
