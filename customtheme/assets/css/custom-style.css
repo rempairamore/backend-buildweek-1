@@ -75,9 +75,9 @@ footer ul{
 }
 footer ul:first-child::after {
   content: " ";
-  color: black;
+  color:  #999;
   display: block;
-  height: 2px;
+  height: 1px;
   width: 120px;
   position: absolute;
   top: 30px;
@@ -104,4 +104,9 @@ footer a{
  /* selected link */
  footer a:active {
    color: #b2b2b2;
+ }
+
+ footer p{
+    font-size: 12px;
+    color: #afafaf;
  }
