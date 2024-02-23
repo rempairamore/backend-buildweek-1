@@ -65,7 +65,10 @@
 
 /* --------FOOTER------------ */
 footer{
-  background-color: green;
+  background-color: #f4f3ef;
+}
+footer li{
+  color: #999;
 }
 footer ul{
   list-style: none;
@@ -74,12 +77,34 @@ footer ul{
   position: relative;
 }
 footer ul:first-child::after {
-  content:" ";
+  content: " ";
   display: block;
   height: 2px;
-  width: 130px;
+  width: 120px;
   position: absolute;
-  top: 50%;
-  left: 0;
+  top: 30px;
+  left: 30px;
   background: red;
 }
+
+footer a{
+  text-decoration: none;
+ }
+ footer a:link {
+   color: red;
+ }
+ 
+ /* visited link */
+ footer a:visited {
+   color: green;
+ }
+ 
+ /* mouse over link */
+ footer a:hover {
+   color: hotpink;
+ }
+ 
+ /* selected link */
+ footer a:active {
+   color: blue;
+ }

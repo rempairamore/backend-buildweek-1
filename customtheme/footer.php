@@ -2,7 +2,7 @@
         <div class="row">
             <div class="col-md-6">
                 <ul>
-                    <li><h5 class="border-bottom">In Evidenza</h5></li>
+                    <li><h5>In Evidenza</h5></li>
                     <li><a class="link" href="#">link</a></li>
                     <li><a class="link" href="#">link</a></li>
                     <li><a class="link" href="#">link</a></li>
@@ -10,7 +10,7 @@
             </div>
             <div class="col-md-6">
                 <ul>
-                    <li><h5 class="border-bottom">Info utili</h5></li>
+                    <li><h5>Info utili</h5></li>
                     <li><a href="#">link</a></li>
                     <li><a href="#">link</a></li>
                     <li><a href="#">link</a></li>
