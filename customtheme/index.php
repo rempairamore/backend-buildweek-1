@@ -45,7 +45,7 @@
             if (have_posts()) {
                 while (have_posts()) {
                     the_post(); ?>
-                    <article class="single-article-home d-flex col-12 col-lg-6 col-xl-4 p-3">
+                    <article class="single-article-home d-flex col-12 col-lg-6 col-xxl-4 p-3">
                         <div class="article-thumbnail-home">
                             <?php
                             the_post_thumbnail('custom-size-thumbnail');
