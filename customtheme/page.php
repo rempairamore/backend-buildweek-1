@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<header class="entry-header">
+<header class="entry-header w-100">
     <?php if (has_post_thumbnail()): ?>
         <div class="featured-image w-100">
             <?php the_post_thumbnail('full'); ?>
