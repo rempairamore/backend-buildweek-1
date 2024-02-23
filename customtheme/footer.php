@@ -1,28 +1,39 @@
-    <footer>
-        <div class="d-flex justify-content-around">
-            <div>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="md-6">
                 <h5>In Evidenza</h5>
-                <ul class="border-start" style="list-style: none">
-                    
-                    <li style="list-style: none">1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
+                <ul class="border-bottom">
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
                 </ul>
             </div>
-            <div>
+            <div class="md-6">
                 <h5>Info utili</h5>
-                <ul>
-                    <li>2</li>
-                    <li>2</li>
-                    <li>2</li>
-                    <li>2</li>
+                <ul class="border-bottom">
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
                 </ul>
             </div>
         </div>
         <div class="text-center">
-            Copyright&copy2024 
+            <p>Copyright&copy2024 Gruppo Fortissimo</p> 
         </div>
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    In evidenza
+                </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a>Link</a></div>
+                </div>
+            </div>
+        </div>
+        
     </footer>
 <?php wp_footer(); ?>
 </body>

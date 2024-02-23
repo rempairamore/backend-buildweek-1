@@ -64,6 +64,10 @@
 }
 
 /* --------FOOTER------------ */
+footer{
+  background-color: green;
+}
 footer ul{
   list-style: none;
 }
+/* --------FOOTER------------ */
