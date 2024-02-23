@@ -70,23 +70,7 @@
 
 
  
-                    <article class="single-article-home d-flex col-12 col-lg-6 col-xxl-4 p-3">
-                        <div class="article-thumbnail-home">
-                            <?php
-                            the_post_thumbnail('custom-size-thumbnail');
-                            ?>
-                        </div>
-                        <div class="p-2">
-                            <h5><?php the_title(); ?></h5>
-                            <p><?php the_excerpt(); ?></p>
-                        </div>
-                    </article>
 
-            <?php
-
-                }
-            }
-            ?>
             <article class="single-article-home d-flex col-12 col-lg-4">
                 <div class="article-thumbnail-home">
 
