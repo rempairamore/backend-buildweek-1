@@ -13,7 +13,7 @@ if (have_posts()) {
                 <h1 class="articleTitle fw-bold text-light"><?php the_title(); ?></h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row mt-5">
             <div class="col-8">
                 <div class="article-content">
                     <?php
