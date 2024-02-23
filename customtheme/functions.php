@@ -15,15 +15,16 @@ function load_bootstrap_scripts() {
 add_action('wp_enqueue_scripts', 'load_bootstrap');
 add_action('wp_enqueue_scripts', 'load_bootstrap_scripts' );
 
-function register_sidebar() {
+function customtheme_register_sidebar() {
     register_sidebar( array(
-        'name'          => __( 'Right Sidebar', 'page.php' ),
+        'name'          => __( 'Right Sidebar', 'customtheme' ),
         'id'            => 'right-sidebar',
-        'description'   => __( 'Widgets in this area will be displayed on the right side of the page.', 'page.php' ),
+        'description'   => __( 'Widgets in this area will be displayed on the right side of the page.', 'customtheme' ),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h2 class="widget-title">',
         'after_title'   => '</h2>',
     ) );
 }
-add_action( 'widgets_init', 'register_sidebar' );
+add_action( 'widgets_init', 'customtheme_register_sidebar' );
+
