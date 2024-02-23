@@ -48,7 +48,7 @@
                     <article class="single-article-home d-flex col-12 col-lg-4">
                         <div class="article-thumbnail-home">
                             <?php
-                            the_post_thumbnail();
+                            the_post_thumbnail('custom-size-thumbnail');
                             ?>
                         </div>
                         <div>
