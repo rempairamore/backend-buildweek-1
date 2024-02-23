@@ -23,12 +23,12 @@ add_action('wp_enqueue_scripts', 'load_bootstrap_scripts');
 
 // ADD FEATURES
 
-function gruppo4_theme_support(){
-    add_theme_support('title-tag');
-    add_theme_support('post-thumbnail');
-}
+// function gruppo4_theme_support(){
+//     add_theme_support('title-tag');
+//     add_theme_support('post-thumbnail');
+// }
 
-add_action('after_setup_theme', 'gruppo4_theme_support');
+// add_action('after_setup_theme', 'gruppo4_theme_support');
 // end add features
 
 
