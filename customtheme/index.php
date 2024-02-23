@@ -1,7 +1,15 @@
 <?php get_header(); ?>
 
 <main>
+    <?php
+    // Recupera l'ID della pagina frontale
+    $page_id = get_option('page_on_front');
 
+    // Recupera le URL delle immagini
+    $image1_url = get_post_meta($page_id, 'image1_url', true);
+    $image2_url = get_post_meta($page_id, 'image2_url', true);
+    $image3_url = get_post_meta($page_id, 'image3_url', true);
+    ?>
 
 
     <div class="container-fluid hero">
@@ -9,16 +17,13 @@
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <h3>Titolo 1 trenta</h3>
-                    <img src="<?php echo get_post_meta(get_option('page_on_front'), 'image1_url', true); ?>" class="d-block w-100" alt="Immagine 1">
+                    <img src="<?php echo esc_url($image1_url); ?>" class="d-block w-100" alt="Immagine 1">
                 </div>
                 <div class="carousel-item">
-                    <h3>Titolo 2</h3>
-                    <img src="<?php echo get_post_meta(get_option('page_on_front'), 'image2_url', true); ?>" class="d-block w-100" alt="Immagine 2">
+                    <img src="<?php echo esc_url($image2_url); ?>" class="d-block w-100" alt="Immagine 2">
                 </div>
                 <div class="carousel-item">
-                    <h3>Titolo 3</h3>
-                    <img src="<?php echo get_post_meta(get_option('page_on_front'), 'image3_url', true); ?>" class="d-block w-100" alt="Immagine 3">
+                    <img src="<?php echo esc_url($image3_url); ?>" class="d-block w-100" alt="Immagine 3">
                 </div>
             </div>
 
