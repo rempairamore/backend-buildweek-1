@@ -24,7 +24,7 @@ get_header();
 </header><!-- .entry-header -->
 
 
-<div class="container mt-5 pt-5">
+<div class="container m-5 pt-5">
     <!-- Main Content Area -->
     <main id="main" class="site-main">
         <?php
