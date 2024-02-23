@@ -28,7 +28,8 @@ function customtheme_register_sidebar()
             'after_widget' => '</div>',
             'before_title' => '<h2 class="widget-title">',
             'after_title' => '</h2>',
-        ));
+        )
+    );
 }
 add_action('widgets_init', 'customtheme_register_sidebar');
 
@@ -49,28 +50,26 @@ add_filter('the_content', 'modify_content_animations');
 // javascript code for animations
 ?>
 <script>
-    // Function to check if an element is in the viewport
-    function isElementInViewport(el) {
-        var rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    // Function to handle scroll animations
-    function handleScrollAnimations() {
-        document.querySelectorAll('.custom-image-wrapper, .custom-list-wrapper, .custom-article-wrapper').forEach(element => {
-            if (isElementInViewport(element)) {
-                element.classList.add('animate');
+    // Function to handle animations when elements enter the viewport
+    function handleAnimations(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate'); // Add a CSS class to trigger the animation
+                observer.unobserve(entry.target); // Stop observing once animated
             }
         });
     }
 
-    // Attach scroll event listener to trigger animations
-    window.addEventListener('scroll', handleScrollAnimations);
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver(handleAnimations, {
+        root: null,
+        threshold: 0.2, // Adjust threshold as needed
+    });
+
+    // Observe elements with the specified class
+    document.querySelectorAll('.custom-image-wrapper, .custom-list-wrapper, .custom-article-wrapper').forEach(element => {
+        observer.observe(element);
+    });
 
 </script>
 

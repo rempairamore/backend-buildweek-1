@@ -153,26 +153,23 @@
 }
 
 /* Define animations */
-@keyframes fadeInX {
+@keyframes fadeInUp {
   from {
       opacity: 0;
-      transform: translateX(50px);
+      transform: translateY(50px);
   }
   to {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0);
   }
 }
 
 /* Apply animations to elements */
 .custom-image-wrapper, .custom-list-wrapper, .custom-article-wrapper {
   opacity: 0; /* Start with opacity 0 */
+  animation: fadeInUp 4s ease-in-out forwards; /* Apply the fadeInUp animation */
 }
 
-/* Add animation class when scrolled into view */
-.animate {
-  animation: fadeInX 4s ease forwards;
-}
 
 
 
