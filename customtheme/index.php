@@ -41,7 +41,7 @@
 
     <div class="griglia">
         <section class="articoli d-flex container row">
-            <article class="single-article-home d-flex col-12 col-md-4">
+            <article class="single-article-home d-flex col-12 col-lg-4">
                 <div class="article-thumbnail-home">
 
                 </div>
@@ -50,7 +50,7 @@
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dolore facere qui, optio ducimus fugiat similique quia iure nesciunt veritatis dolorum eligendi reprehenderit incidunt labore earum asperiores nemo eveniet ea.</p>
                 </div>
             </article>
-            <article class="single-article-home d-flex col-12 col-md-4">
+            <article class="single-article-home d-flex col-12 col-lg-4">
                 <div class="article-thumbnail-home">
 
                 </div>
@@ -59,7 +59,7 @@
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dolore facere qui, optio ducimus fugiat similique quia iure nesciunt veritatis dolorum eligendi reprehenderit incidunt labore earum asperiores nemo eveniet ea.</p>
                 </div>
             </article>
-            <article class="single-article-home d-flex col-12 col-md-4">
+            <article class="single-article-home d-flex col-12 col-lg-4">
                 <div class="article-thumbnail-home">
 
                 </div>
