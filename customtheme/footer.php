@@ -1,17 +1,18 @@
     <footer>
         <div class="d-flex justify-content-around">
             <div>
+                <h5>In Evidenza</h5>
                 <ul class="border-start" style="list-style: none">
-                    <h5>In Evidenza</h5>
-                    <li>1</li>
+                    
+                    <li style="list-style: none">1</li>
                     <li>1</li>
                     <li>1</li>
                     <li>1</li>
                 </ul>
             </div>
             <div>
+                <h5>Info utili</h5>
                 <ul>
-                    <h5>Info utili</h5>
                     <li>2</li>
                     <li>2</li>
                     <li>2</li>

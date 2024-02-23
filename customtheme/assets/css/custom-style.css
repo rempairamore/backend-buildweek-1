@@ -62,3 +62,8 @@
       "side side side";
   }
 }
+
+/* --------FOOTER------------ */
+footer ul{
+  list-style: none;
+}
