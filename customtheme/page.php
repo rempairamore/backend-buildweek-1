@@ -6,7 +6,7 @@
         // Loop principale di WordPress
         while (have_posts()) :
             the_post();
-
+            the_title();
             // Contenuto della pagina
             the_content();
 
