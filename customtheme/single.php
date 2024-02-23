@@ -19,7 +19,7 @@ if (have_posts()) {
             if (has_post_thumbnail()) {
                 $content = apply_filters('the_content', get_the_content());
                 $content = preg_replace('/<img[^>]+>/', '', $content, 1);
-                echo '<div class="row cols-2"> 
+                echo '<div class="row"> 
                         <div class="col-8">' . $content . '</div>
                         <div class="col-4">' . get_sidebar() . '</div>
                       </div>';
