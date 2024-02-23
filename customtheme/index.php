@@ -35,12 +35,31 @@
 
 
     <section class="promozioni">
-            
+
     </section>
 
 
     <div class="griglia">
         <section class="articoli d-flex container row">
+            <?php
+            if (have_posts()) {
+                while (have_posts()) {
+                    the_post(); ?>
+                    <article class="single-article-home d-flex col-12 col-lg-4">
+                        <div class="article-thumbnail-home">
+                            <?php the_post_thumbnail(); ?>
+                        </div>
+                        <div>
+                            <h5><?php the_title(); ?></h5>
+                            <p><?php the_excerpt(); ?></p>
+                        </div>
+                    </article>
+
+            <?php
+
+                }
+            }
+            ?>
             <article class="single-article-home d-flex col-12 col-lg-4">
                 <div class="article-thumbnail-home">
 
@@ -50,30 +69,11 @@
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dolore facere qui, optio ducimus fugiat similique quia iure nesciunt veritatis dolorum eligendi reprehenderit incidunt labore earum asperiores nemo eveniet ea.</p>
                 </div>
             </article>
-            <article class="single-article-home d-flex col-12 col-lg-4">
-                <div class="article-thumbnail-home">
-
-                </div>
-                <div>
-                    <h5>titolo articolo</h5>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dolore facere qui, optio ducimus fugiat similique quia iure nesciunt veritatis dolorum eligendi reprehenderit incidunt labore earum asperiores nemo eveniet ea.</p>
-                </div>
-            </article>
-            <article class="single-article-home d-flex col-12 col-lg-4">
-                <div class="article-thumbnail-home">
-
-                </div>
-                <div>
-                    <h5>titolo articolo</h5>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dolore facere qui, optio ducimus fugiat similique quia iure nesciunt veritatis dolorum eligendi reprehenderit incidunt labore earum asperiores nemo eveniet ea.</p>
-                </div>
-            </article>
-
         </section>
         <aside class="side text-center">
-            <?php 
+            <?php
             get_sidebar();
-             ?>
+            ?>
 
         </aside>
         <section class="gallery text-center">
