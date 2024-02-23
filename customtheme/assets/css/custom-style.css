@@ -171,7 +171,7 @@
 
 /* Add animation class when scrolled into view */
 .animate {
-  animation: fadeInUp 0.5s ease forwards;
+  animation: fadeInUp 4s ease forwards;
 }
 
 
