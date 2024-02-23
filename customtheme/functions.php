@@ -38,6 +38,53 @@ add_image_size( 'custom-size-thumbnail', 280, 180);
 
 
 
+// Immagini per carosello
+
+// Aggiungi campi personalizzati nel pannello amministratore per caricare le immagini
+add_action('add_meta_boxes', 'custom_image_meta_box');
+function custom_image_meta_box() {
+    add_meta_box(
+        'custom_image_meta_box',
+        'Carica le immagini per il carosello',
+        'render_custom_image_meta_box',
+        'page', // Cambia 'page' con il tipo di post dove desideri che compaia la meta box
+        'normal',
+        'default'
+    );
+}
+
+// Renderizza il contenuto della meta box
+function render_custom_image_meta_box($post) {
+    // Recupera le URL delle immagini salvate come metadati del post
+    $image1_url = get_post_meta($post->ID, 'image1_url', true);
+    $image2_url = get_post_meta($post->ID, 'image2_url', true);
+    $image3_url = get_post_meta($post->ID, 'image3_url', true);
+    ?>
+    <p>Carica le immagini per il carosello:</p>
+    <input type="text" name="image1_url" value="<?php echo esc_attr($image1_url); ?>" placeholder="URL immagine 1"><br>
+    <input type="text" name="image2_url" value="<?php echo esc_attr($image2_url); ?>" placeholder="URL immagine 2"><br>
+    <input type="text" name="image3_url" value="<?php echo esc_attr($image3_url); ?>" placeholder="URL immagine 3">
+    <?php
+}
+
+// Salva le URL delle immagini come metadati del post
+add_action('save_post', 'save_custom_image_meta_data');
+function save_custom_image_meta_data($post_id) {
+    if (isset($_POST['image1_url'])) {
+        update_post_meta($post_id, 'image1_url', esc_url($_POST['image1_url']));
+    }
+    if (isset($_POST['image2_url'])) {
+        update_post_meta($post_id, 'image2_url', esc_url($_POST['image2_url']));
+    }
+    if (isset($_POST['image3_url'])) {
+        update_post_meta($post_id, 'image3_url', esc_url($_POST['image3_url']));
+    }
+}
+
+
+// end immagini per carosello
+
+
 
 
 
