@@ -1,16 +1,16 @@
     <footer class="container-fluid">
         <div class="row">
-            <div class="md-6">
-                <h5>In Evidenza</h5>
-                <ul class="border-bottom">
-                    <li><a href="#">link</a></li>
-                    <li><a href="#">link</a></li>
-                    <li><a href="#">link</a></li>
+            <div class="col-md-6">
+                <h5 class="border-bottom">In Evidenza</h5>
+                <ul>
+                    <li><a class="link" href="#">link</a></li>
+                    <li><a class="link" href="#">link</a></li>
+                    <li><a class="link" href="#">link</a></li>
                 </ul>
             </div>
-            <div class="md-6">
-                <h5>Info utili</h5>
-                <ul class="border-bottom">
+            <div class="col-md-6">
+                <h5 class="border-bottom">Info utili</h5>
+                <ul>
                     <li><a href="#">link</a></li>
                     <li><a href="#">link</a></li>
                     <li><a href="#">link</a></li>
@@ -30,7 +30,7 @@
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
-                        <ul class="border-bottom">
+                        <ul>
                             <li><a href="#">link</a></li>
                             <li><a href="#">link</a></li>
                             <li><a href="#">link</a></li>
