@@ -14,9 +14,6 @@ get_header();
     <?php if (has_post_thumbnail()): ?>
         <div class="featured-image w-100">
             <?php the_post_thumbnail('full'); ?>
-            <div class="overlay d-flex justify-content-center align-items-center">
-                <?php the_title('<h1 class="entry-title text-center">', '</h1>'); ?>
-            </div>
         </div>
     <?php else: ?>
         <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
