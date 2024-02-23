@@ -25,43 +25,27 @@ get_header();
 
 
 <div class="container mt-5 pt-5">
-
-    <div class="row">
-        <div class="col-md-7">
-            <!-- Main Content Area -->
-            <main id="main" class="site-main">
-                <?php
-                // Start the loop.
-                while (have_posts()):
-                    the_post();
-                    ?>
-                    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <!-- Main Content Area -->
+    <main id="main" class="site-main">
+        <?php
+        // Start the loop.
+        while (have_posts()):
+            the_post();
+            ?>
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 
-                        <div class="entry-content">
-                            <?php the_content(); ?>
-                        </div><!-- .entry-content -->
-                    </article><!-- #post-<?php the_ID(); ?> -->
+                <div class="entry-content">
+                    <?php the_content(); ?>
+                </div><!-- .entry-content -->
+            </article><!-- #post-<?php the_ID(); ?> -->
 
-                    <?php
-                    // End of the loop.
-                endwhile;
-                ?>
-            </main><!-- #main -->
-        </div>
-        <div class="col-md-5">
-            <!-- Right Sidebar -->
-            <div id="sidebar">
-                <div id="sidebar-widget">
-                    <?php
-                    if (is_active_sidebar('right-sidebar')) {
-                        dynamic_sidebar('right-sidebar');
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
-    </div><!-- .row -->
+            <?php
+            // End of the loop.
+        endwhile;
+        ?>
+    </main><!-- #main -->
+
 </div><!-- .container -->
 
 <?php
