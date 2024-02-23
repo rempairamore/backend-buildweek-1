@@ -1,5 +1,5 @@
     <footer class="container-fluid p-2">
-        <div class="row .d-none .d-sm-block">
+        <div class="row d-none d-sm-block">
             <div class="col-md-6">
                 <ul class="medium">
                     <li><h5>In Evidenza</h5></li>
@@ -21,7 +21,7 @@
             <p>Copyright&copy2024 Gruppo Fortissimo</p> 
         </div>
 
-        <div class="accordion accordion-flush .d-block .d-sm-none" id="accordionFlushExample">
+        <div class="accordion accordion-flush d-block d-sm-none" id="accordionFlushExample">
             <div class="accordion-item">
                 <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">

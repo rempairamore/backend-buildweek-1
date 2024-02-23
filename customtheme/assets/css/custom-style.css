@@ -82,7 +82,7 @@ footer .medium:first-child::after {
   position: absolute;
   top: 30px;
   left: 30px;
-  background: rgb(5, 5, 5);
+  background: #999;
 }
 footer a{
   text-decoration: none;
@@ -112,8 +112,11 @@ footer p{
  }
 
 .accordion-button{
-    background-color: #f4f3ef;
+  background-color: #f4f3ef;
  }
 .accordion-button:not(.collapsed) {
+  background-color: #f4f3ef!important;
+}
+.accordion-body{
   background-color: #f4f3ef;
 }
