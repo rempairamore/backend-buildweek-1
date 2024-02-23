@@ -56,7 +56,7 @@ function custom_home_type(){
         'has_archive' => true
     ));
 }
-add_action('init', 'custom_home_type')
+add_action('init', 'custom_home_type');
 
 // end add home type
 
