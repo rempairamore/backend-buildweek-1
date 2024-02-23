@@ -32,7 +32,7 @@ function ale_theme_support()
 
 add_action('after_setup_theme', 'ale_theme_support');
 
-add_image_size( 'custom-size-thumbnail', 300, 200);
+add_image_size( 'custom-size-thumbnail', 180, 80);
 
 //end add features
 
