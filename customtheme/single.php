@@ -17,9 +17,12 @@ if (have_posts()) {
             <?php 
             
             if (has_post_thumbnail()) {
-                $content = apply_filters( 'the_content', get_the_content() );
-                $content = preg_replace( '/<img[^>]+>/', '', $content, 1 );
-                echo $content;
+                $content = apply_filters('the_content', get_the_content());
+                $content = preg_replace('/<img[^>]+>/', '', $content, 1);
+                echo '<div class="row cols-2"> 
+                        <div class="col-8">' . $content . '</div>
+                        <div class="col-4">' . get_sidebar() . '</div>
+                      </div>';
             } else {
                 the_content();
             }
