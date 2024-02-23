@@ -1,6 +1,8 @@
 
 <?php
 
+// STYLE E SCRIPTS
+
 function load_bootstrap()
 {
     // carica lo stile css di bootstrap
@@ -17,7 +19,28 @@ function load_bootstrap_scripts()
 add_action('wp_enqueue_scripts', 'load_bootstrap');
 add_action('wp_enqueue_scripts', 'load_bootstrap_scripts');
 
+// end style e scripts
 
+// ADD FEATURES
+
+function gruppo4_theme_support(){
+    add_theme_support('title-tag');
+    add_theme_support('post-thumbnail');
+}
+
+add_action('after_setup_theme', 'gruppo4_theme_support');
+// end add features
+
+
+
+
+
+
+
+
+
+
+// MENU
 
 function gruppo4_menus()
 {
@@ -94,3 +117,5 @@ class Bootstrap_5_WP_Nav_Menu_Walker extends Walker_Nav_Menu
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
     }
 }
+
+// end menu

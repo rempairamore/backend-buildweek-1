@@ -71,17 +71,10 @@
 
         </section>
         <aside class="side text-center">
-            <div>
-                <h4>Dove mangiare</h4>
-                <p>scopri i migliori ristoranti</p>
-            </div>
+            <?php 
+            get_sidebar();
+             ?>
 
-            <div>
-                <h4 class="">
-                    Dove dormire
-                </h4>
-                <p>se non trovi comode le panchine del parco, chiama questi numeri</p>
-            </div>
         </aside>
         <section class="gallery text-center">
             gallery
