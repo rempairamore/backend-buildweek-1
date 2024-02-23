@@ -44,27 +44,7 @@ add_image_size( 'custom-size-thumbnail', 280, 180);
 // end immagini per carosello
 
 
-// add HOME type
 
-function custom_home_type(){
-    register_post_type('home', array(
-        'labels' => array(
-            'name'=> 'Home',
-            'singular_name' => 'Home'
-        ),
-        'public' => true,
-        'has_archive' => true
-    ));
-}
-add_action('init', 'custom_home_type');
-
-
-
-
-
-
-
-// end add home type
 
 
 
