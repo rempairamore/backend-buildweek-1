@@ -41,10 +41,35 @@
 
     <div class="griglia">
         <section class="articoli d-flex container row">
+
             <?php
-            if (have_posts()) {
-                while (have_posts()) {
-                    the_post(); ?>
+            $args = array(
+                'posts_per_page' => 3, // Retrieve only 3 posts
+                'order'          => 'DESC', // Order posts in descending order (latest posts first)
+            );
+
+            $custom_query = new WP_Query($args);
+
+            if ($custom_query->have_posts()) {
+                while ($custom_query->have_posts()) {
+                    $custom_query->the_post();?>
+                    <article class="single-article-home d-flex col-12 col-lg-6 col-xxl-4 p-3">
+                    <div class="article-thumbnail-home">
+                        <?php
+                        the_post_thumbnail('custom-size-thumbnail');
+                        ?>
+                    </div>
+                    <div class="p-2">
+                        <h5><?php the_title(); ?></h5>
+                        <p><?php the_excerpt(); ?></p>
+                    </div>
+                </article>
+              <?php   }
+            }
+            ?>
+
+
+ 
                     <article class="single-article-home d-flex col-12 col-lg-6 col-xxl-4 p-3">
                         <div class="article-thumbnail-home">
                             <?php
