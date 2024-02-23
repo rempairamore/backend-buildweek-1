@@ -1,7 +1,7 @@
     <footer>
         <div class="d-flex justify-content-around">
-            <div class="border-start">
-                <ul>
+            <div>
+                <ul class="border-start" style="list-style: none">
                     <h5>In Evidenza</h5>
                     <li>1</li>
                     <li>1</li>
