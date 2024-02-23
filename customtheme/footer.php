@@ -1,25 +1,25 @@
     <footer class="container-fluid p-2">
-        <div class="row d-none d-sm-block">
-            <div class="col-md-6">
-                <ul class="medium">
-                    <li><h5>In Evidenza</h5></li>
-                    <li><a class="link" href="#">link</a></li>
-                    <li><a class="link" href="#">link</a></li>
-                    <li><a class="link" href="#">link</a></li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <ul class="medium">
-                    <li><h5>Info utili</h5></li>
-                    <li><a href="#">link</a></li>
-                    <li><a href="#">link</a></li>
-                    <li><a href="#">link</a></li>
-                </ul>
+        <div class="d-none d-sm-block">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="medium">
+                        <li><h5>In Evidenza</h5></li>
+                        <li><a class="link" href="#">link</a></li>
+                        <li><a class="link" href="#">link</a></li>
+                        <li><a class="link" href="#">link</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="medium">
+                        <li><h5>Info utili</h5></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="text-center">
-            <p>Copyright&copy2024 Gruppo Fortissimo</p> 
-        </div>
+        
 
         <div class="accordion accordion-flush d-block d-sm-none" id="accordionFlushExample">
             <div class="accordion-item">
@@ -54,6 +54,10 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="text-center">
+            <p>Copyright&copy2024 Gruppo Fortissimo</p> 
         </div>
     </footer>
 <?php wp_footer(); ?>
