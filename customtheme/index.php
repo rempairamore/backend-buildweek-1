@@ -98,7 +98,7 @@
         </aside>
         <section class="gallery text-center">
             galleryddd
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col">
                     <img src="https://www.my-personaltrainer.it/2023/11/24/gatto-europeo_900x760.jpeg" alt="" >
                 </div>
@@ -108,7 +108,7 @@
                 <div class="col">
                     <img src="https://www.my-personaltrainer.it/2023/11/24/gatto-europeo_900x760.jpeg" alt="" >
                 </div>
-            </div>
+            </div> -->
 
             <div class="row">
   <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
