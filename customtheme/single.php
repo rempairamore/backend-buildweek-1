@@ -9,7 +9,7 @@ if (have_posts()) {
             <?php if (has_post_thumbnail()) { ?>
                 <img class="imgArticle" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="...">
             <?php } ?>
-            <div class="articleTitle fw-bold text-light">
+            <div class="titoloArticolo fw-bold text-light">
                 <h1><?php the_title(); ?></h1>
             </div>
             <div class="position-absolute bottom-0 start-0">
