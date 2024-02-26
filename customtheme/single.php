@@ -100,7 +100,7 @@ if ($post_type == "servizi") {
                 <div class="card shadow-sm h-100" style="width: 18rem;">
                     <img src="https://images.placesonline.com/photos/424012810201124_Jameos_1763008766.jpg?quality=80&w=700" class="card-img-top h-100" alt="...">
                     <div class="card-body">
-                        <h5>Cueva de los Verdes</h5>
+                        <h5><?php echo esc_html($cosaVedereTitolo2); ?></h5>
                         <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
@@ -109,7 +109,7 @@ if ($post_type == "servizi") {
                 <div class="card shadow-sm h-100" style="width: 18rem;">
                     <img src="https://allecanarie.it/wp-content/uploads/2023/01/cosa-vedere-a-gran-canaria-in-7-giorni.jpg" class="card-img-top h-100" alt="...">
                     <div class="card-body">
-                        <h5>Piramidi di Güímar</h5>
+                        <h5><?php echo esc_html($cosaVedereTitolo3); ?></h5>
                         <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
@@ -118,7 +118,7 @@ if ($post_type == "servizi") {
                 <div class="card shadow-sm h-100" style="width: 18rem;">
                     <img src="https://allecanarie.it/wp-content/uploads/2023/01/cosa-vedere-a-gran-canaria-in-7-giorni.jpg" class="card-img-top h-100" alt="...">
                     <div class="card-body">
-                        <h5>Cattedrale di Santa Ana</h5>
+                        <h5><?php echo esc_html($cosaVedereTitolo4); ?></h5>
                         <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>

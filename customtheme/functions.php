@@ -318,12 +318,34 @@ function callback_riempi_servizi($post)
 
         <div>
             <p>Cosa vedere</p>
-            <label for="cosa_vedere_titolo_1">Titolo 1</label>
-            <br>
-            <?php $cosaVedereTitolo1 = get_post_meta($post->ID, "cosa_vedere_titolo_1", true); ?>
-            <input type="text" name="cosa_vedere_titolo_1" id="cosa_vedere_titolo_1" value="<?= $cosaVedereTitolo1 ?>">
-            <br>
-            
+            <div class="d-flex">
+                <label for="cosa_vedere_titolo_1">Titolo 1</label>
+                <br>
+                <?php $cosaVedereTitolo1 = get_post_meta($post->ID, "cosa_vedere_titolo_1", true); ?>
+                <input type="text" name="cosa_vedere_titolo_1" id="cosa_vedere_titolo_1" value="<?= $cosaVedereTitolo1 ?>">
+                <br>
+                <!--  -->
+                <label for="cosa_vedere_titolo_2">Titolo 2</label>
+                <br>
+                <?php $cosaVedereTitolo2 = get_post_meta($post->ID, "cosa_vedere_titolo_2", true); ?>
+                <input type="text" name="cosa_vedere_titolo_2" id="cosa_vedere_titolo_2" value="<?= $cosaVedereTitolo2 ?>">
+                <br>
+                <!--  -->
+                <label for="cosa_vedere_titolo_3">Titolo 3</label>
+                <br>
+                <?php $cosaVedereTitolo3 = get_post_meta($post->ID, "cosa_vedere_titolo_3", true); ?>
+                <input type="text" name="cosa_vedere_titolo_3" id="cosa_vedere_titolo_3" value="<?= $cosaVedereTitolo3 ?>">
+                <br>
+                <!--  -->
+                <label for="cosa_vedere_titolo_4">Titolo 4</label>
+                <br>
+                <?php $cosaVedereTitolo4 = get_post_meta($post->ID, "cosa_vedere_titolo_4", true); ?>
+                <input type="text" name="cosa_vedere_titolo_4" id="cosa_vedere_titolo_4" value="<?= $cosaVedereTitolo4 ?>">
+                <br>
+                <!--  -->
+
+            </div>
+
         </div>
 
 
@@ -351,7 +373,7 @@ function save_service_metabox_data($post_id, $post)
     } else {
         $titolo = '';
     }
-    
+
     $cosaVedereTitolo1 = '';
     if (isset($_POST['cosa_vedere_titolo_1'])) {
         $cosaVedereTitolo1 = htmlspecialchars($_POST['cosa_vedere_titolo_1']);
@@ -360,17 +382,42 @@ function save_service_metabox_data($post_id, $post)
     }
 
 
+    $cosaVedereTitolo2 = '';
+    if (isset($_POST['cosa_vedere_titolo_2'])) {
+        $cosaVedereTitolo2 = htmlspecialchars($_POST['cosa_vedere_titolo_2']);
+    } else {
+        $cosaVedereTitolo2 = '';
+    }
+
+    $cosaVedereTitolo3 = '';
+    if (isset($_POST['cosa_vedere_titolo_3'])) {
+        $cosaVedereTitolo3 = htmlspecialchars($_POST['cosa_vedere_titolo_3']);
+    } else {
+        $cosaVedereTitolo3 = '';
+    }
+
+    $cosaVedereTitolo4 = '';
+    if (isset($_POST['cosa_vedere_titolo_4'])) {
+        $cosaVedereTitolo4 = htmlspecialchars($_POST['cosa_vedere_titolo_4']);
+    } else {
+        $cosaVedereTitolo4 = '';
+    }
+
 
     $newValues = array(
         'service_title' => $titolo,
-        'cosa_vedere_titolo_1' => $cosaVedereTitolo1
+        'cosa_vedere_titolo_1' => $cosaVedereTitolo1,
+        'cosa_vedere_titolo_2' => $cosaVedereTitolo2,
+        'cosa_vedere_titolo_3' => $cosaVedereTitolo3,
+        'cosa_vedere_titolo_4' => $cosaVedereTitolo4,
+
+
     );
 
     foreach ($newValues as $key => $value) {
 
-        update_post_meta($post_id, $key, $value );
+        update_post_meta($post_id, $key, $value);
     }
-
 }
 
 
