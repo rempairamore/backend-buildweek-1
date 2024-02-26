@@ -28,13 +28,13 @@
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="<?php echo esc_url($image1_url); ?>" class="d-block w-100" alt="Immagine 1">
+                    <img src="<?php echo esc_url($image1_url); ?>" class="d-block h-100" alt="Immagine 1">
                 </div>
                 <div class="carousel-item">
-                    <img src="<?php echo esc_url($image2_url); ?>" class="d-block w-100" alt="Immagine 2">
+                    <img src="<?php echo esc_url($image2_url); ?>" class="d-block h-100" alt="Immagine 2">
                 </div>
                 <div class="carousel-item">
-                    <img src="<?php echo esc_url($image3_url); ?>" class="d-block w-100" alt="Immagine 3">
+                    <img src="<?php echo esc_url($image3_url); ?>" class="d-block h-100" alt="Immagine 3">
                 </div>
             </div>
 
