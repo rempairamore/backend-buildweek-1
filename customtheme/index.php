@@ -98,7 +98,7 @@
         </aside>
         <section class="gallery text-center">
             galleryddd
-            <div class="d-block d-sm-none">
+            <div class="d-none d-sm-block d-md-none">
                 small
                 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
