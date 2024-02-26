@@ -280,9 +280,7 @@ footer p{
 /* --------FOOTER END------------ */
 
 /* ------GALLERY STAR------------- */
-.gallery div[class="col"]{
-  width: 200px;
-  height: 200px;
+.gallery{
   background-color: blue;
 }
 /* ------GALLERY END------------- */
