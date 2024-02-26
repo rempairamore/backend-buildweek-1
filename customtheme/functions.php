@@ -331,7 +331,7 @@ function callback_riempi_servizi($post)
                     <?php $cosaVedereDescrizione1 = get_post_meta($post->ID, "cosa_vedere_descrizione_1", true); ?>
                     <input type="text" name="cosa_vedere_descrizione_1" id="cosa_vedere_descrizione_1" value="<?= $cosaVedereDescrizione1 ?>">
                     <br>
-
+                    <br>
 
                     <?php
                     $cosa_vedere_image_1 = get_post_meta($post->ID, 'cosa_vedere_image_1', true);
@@ -388,6 +388,7 @@ function callback_riempi_servizi($post)
                     <?php $cosaVedereDescrizione2 = get_post_meta($post->ID, "cosa_vedere_descrizione_2", true); ?>
                     <input type="text" name="cosa_vedere_descrizione_2" id="cosa_vedere_descrizione_2" value="<?= $cosaVedereDescrizione2 ?>">
                     <br>
+                    <br>
                     <?php
                     $cosa_vedere_image_2 = get_post_meta($post->ID, 'cosa_vedere_image_2', true);
                     $cosa_vedere_image_url_2 = wp_get_attachment_image_url($cosa_vedere_image_2, 'thumbnail');
@@ -440,7 +441,7 @@ function callback_riempi_servizi($post)
 
 
                     <br>
-
+                    <br>
 
                     <?php
                     $cosa_vedere_image_3 = get_post_meta($post->ID, 'cosa_vedere_image_3', true);
@@ -497,7 +498,7 @@ function callback_riempi_servizi($post)
                     <br>
                     <?php $cosaVedereDescrizione4 = get_post_meta($post->ID, "cosa_vedere_descrizione_4", true); ?>
                     <input type="text" name="cosa_vedere_descrizione_4" id="cosa_vedere_descrizione_4" value="<?= $cosaVedereDescrizione4 ?>">
-
+                    <br><br>
 
                     <?php
                     $cosa_vedere_image_4 = get_post_meta($post->ID, 'cosa_vedere_image_4', true);
@@ -542,6 +543,259 @@ function callback_riempi_servizi($post)
                 <!--  -->
             </div>
         </div>
+
+
+
+
+
+<br><br><br><br>
+
+
+
+
+
+
+
+
+        <div class="localita-container-box" style="border: 1px solid black;padding: 1rem;">
+            <h4>Località</h4>
+            <div style="display: flex; flex-wrap: wrap;">
+                <div class="localita-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
+                    <label for="localita_titolo_1">Titolo 1</label>
+                    <br>
+                    <?php $localitaTitolo1 = get_post_meta($post->ID, "localita_titolo_1", true); ?>
+                    <input type="text" name="localita_titolo_1" id="localita_titolo_1" value="<?= $localitaTitolo1 ?>">
+                    <br>
+                    <label for="localita_descrizione_1">Descrizione 1</label>
+                    <br>
+                    <?php $localitaDescrizione1 = get_post_meta($post->ID, "localita_descrizione_1", true); ?>
+                    <input type="text" name="localita_descrizione_1" id="localita_descrizione_1" value="<?= $localitaDescrizione1 ?>">
+                    <br>
+                    <br>
+
+                    <?php
+                    $localita_image_1 = get_post_meta($post->ID, 'localita_image_1', true);
+                    $localita_image_url_1 = wp_get_attachment_image_url($localita_image_1, 'thumbnail');
+                    ?>
+                    <div class="custom-image-container">
+                        <div class="image-preview-1">
+                            <?php if ($localita_image_url_1) : ?>
+                                <img src="<?php echo esc_url($localita_image_url_1); ?>" alt="Custom Image" style="max-width: 200px; max-height: 100px;">
+                            <?php endif; ?>
+                        </div>
+                        <input type="hidden" name="localita_image_1" id="localita_image_1" value="<?php echo esc_attr($localita_image_1); ?>">
+                        <button type="button" class="button button-primary" id="cosa_fare_image_button_1">Carica Immagine</button>
+                    </div>
+                    <script>
+                        jQuery(document).ready(function($) {
+                            // Upload dell'immagine
+                            $('#cosa_fare_image_button_1').click(function(e) {
+                                e.preventDefault();
+                                var custom_uploader = wp.media({
+                                    title: 'Carica Immagine',
+                                    button: {
+                                        text: 'Seleziona Immagine'
+                                    },
+                                    multiple: false
+                                });
+                                custom_uploader.on('select', function() {
+                                    var attachment = custom_uploader.state().get('selection').first().toJSON();
+                                    $('#localita_image_1').val(attachment.id);
+                                    $('.image-preview-1 img').attr('src', attachment.url);
+                                });
+                                custom_uploader.open();
+                            });
+
+
+                        });
+                    </script>
+
+
+
+
+
+                </div>
+                <!--  -->
+                <div class="localita-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
+
+                    <label for="localita_titolo_2">Titolo 2</label>
+                    <br>
+                    <?php $localitaTitolo2 = get_post_meta($post->ID, "localita_titolo_2", true); ?>
+                    <input type="text" name="localita_titolo_2" id="localita_titolo_2" value="<?= $localitaTitolo2 ?>">
+                    <br>
+                    <label for="localita_descrizione_2">Descrizione 2</label>
+                    <br>
+                    <?php $localitaDescrizione2 = get_post_meta($post->ID, "localita_descrizione_2", true); ?>
+                    <input type="text" name="localita_descrizione_2" id="localita_descrizione_2" value="<?= $localitaDescrizione2 ?>">
+                    <br>
+                    <br>
+                    <?php
+                    $localita_image_2 = get_post_meta($post->ID, 'localita_image_2', true);
+                    $localita_image_url_2 = wp_get_attachment_image_url($localita_image_2, 'thumbnail');
+                    ?>
+                    <div class="custom-image-container">
+                        <div class="image-preview-2">
+                            <?php if ($localita_image_url_2) : ?>
+                                <img src="<?php echo esc_url($localita_image_url_2); ?>" alt="Custom Image" style="max-width: 200px; max-height: 100px;">
+                            <?php endif; ?>
+                        </div>
+                        <input type="hidden" name="localita_image_2" id="localita_image_2" value="<?php echo esc_attr($localita_image_2); ?>">
+                        <button type="button" class="button button-primary" id="cosa_fare_image_button_2">Carica Immagine</button>
+                    </div>
+                    <script>
+                        jQuery(document).ready(function($) {
+                            // Upload dell'immagine
+                            $('#cosa_fare_image_button_2').click(function(e) {
+                                e.preventDefault();
+                                var custom_uploader = wp.media({
+                                    title: 'Carica Immagine',
+                                    button: {
+                                        text: 'Seleziona Immagine'
+                                    },
+                                    multiple: false
+                                });
+                                custom_uploader.on('select', function() {
+                                    var attachment = custom_uploader.state().get('selection').first().toJSON();
+                                    $('#localita_image_2').val(attachment.id);
+                                    $('.image-preview-2 img').attr('src', attachment.url);
+                                });
+                                custom_uploader.open();
+                            });
+
+
+                        });
+                    </script>
+                </div>
+                <!--  -->
+                <div class="localita-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
+
+                    <label for=" localita_titolo_3">Titolo 3</label>
+                    <br>
+                    <?php $localitaTitolo3 = get_post_meta($post->ID, "localita_titolo_3", true); ?>
+                    <input type="text" name="localita_titolo_3" id="localita_titolo_3" value="<?= $localitaTitolo3 ?>">
+                    <br>
+                    <label for="localita_descrizione_3">Descrizione 3</label>
+                    <br>
+                    <?php $localitaDescrizione3 = get_post_meta($post->ID, "localita_descrizione_3", true); ?>
+                    <input type="text" name="localita_descrizione_3" id="localita_descrizione_3" value="<?= $localitaDescrizione3 ?>">
+
+
+                    <br>
+                    <br>
+
+                    <?php
+                    $localita_image_3 = get_post_meta($post->ID, 'localita_image_3', true);
+                    $localita_image_url_3 = wp_get_attachment_image_url($localita_image_3, 'thumbnail');
+                    ?>
+                    <div class="custom-image-container">
+                        <div class="image-preview-3">
+                            <?php if ($localita_image_url_3) : ?>
+                                <img src="<?php echo esc_url($localita_image_url_3); ?>" alt="Custom Image" style="max-width: 200px; max-height: 100px;">
+                            <?php endif; ?>
+                        </div>
+                        <input type="hidden" name="localita_image_3" id="localita_image_3" value="<?php echo esc_attr($localita_image_3); ?>">
+                        <button type="button" class="button button-primary" id="cosa_fare_image_button_3">Carica Immagine</button>
+                    </div>
+                    <script>
+                        jQuery(document).ready(function($) {
+                            // Upload dell'immagine
+                            $('#cosa_fare_image_button_3').click(function(e) {
+                                e.preventDefault();
+                                var custom_uploader = wp.media({
+                                    title: 'Carica Immagine',
+                                    button: {
+                                        text: 'Seleziona Immagine'
+                                    },
+                                    multiple: false
+                                });
+                                custom_uploader.on('select', function() {
+                                    var attachment = custom_uploader.state().get('selection').first().toJSON();
+                                    $('#localita_image_3').val(attachment.id);
+                                    $('.image-preview-3 img').attr('src', attachment.url);
+                                });
+                                custom_uploader.open();
+                            });
+
+
+                        });
+                    </script>
+
+
+
+
+
+
+                </div>
+                <!--  -->
+                <div class="localita-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
+
+                    <label for=" localita_titolo_4">Titolo 4</label>
+                    <br>
+                    <?php $localitaTitolo4 = get_post_meta($post->ID, "localita_titolo_4", true); ?>
+                    <input type="text" name="localita_titolo_4" id="localita_titolo_4" value="<?= $localitaTitolo4 ?>">
+                    <br>
+                    <label for="localita_descrizione_4">Descrizione 4</label>
+                    <br>
+                    <?php $localitaDescrizione4 = get_post_meta($post->ID, "localita_descrizione_4", true); ?>
+                    <input type="text" name="localita_descrizione_4" id="localita_descrizione_4" value="<?= $localitaDescrizione4 ?>">
+                    <br><br>
+
+                    <?php
+                    $localita_image_4 = get_post_meta($post->ID, 'localita_image_4', true);
+                    $localita_image_url_4 = wp_get_attachment_image_url($localita_image_4, 'thumbnail');
+                    ?>
+                    <div class="custom-image-container">
+                        <div class="image-preview-4">
+                            <?php if ($localita_image_url_4) : ?>
+                                <img src="<?php echo esc_url($localita_image_url_4); ?>" alt="Custom Image" style="max-width: 200px; max-height: 100px;">
+                            <?php endif; ?>
+                        </div>
+                        <input type="hidden" name="localita_image_4" id="localita_image_4" value="<?php echo esc_attr($localita_image_4); ?>">
+                        <button type="button" class="button button-primary" id="cosa_fare_image_button_4">Carica Immagine</button>
+                    </div>
+                    <script>
+                        jQuery(document).ready(function($) {
+                            // Upload dell'immagine
+                            $('#cosa_fare_image_button_4').click(function(e) {
+                                e.preventDefault();
+                                var custom_uploader = wp.media({
+                                    title: 'Carica Immagine',
+                                    button: {
+                                        text: 'Seleziona Immagine'
+                                    },
+                                    multiple: false
+                                });
+                                custom_uploader.on('select', function() {
+                                    var attachment = custom_uploader.state().get('selection').first().toJSON();
+                                    $('#localita_image_4').val(attachment.id);
+                                    $('.image-preview-4 img').attr('src', attachment.url);
+                                });
+                                custom_uploader.open();
+                            });
+
+
+                        });
+                    </script>
+
+
+
+                </div>
+                <!--  -->
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -664,6 +918,107 @@ function save_service_metabox_data($post_id, $post)
     update_post_meta($post_id, 'cosa_vedere_image_4', $cosa_vedere_image_4);
 }
 
+
+
+
+
+
+
+
+
+$localitaTitolo1 = '';
+    if (isset($_POST['localita_titolo_1'])) {
+        $localitaTitolo1 = htmlspecialchars($_POST['localita_titolo_1']);
+    } else {
+        $localitaTitolo1 = '';
+    }
+
+
+    $localitaTitolo2 = '';
+    if (isset($_POST['localita_titolo_2'])) {
+        $localitaTitolo2 = htmlspecialchars($_POST['localita_titolo_2']);
+    } else {
+        $localitaTitolo2 = '';
+    }
+
+    $localitaTitolo3 = '';
+    if (isset($_POST['localita_titolo_3'])) {
+        $localitaTitolo3 = htmlspecialchars($_POST['localita_titolo_3']);
+    } else {
+        $localitaTitolo3 = '';
+    }
+
+    $localitaTitolo4 = '';
+    if (isset($_POST['localita_titolo_4'])) {
+        $localitaTitolo4 = htmlspecialchars($_POST['localita_titolo_4']);
+    } else {
+        $localitaTitolo4 = '';
+    }
+
+    $localitaDescrizione1 = '';
+    if (isset($_POST['localita_descrizione_1'])) {
+        $localitaDescrizione1 = htmlspecialchars($_POST['localita_descrizione_1']);
+    } else {
+        $localitaDescrizione1 = '';
+    }
+
+    $localitaDescrizione2 = '';
+    if (isset($_POST['localita_descrizione_2'])) {
+        $localitaDescrizione2 = htmlspecialchars($_POST['localita_descrizione_2']);
+    } else {
+        $localitaDescrizione2 = '';
+    }
+
+    $localitaDescrizione3 = '';
+    if (isset($_POST['localita_descrizione_3'])) {
+        $localitaDescrizione3 = htmlspecialchars($_POST['localita_descrizione_3']);
+    } else {
+        $localitaDescrizione3 = '';
+    }
+
+
+    $localitaDescrizione4 = '';
+    if (isset($_POST['localita_descrizione_4'])) {
+        $localitaDescrizione4 = htmlspecialchars($_POST['localita_descrizione_4']);
+    } else {
+        $localitaDescrizione4 = '';
+    }
+
+
+    $newValues = array(
+        'service_title' => $titolo,
+        'localita_titolo_1' => $localitaTitolo1,
+        'localita_titolo_2' => $localitaTitolo2,
+        'localita_titolo_3' => $localitaTitolo3,
+        'localita_titolo_4' => $localitaTitolo4,
+        'localita_descrizione_1' => $localitaDescrizione1,
+        'localita_descrizione_2' => $localitaDescrizione2,
+        'localita_descrizione_3' => $localitaDescrizione3,
+        'localita_descrizione_4' => $localitaDescrizione4,
+
+
+
+
+    );
+
+    foreach ($newValues as $key => $value) {
+
+        update_post_meta($post_id, $key, $value);
+    }
+
+
+    $localita_image_1 = isset($_POST['localita_image_1']) ? sanitize_text_field($_POST['localita_image_1']) : '';
+    update_post_meta($post_id, 'localita_image_1', $localita_image_1);
+
+    $localita_image_2 = isset($_POST['localita_image_2']) ? sanitize_text_field($_POST['localita_image_2']) : '';
+    update_post_meta($post_id, 'localita_image_2', $localita_image_2);
+
+    $localita_image_3 = isset($_POST['localita_image_3']) ? sanitize_text_field($_POST['localita_image_3']) : '';
+    update_post_meta($post_id, 'localita_image_3', $localita_image_3);
+
+    $localita_image_4 = isset($_POST['localita_image_4']) ? sanitize_text_field($_POST['localita_image_4']) : '';
+    update_post_meta($post_id, 'localita_image_4', $localita_image_4);
+}
 
 
 ?>
