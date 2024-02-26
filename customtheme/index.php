@@ -97,7 +97,7 @@
 
         </aside>
         <section class="gallery text-center">
-            gallery
+            galleryddd
         </section>
 
     </div>
