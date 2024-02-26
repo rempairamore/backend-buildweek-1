@@ -321,4 +321,8 @@ footer p{
   font-size: 0.8rem;
   color: #999;
 }
+
+.article-content{
+  padding: 10px;
+}
 /* ---------ARTICLE PATCH END-------------- */
