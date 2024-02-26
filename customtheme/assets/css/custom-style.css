@@ -27,7 +27,8 @@
 .griglia {
   display: grid;
   grid-template-columns: 1fr 1fr 300px;
-  grid-template-rows: 1fr 1fr 300px;
+  /* grid-template-rows: 1fr 1fr 300px; */
+  grid-template-rows: 1fr 1fr 0px;
   grid-template-areas:
     "articoli articoli side"
     "gallery gallery side"
@@ -51,7 +52,7 @@
 
 @media screen and (max-width: 768px) {
   .griglia {
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
     grid-template-areas:
       "articoli articoli articoli"
       "gallery gallery gallery"
