@@ -12,8 +12,11 @@ if (have_posts()) {
             <div class="articleTitle fw-bold text-light">
                 <h1><?php the_title(); ?></h1>
             </div>
+            <div class="position-absolute bottom-0 end-0">
+                <h1><?php the_title(); ?></h1>
+            </div>
         </div>
-        <div class="row mt-5">
+        <div class="row mt-5 p-5">
             <div class="col-8">
                 <div class="article-content">
                     <?php
