@@ -301,6 +301,52 @@ function render_title_dashboard_widget()
     <br>
     <textarea type="text" name="description" id="description"></textarea>
     <br>
+    <br>
+    <input type="hidden" id="ajax_url" value="<?php echo admin_url('admin-ajax.php'); ?>">
     <button>Modifica</button>
 
 <?php } ?>
+
+<?php 
+function crea_tabella_titolo_e_descrizione() {
+    global $wpdb;
+    
+    // Nome della tabella
+    $nome_tabella = $wpdb->prefix . 'titolo_e_descrizione';
+
+    // Controllo se la tabella esiste già
+    if ($wpdb->get_var("SHOW TABLES LIKE '$nome_tabella'") != $nome_tabella) {
+        // La tabella non esiste, quindi la creiamo
+
+        // Query per creare la tabella
+        $query_creazione_tabella = "
+            CREATE TABLE $nome_tabella (
+                id smallint(1) NOT NULL AUTO_INCREMENT,
+                titolo varchar(64) NOT NULL,
+                descrizione text NOT NULL,
+                PRIMARY KEY  (id)
+            ) $wpdb->get_charset_collate();";
+
+        // Richiamo la funzione di WordPress per eseguire la query SQL
+        require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+        dbDelta($query_creazione_tabella);
+
+        // Popoliamo la tabella con titolo e descrizione predefiniti
+        $titolo_predefinito = 'Titolo predefinito';
+        $descrizione_predefinita = 'Descrizione predefinita';
+
+        $wpdb->insert(
+            $nome_tabella,
+            array(
+                'titolo' => $titolo_predefinito,
+                'descrizione' => $descrizione_predefinita
+            )
+        );
+    }
+}
+// Aggiungo la funzione all'hook 'after_setup_theme' in modo che venga eseguita dopo l'inizializzazione del tema
+add_action('after_setup_theme', 'crea_tabella_titolo_e_descrizione');
+
+
+
+?>
