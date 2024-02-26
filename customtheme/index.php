@@ -5,8 +5,10 @@
 
     <div class="hero overflow-hidden m-0 p-0 relative">
 
-        <h1>Maldive</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus magni doloremque incidunt excepturi provident commodi officiis deleniti molestiae, sequi in deserunt ipsum quae praesentium eius fugit similique adipisci, sed obcaecati dolores reiciendis nulla, exercitationem blanditiis. Facere eaque commodi ipsa id?</p>
+        <div class="title-box-hero">
+            <h1>Maldive</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus magni doloremque incidunt excepturi provident commodi officiis deleniti molestiae, sequi in deserunt ipsum quae praesentium eius fugit similique adipisci, sed obcaecati dolores reiciendis nulla, exercitationem blanditiis. Facere eaque commodi ipsa id?</p>
+        </div>
         <div id="carouselHome" class="carousel slide" data-bs-ride="carousel">
 
 
