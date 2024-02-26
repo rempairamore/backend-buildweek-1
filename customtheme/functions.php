@@ -282,11 +282,14 @@ function custom_post_types()
         ),
         'public' => true,
         'has_archive' => true,
+        'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comment')
     ));
 }
 
 add_action('init', 'custom_post_types');
 
 ?>
+
+
 
 
