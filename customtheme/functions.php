@@ -916,7 +916,7 @@ function save_service_metabox_data($post_id, $post)
 
     $cosa_vedere_image_4 = isset($_POST['cosa_vedere_image_4']) ? sanitize_text_field($_POST['cosa_vedere_image_4']) : '';
     update_post_meta($post_id, 'cosa_vedere_image_4', $cosa_vedere_image_4);
-}
+
 
 
 
