@@ -9,7 +9,7 @@
             <h1>Maldive</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
-        <div id="carouselHome" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselHome" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
             <div class="title-head-btns">
                 <a href="<?php echo esc_url('/posts'); ?>"><button class="btn"> Blog</button></a>
