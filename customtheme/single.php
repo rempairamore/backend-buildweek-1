@@ -1,9 +1,9 @@
-<?php get_header(); ?>
+
 <?php
 $post_type = get_post_type();
 
 if ($post_type != 'servizi') {
-
+    get_header();
 
     if (have_posts()) {
         while (have_posts()) {
@@ -41,6 +41,7 @@ if ($post_type != 'servizi') {
 }
 
 if($post_type == "servizi"){?>
+<?php get_header(); ?>
     <div style="position: relative;">
         <img class="imgArticle" src="https://www.ilturista.info/repo/images/no/isole-canarie.jpg" class="card-img" alt="...">
         <div>
