@@ -288,6 +288,25 @@ footer p{
 .gallery .carousel-inner{
   height: 400px;
 }
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: grey; 
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
 /* ------GALLERY END------------- */
 /* ---------ARTICLE PATCH START-------------- */
 .article-title-home a{
@@ -319,7 +338,7 @@ footer p{
 
 .data{
   font-size: 0.8rem;
-  color: #999;
+  color: #b8b8b8;
 }
 
 .titoloArticolo{
