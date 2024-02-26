@@ -3,7 +3,7 @@
 <main>
 
 
-    <div class="container-fluid hero overflow-hidden">
+    <div class="hero overflow-hidden m-0 p-0">
         <div id="carouselHome" class="carousel slide">
 
 
