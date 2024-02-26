@@ -333,7 +333,7 @@ function callback_riempi_servizi($post)
                         <br>
 
 
-
+                        <?php
                         $custom_image_id = get_post_meta($post->ID, 'custom_image_id', true);
                         $custom_image_url = wp_get_attachment_image_url($custom_image_id, 'thumbnail');
                         ?>
