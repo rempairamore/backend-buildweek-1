@@ -437,6 +437,36 @@ function callback_riempi_servizi($post)
 
 
     </div>
+
+
+
+
+    <script>
+        jQuery(document).ready(function($) {
+            var custom_media_frame;
+            $('.custom_media_button').click(function(e) {
+                e.preventDefault();
+                var field = $(this).data('field');
+                if (custom_media_frame) {
+                    custom_media_frame.open();
+                    return;
+                }
+                custom_media_frame = wp.media.frames.custom_media_frame = wp.media({
+                    title: 'Seleziona Immagine',
+                    button: {
+                        text: 'Seleziona'
+                    },
+                    multiple: false // Allow only one image selection at a time
+                });
+                custom_media_frame.on('select', function() {
+                    var attachment = custom_media_frame.state().get('selection').first().toJSON();
+                    $('#' + field).val(attachment.id);
+                    $('.' + field + '_preview').html('<img src="' + attachment.url + '" alt="" style="max-width: 100px; max-height: 100px;">');
+                });
+                custom_media_frame.open();
+            });
+        });
+    </script>
 <?php  }
 
 
