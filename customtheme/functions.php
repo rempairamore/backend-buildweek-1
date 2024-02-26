@@ -334,18 +334,17 @@ function callback_riempi_servizi($post)
 
 
                         <?php
-                        $custom_image_id = get_post_meta($post->ID, 'custom_image_id', true);
-                        $custom_image_url = wp_get_attachment_image_url($custom_image_id, 'thumbnail');
+                        $cosa_vedere_image_1 = get_post_meta($post->ID, 'cosa_vedere_image_1', true);
+                        $cosa_vedere_image_url_1 = wp_get_attachment_image_url($cosa_vedere_image_1, 'thumbnail');
                         ?>
                         <div class="custom-image-container">
                             <div class="image-preview">
-                                <?php if ($custom_image_url) : ?>
-                                    <img src="<?php echo esc_url($custom_image_url); ?>" alt="Custom Image">
+                                <?php if ($cosa_vedere_image_url_1) : ?>
+                                    <img src="<?php echo esc_url($cosa_vedere_image_url_1); ?>" alt="Custom Image">
                                 <?php endif; ?>
                             </div>
-                            <input type="hidden" name="custom_image_id" id="custom_image_id" value="<?php echo esc_attr($custom_image_id); ?>">
+                            <input type="hidden" name="cosa_vedere_image_1" id="cosa_vedere_image_1" value="<?php echo esc_attr($cosa_vedere_image_1); ?>">
                             <button type="button" class="button button-primary" id="upload_image_button">Carica Immagine</button>
-                            <button type="button" class="button" id="remove_image_button">Rimuovi Immagine</button>
                         </div>
                         <script>
                             jQuery(document).ready(function($) {
@@ -361,17 +360,13 @@ function callback_riempi_servizi($post)
                                     });
                                     custom_uploader.on('select', function() {
                                         var attachment = custom_uploader.state().get('selection').first().toJSON();
-                                        $('#custom_image_id').val(attachment.id);
+                                        $('#cosa_vedere_image_1').val(attachment.id);
                                         $('.image-preview img').attr('src', attachment.url);
                                     });
                                     custom_uploader.open();
                                 });
 
-                                // Rimozione dell'immagine
-                                $('#remove_image_button').click(function() {
-                                    $('#custom_image_id').val('');
-                                    $('.image-preview img').attr('src', '');
-                                });
+
                             });
                         </script>
 
@@ -392,6 +387,43 @@ function callback_riempi_servizi($post)
                         <br>
                         <?php $cosaVedereDescrizione2 = get_post_meta($post->ID, "cosa_vedere_descrizione_2", true); ?>
                         <input type="text" name="cosa_vedere_descrizione_2" id="cosa_vedere_descrizione_2" value="<?= $cosaVedereDescrizione2 ?>">
+                    <br>
+                        <?php
+                        $cosa_vedere_image_2 = get_post_meta($post->ID, 'cosa_vedere_image_2', true);
+                        $cosa_vedere_image_url_2 = wp_get_attachment_image_url($cosa_vedere_image_2, 'thumbnail');
+                        ?>
+                        <div class="custom-image-container">
+                            <div class="image-preview">
+                                <?php if ($cosa_vedere_image_url_2) : ?>
+                                    <img src="<?php echo esc_url($cosa_vedere_image_url_2); ?>" alt="Custom Image">
+                                <?php endif; ?>
+                            </div>
+                            <input type="hidden" name="cosa_vedere_image_2" id="cosa_vedere_image_2" value="<?php echo esc_attr($cosa_vedere_image_2); ?>">
+                            <button type="button" class="button button-primary" id="upload_image_button">Carica Immagine</button>
+                        </div>
+                        <script>
+                            jQuery(document).ready(function($) {
+                                // Upload dell'immagine
+                                $('#upload_image_button').click(function(e) {
+                                    e.preventDefault();
+                                    var custom_uploader = wp.media({
+                                        title: 'Carica Immagine',
+                                        button: {
+                                            text: 'Seleziona Immagine'
+                                        },
+                                        multiple: false
+                                    });
+                                    custom_uploader.on('select', function() {
+                                        var attachment = custom_uploader.state().get('selection').first().toJSON();
+                                        $('#cosa_vedere_image_2').val(attachment.id);
+                                        $('.image-preview img').attr('src', attachment.url);
+                                    });
+                                    custom_uploader.open();
+                                });
+
+
+                            });
+                        </script>
                     </div>
                     <!--  -->
                     <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
@@ -532,8 +564,11 @@ function save_service_metabox_data($post_id, $post)
     }
 
 
-    $custom_image_id = isset($_POST['custom_image_id']) ? sanitize_text_field($_POST['custom_image_id']) : '';
-    update_post_meta($post_id, 'custom_image_id', $custom_image_id);
+    $cosa_vedere_image_1 = isset($_POST['cosa_vedere_image_1']) ? sanitize_text_field($_POST['cosa_vedere_image_1']) : '';
+    update_post_meta($post_id, 'cosa_vedere_image_1', $cosa_vedere_image_1);
+
+    $cosa_vedere_image_2 = isset($_POST['cosa_vedere_image_2']) ? sanitize_text_field($_POST['cosa_vedere_image_2']) : '';
+    update_post_meta($post_id, 'cosa_vedere_image_2', $cosa_vedere_image_2);
 }
 
 
