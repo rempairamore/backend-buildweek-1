@@ -39,5 +39,9 @@ if ($post_type != 'servizi') {
         }
     }
 }
+
+if($post_type == "servizi"){
+    the_title();
+}
 ?>
 <?php get_footer(); ?>
