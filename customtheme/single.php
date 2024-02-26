@@ -63,7 +63,15 @@ if ($post_type == "servizi") {
     $cosaVedereImmagine3_url = wp_get_attachment_image_url($cosaVedereImmagine3_id, 'full');
     $cosaVedereImmagine4_url = wp_get_attachment_image_url($cosaVedereImmagine4_id, 'full');
 
+    $localitaImmagine1_id = get_post_meta(get_the_ID(), 'localita_image_1', true);
+    $localitaImmagine2_id = get_post_meta(get_the_ID(), 'localita_image_2', true);
+    $localitaImmagine3_id = get_post_meta(get_the_ID(), 'localita_image_3', true);
+    $localitaImmagine4_id = get_post_meta(get_the_ID(), 'localita_image_4', true);
 
+    $localitaImmagine1_url = wp_get_attachment_image_url($localitaImmagine1_id, 'full');
+    $localitaImmagine2_url = wp_get_attachment_image_url($localitaImmagine2_id, 'full');
+    $localitaImmagine3_url = wp_get_attachment_image_url($localitaImmagine3_id, 'full');
+    $localitaImmagine4_url = wp_get_attachment_image_url($localitaImmagine4_id, 'full');
 
 
 
@@ -219,7 +227,7 @@ if ($post_type == "servizi") {
         <div class="row row-sm-cols-1 row-md-cols-2 row-lg-cols-2 g-5 align-items-">
             <div class="col">
                 <div class="card shadow-sm h-100" style="width: 18rem;">
-                    <img src="https://static2-viaggi.corriereobjects.it/wp-content/uploads/2023/05/canarie-cosa-vedere-cosa-fare.jpg?v=1683531579" class="card-img-top h-100" alt="...">
+                    <img src="<?= esc_url($localitaImmagine1_url) ?>" class="card-img-top h-100" alt="...">
                     <div class="card-body">
                         <h5>Gran canaria</h5>
                         <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -228,7 +236,7 @@ if ($post_type == "servizi") {
             </div>
             <div class="col">
                 <div class="card shadow-sm h-100" style="width: 18rem;">
-                    <img src="https://images.placesonline.com/photos/424012810201124_Jameos_1763008766.jpg?quality=80&w=700" class="card-img-top h-100" alt="...">
+                <img src="<?= esc_url($localitaImmagine2_url) ?>" class="card-img-top h-100" alt="...">
                     <div class="card-body">
                         <h5>Tenerife</h5>
                         <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -237,7 +245,7 @@ if ($post_type == "servizi") {
             </div>
             <div class="col">
                 <div class="card shadow-sm h-100" style="width: 18rem;">
-                    <img src="https://allecanarie.it/wp-content/uploads/2023/01/cosa-vedere-a-gran-canaria-in-7-giorni.jpg" class="card-img-top h-100" alt="...">
+                <img src="<?= esc_url($localitaImmagine3_url) ?>" class="card-img-top h-100" alt="...">
                     <div class="card-body">
                         <h5>Lanzarote</h5>
                         <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -246,7 +254,7 @@ if ($post_type == "servizi") {
             </div>
             <div class="col">
                 <div class="card shadow-sm h-100" style="width: 18rem;">
-                    <img src="https://allecanarie.it/wp-content/uploads/2023/01/cosa-vedere-a-gran-canaria-in-7-giorni.jpg" class="card-img-top h-100" alt="...">
+                <img src="<?= esc_url($localitaImmagine4_url) ?>" class="card-img-top h-100" alt="...">
                     <div class="card-body">
                         <h5>Fuerteventura</h5>
                         <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
