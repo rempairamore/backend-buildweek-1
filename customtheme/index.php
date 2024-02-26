@@ -186,22 +186,22 @@
                                     <div class="movie-row">
                                         <div class="row g-1">
                                             <div class="col-md-2">
-                                                <img class="img-fluid movie-cover" src="./assets/media/media0.jpg">
+                                                <img class="img-fluid movie-cover" src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">
                                             </div>
                                             <div class="col-md-2">
-                                                <img class="img-fluid movie-cover" src="./assets/media/media1.jpg">
+                                                <img class="img-fluid movie-cover" src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">
                                             </div>
                                             <div class="col-md-2">
-                                                <img class="img-fluid movie-cover" src="./assets/media/media2.jpg">
+                                                <img class="img-fluid movie-cover" src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">
                                             </div>
                                             <div class="col-md-2">
-                                                <img class="img-fluid movie-cover" src="./assets/media/media3.jpg">
+                                                <img class="img-fluid movie-cover" src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">
                                             </div>
                                             <div class="col-md-2">
-                                                <img class="img-fluid movie-cover" src="./assets/media/media4.jpg">
+                                                <img class="img-fluid movie-cover" src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">
                                             </div>
                                             <div class="col-md-2">
-                                                <img class="img-fluid movie-cover" src="./assets/media/media5.jpg">
+                                                <img class="img-fluid movie-cover" src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">
                                             </div>
 
                                         </div>
