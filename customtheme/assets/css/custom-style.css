@@ -294,16 +294,16 @@ footer p{
 }
 /* Track */
 .gallery::-webkit-scrollbar-track {
-  background-color: rgb(247, 243, 245); 
+  background-color: #aaaaaa;; 
 }
 /* Handle */
 .gallery::-webkit-scrollbar-thumb {
-  background: blue;
+  background: #989898;
 }
 
 /* Handle on hover */
 .gallery::-webkit-scrollbar-thumb:hover {
-  background: #b30000; 
+  background: #7e7e7e;
 }
 /* ------GALLERY END------------- */
 /* ---------ARTICLE PATCH START-------------- */
