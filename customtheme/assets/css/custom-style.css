@@ -285,8 +285,10 @@ footer p{
 
 .title-box-hero{
   position: absolute;
-  top: 50px;
-  left: 50px;
+  top: calc(50vw + 56px - 50%);
+  left: 300px;
+  z-index: 10;
+  background-color: #f1f1f182
 }
 
 /* end task 13 */
