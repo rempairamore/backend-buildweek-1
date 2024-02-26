@@ -345,7 +345,7 @@ function crea_tabella_titolo_e_descrizione() {
     }
 }
 // Aggiungo la funzione all'hook 'after_setup_theme' in modo che venga eseguita dopo l'inizializzazione del tema
-add_action('after_setup_theme', 'crea_tabella_titolo_e_descrizione');
+crea_tabella_titolo_e_descrizione();
 
 
 
