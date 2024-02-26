@@ -81,7 +81,7 @@
                                     <?php the_author(); ?>
                                 </p>
                                 <!-- da fare un ternario per gli articoli senza data -->
-                                <p class="fs-6"><i class="bi bi-calendar-week"></i> <?php the_date("d-m-o"); ?></p>
+                                <p class="data"><i class="bi bi-calendar-week"></i> <?php the_date("d-m-o"); ?></p>
                                 <span class="ms-2"><a class="article-link-home" href="<?php the_permalink(); ?>">
                                         ...leggi</a></span>
                             </div>

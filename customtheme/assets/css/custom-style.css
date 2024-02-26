@@ -294,7 +294,7 @@ footer p{
   text-decoration: none;
 }
 .article-title-home a:link {
-  color: #999;
+  color: black;
 }
  
 /* visited link */
@@ -315,5 +315,10 @@ footer p{
 .stile{
   border: 1px solid #a09f9f38;
   padding: 10px;
+}
+
+.data{
+  font-size: 0.8rem;
+  color: #999;
 }
 /* ---------ARTICLE PATCH END-------------- */
