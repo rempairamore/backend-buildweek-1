@@ -65,7 +65,7 @@
 
                     <article
                         class="single-article-home d-flex flex-column align-items-center align-items-lg-start col-12 col-lg-6 col-xxl-4 p-3 <?php ($count == 3) ? print("d-lg-none d-xxl-block") : "" ?>">
-                        <div class="article-thumbnail-home">
+                        <div class="article-thumbnail-home">col-lg-4 col-md-12 mb-4 mb-lg-0
                             <?php
                             the_post_thumbnail('custom-size-thumbnail');
                             ?>
@@ -109,50 +109,77 @@
                     <img src="https://www.my-personaltrainer.it/2023/11/24/gatto-europeo_900x760.jpeg" alt="" >
                 </div>
             </div> -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                        <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Boat on Calm Water"
+                        />
 
-            <div class="row">
-  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Boat on Calm Water"
-    />
+                        <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Wintry Mountain Landscape"
+                        />
+                    </div>
 
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Wintry Mountain Landscape"
-    />
-  </div>
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Mountains in the Clouds"
+                        />
 
-  <div class="col-lg-4 mb-4 mb-lg-0">
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Mountains in the Clouds"
-    />
+                        <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Boat on Calm Water"
+                        />
+                    </div>
 
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Boat on Calm Water"
-    />
-  </div>
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Waves at Sea"
+                        />
 
-  <div class="col-lg-4 mb-4 mb-lg-0">
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Waves at Sea"
-    />
+                        <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Yosemite National Park"
+                        />
+                    </div>
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Waves at Sea"
+                        />
 
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Yosemite National Park"
-    />
-  </div>
-</div>
+                        <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Yosemite National Park"
+                        />
+                    </div>
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Waves at Sea"
+                        />
+
+                        <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Yosemite National Park"
+                        />
+                    </div>
+                </div>
+            </div>
         </section>
 
     </div>
