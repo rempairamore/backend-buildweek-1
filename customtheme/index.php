@@ -100,7 +100,7 @@
             galleryddd
             <div class="row">
                 <div class="col">
-                    <img src="https://www.my-personaltrainer.it/2023/11/24/gatto-europeo_900x760.jpeg" alt="Girl in a jacket" width="500" height="600">
+                    <img src="https://www.my-personaltrainer.it/2023/11/24/gatto-europeo_900x760.jpeg" alt="" >
                 </div>
                 <div class="col">
                     Columnnnn
