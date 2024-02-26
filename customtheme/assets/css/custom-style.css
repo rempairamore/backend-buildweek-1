@@ -53,9 +53,9 @@
       "articoli articoli articoli"
       "gallery gallery gallery"
       "side side side";
+      background-size: cover; ;
   }
 }
-
 /* Custom CSS for page.php WP-10------------------- */
 
 /* Search Bar Styling */
