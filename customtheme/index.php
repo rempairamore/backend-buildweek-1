@@ -98,7 +98,7 @@
         </aside>
 
         <section class="gallery text-center">
-            galleryddd
+            gallerydddpinguino
             <div class="d-lg-none">
                 small
                 <div class="mx-auto">
@@ -209,7 +209,7 @@
 
                 </div>
             </div>
-            --modale---
+            --modale eventuale---
         </section>
 
     </div>
