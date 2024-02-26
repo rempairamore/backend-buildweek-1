@@ -14,22 +14,25 @@ if (have_posts()) {
                 <h1><?php the_title(); ?></h1>
             </div>
         </div>
-        <div class="row mt-5 p-5">
-            <div class="col-sm-8">
-                <div class="article-content">
-                    <?php
-                    if (has_post_thumbnail()) {
-                        $content = apply_filters('the_content', get_the_content());
-                        $content = preg_replace('/<img[^>]+>/', '', $content, 1);
-                        echo $content;
-                    } else {
-                        the_content();
-                    }
-                    ?>
+
+        <div class="container">
+            <div class="row mt-5 p-5">
+                <div class="col-sm-8">
+                    <div class="article-content">
+                        <?php
+                        if (has_post_thumbnail()) {
+                            $content = apply_filters('the_content', get_the_content());
+                            $content = preg_replace('/<img[^>]+>/', '', $content, 1);
+                            echo $content;
+                        } else {
+                            the_content();
+                        }
+                        ?>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-4">
-                <?php get_sidebar(); ?>
+                <div class="col-sm-4">
+                    <?php get_sidebar(); ?>
+                </div>
             </div>
         </div>
 <?php
