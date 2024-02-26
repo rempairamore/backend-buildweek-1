@@ -86,6 +86,21 @@ if ($post_type == "servizi") {
     $localitaImmagine4_url = wp_get_attachment_image_url($localitaImmagine4_id, 'full');
 
 
+    $mangiareTitolo1 = get_post_meta(get_the_ID(), 'mangiare_titolo_1', true);
+    $mangiareTitolo2 = get_post_meta(get_the_ID(), 'mangiare_titolo_2', true);
+    $mangiareTitolo3 = get_post_meta(get_the_ID(), 'mangiare_titolo_3', true);
+    
+    $mangiareDescrizione1 = get_post_meta(get_the_ID(), 'mangiare_descrizione_1', true);
+    $mangiareDescrizione2 = get_post_meta(get_the_ID(), 'mangiare_descrizione_2', true);
+    $mangiareDescrizione3 = get_post_meta(get_the_ID(), 'mangiare_descrizione_3', true);
+
+    $mangiareImmagine1_id = get_post_meta(get_the_ID(), 'mangiare_image_1', true);
+    $mangiareImmagine2_id = get_post_meta(get_the_ID(), 'mangiare_image_2', true);
+    $mangiareImmagine3_id = get_post_meta(get_the_ID(), 'mangiare_image_3', true);
+
+    $mangiareImmagine1_url = wp_get_attachment_image_url($mangiareImmagine1_id, 'full');
+    $mangiareImmagine2_url = wp_get_attachment_image_url($mangiareImmagine2_id, 'full');
+    $mangiareImmagine3_url = wp_get_attachment_image_url($mangiareImmagine3_id, 'full');
 
 
     ?>
