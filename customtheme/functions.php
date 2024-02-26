@@ -310,12 +310,12 @@ function callback_riempi_servizi($post)
     wp_nonce_field(basename(__FILE__), 'servizi_nonce');
 ?>
     <div>
-        <label for="title">Titolo</label>
+        <h4>Titolo</h4>
         <br>
         <?php $titolo = get_post_meta($post->ID, "service_title", true); ?>
         <input type="text" name="title" id="title" value="<?= $titolo ?>">
         <br>
-
+        <br>
         <div>
             <div class="cosa-vedere-container-box" style="border: 1px solid black;padding: 1rem;">
                 <h4>Cosa vedere</h4>
