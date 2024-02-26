@@ -105,7 +105,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
         </section>
         <aside class="side text-center">
             <?php
-            // get_sidebar();
+            get_sidebar();
             ?>
 
         </aside>

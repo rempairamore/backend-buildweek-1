@@ -1388,4 +1388,20 @@ function save_service_metabox_data($post_id, $post)
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+// REGISTER SIDEBAR
+
+
+
     ?>
