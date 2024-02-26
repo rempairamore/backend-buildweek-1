@@ -293,6 +293,7 @@ function render_title_dashboard_widget(){
     <br>
     <label for="description">Descrizione</label>
     <input type="text" name="description" id="description">
+    <br>
     <button>Modifica</button>
 
 <?php } ?>
