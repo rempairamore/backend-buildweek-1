@@ -272,11 +272,21 @@ add_filter('the_content', 'convert_gallery_to_carousel');
 //----------------------------------------------------------------end wp-10---------------------------------------------------------------
 
 
-// ------------- wp 13 -------------
 
-// add title and description metabox
-// Registra il widget personalizzato per la dashboard
+function custom_post_types()
+{
+    register_post_type('servizi', array(
+        'labels' => array(
+            'name' => 'Servizi',
+            'singular_name' => 'Servizi',
+        ),
+        'public' => true,
+        'has_archive' => true,
+    ));
+}
 
-
+add_action('init', 'custom_post_types');
 
 ?>
+
+
