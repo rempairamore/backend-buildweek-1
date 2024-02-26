@@ -103,7 +103,7 @@
                     Columnnn
                 </div>
                 <div class="col">
-                    Column
+                    Columnnnn
                 </div>
                 <div class="col">
                     Column

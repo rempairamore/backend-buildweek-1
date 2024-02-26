@@ -46,7 +46,7 @@
 
 .gallery {
   grid-area: gallery;
-  background-color: aquamarine;
+  background-color: blue;
 }
 
 @media screen and (max-width: 768px) {
