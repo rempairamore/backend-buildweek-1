@@ -289,20 +289,20 @@ footer p{
   height: 400px;
 }
 /* ---------GALLERY SCROLL-------- */
-.gallery::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 20px;
 }
 /* Track */
-.gallery::-webkit-scrollbar-track {
-  background-color: grey; 
+::-webkit-scrollbar-track {
+  background-color: rgb(247, 243, 245); 
 }
 /* Handle */
-.gallery::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: red;
 }
 
 /* Handle on hover */
-.gallery::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
   background: #b30000; 
 }
 /* ------GALLERY END------------- */
