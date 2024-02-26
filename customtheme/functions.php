@@ -338,18 +338,18 @@ function callback_riempi_servizi($post)
                         $cosa_vedere_image_url_1 = wp_get_attachment_image_url($cosa_vedere_image_1, 'thumbnail');
                         ?>
                         <div class="custom-image-container">
-                            <div class="image-preview">
+                            <div class="image-preview-1">
                                 <?php if ($cosa_vedere_image_url_1) : ?>
                                     <img src="<?php echo esc_url($cosa_vedere_image_url_1); ?>" alt="Custom Image">
                                 <?php endif; ?>
                             </div>
                             <input type="hidden" name="cosa_vedere_image_1" id="cosa_vedere_image_1" value="<?php echo esc_attr($cosa_vedere_image_1); ?>">
-                            <button type="button" class="button button-primary" id="upload_image_button">Carica Immagine</button>
+                            <button type="button" class="button button-primary" id="cosa_fare_image_button_1">Carica Immagine</button>
                         </div>
                         <script>
                             jQuery(document).ready(function($) {
                                 // Upload dell'immagine
-                                $('#upload_image_button').click(function(e) {
+                                $('#cosa_fare_image_button_1').click(function(e) {
                                     e.preventDefault();
                                     var custom_uploader = wp.media({
                                         title: 'Carica Immagine',
@@ -361,7 +361,7 @@ function callback_riempi_servizi($post)
                                     custom_uploader.on('select', function() {
                                         var attachment = custom_uploader.state().get('selection').first().toJSON();
                                         $('#cosa_vedere_image_1').val(attachment.id);
-                                        $('.image-preview img').attr('src', attachment.url);
+                                        $('.image-preview-1 img').attr('src', attachment.url);
                                     });
                                     custom_uploader.open();
                                 });
@@ -393,18 +393,18 @@ function callback_riempi_servizi($post)
                         $cosa_vedere_image_url_2 = wp_get_attachment_image_url($cosa_vedere_image_2, 'thumbnail');
                         ?>
                         <div class="custom-image-container">
-                            <div class="image-preview">
+                            <div class="image-preview-2">
                                 <?php if ($cosa_vedere_image_url_2) : ?>
                                     <img src="<?php echo esc_url($cosa_vedere_image_url_2); ?>" alt="Custom Image">
                                 <?php endif; ?>
                             </div>
                             <input type="hidden" name="cosa_vedere_image_2" id="cosa_vedere_image_2" value="<?php echo esc_attr($cosa_vedere_image_2); ?>">
-                            <button type="button" class="button button-primary" id="upload_image_button">Carica Immagine</button>
+                            <button type="button" class="button button-primary" id="cosa_fare_image_button_2">Carica Immagine</button>
                         </div>
                         <script>
                             jQuery(document).ready(function($) {
                                 // Upload dell'immagine
-                                $('#upload_image_button').click(function(e) {
+                                $('#cosa_fare_image_button_2').click(function(e) {
                                     e.preventDefault();
                                     var custom_uploader = wp.media({
                                         title: 'Carica Immagine',
@@ -416,7 +416,7 @@ function callback_riempi_servizi($post)
                                     custom_uploader.on('select', function() {
                                         var attachment = custom_uploader.state().get('selection').first().toJSON();
                                         $('#cosa_vedere_image_2').val(attachment.id);
-                                        $('.image-preview img').attr('src', attachment.url);
+                                        $('.image-preview-2 img').attr('src', attachment.url);
                                     });
                                     custom_uploader.open();
                                 });
