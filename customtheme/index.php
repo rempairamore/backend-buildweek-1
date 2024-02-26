@@ -99,7 +99,7 @@
 
         <section class="gallery text-center">
             galleryddd
-            <div class="d-lg-none d-xl-block">
+            <div class="d-lg-none">
                 small
                 <div class="mx-auto">
                     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
