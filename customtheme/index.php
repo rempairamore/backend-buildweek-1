@@ -79,7 +79,7 @@
                                 </h5>
                                 <p class="article-author-home">
                                     <?php the_author(); ?>
-                                    <?php the_date(); ?>
+                                    <?php the_date("d-m-o"); ?>
                                 </p>
                                 <span class="ms-2"><a class="article-link-home" href="<?php the_permalink(); ?>">
                                         ...leggi</a></span>
