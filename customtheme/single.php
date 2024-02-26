@@ -194,12 +194,12 @@ if ($post_type == "servizi") {
                 <div id="mangiare" class="container-fluid ciboContainer text-light mt-5">
                     <div class="row rowCibo d-flex" id="cibo">
                         <div class="col">
-                            <img src="https://static2-viaggi.corriereobjects.it/wp-content/uploads/2023/05/canarie-cosa-vedere-cosa-fare.jpg?v=1683531579" class="rounded-3 imgCibo" alt="...">
+                            <img src=" <?= esc_url($mangiareImmagine1_url) ?>" class="rounded-3 imgCibo" alt="...">
                         </div>
                         <div class="col colP">
                             <h5>Cosa mangiare</h5>
-                            <h3 class="pt-3">Qualcosa</h3>
-                            <p class="text-justify mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laborum magnam nobis cupiditate ea natus nisi iusto, illo quam earum laboriosam. Quis illo nemo nobis officia ut debitis officiis consectetur? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore dolores nobis eligendi dolorum, corrupti vel excepturi repellendus laudantium maxime laborum itaque quia quae velit facilis quas quasi deleniti quibusdam accusamus!</p>
+                            <h3 class="pt-3"><?php echo esc_html($mangiareTitolo1); ?></h3>
+                            <p class="text-justify mt-4"><?php echo esc_html($mangiareDescrizione1); ?></p>
                         </div>
                     </div>
                 </div>
@@ -208,12 +208,12 @@ if ($post_type == "servizi") {
                 <div id="mangiare" class="container-fluid ciboContainer text-light mt-5">
                     <div class="row rowCibo d-flex" id="cibo">
                         <div class="col">
-                            <img src="https://www.viggiviaggi.com/wp-content/uploads/2021/06/IMG_20200811_131449-scaled.jpg" class="rounded-3 imgCibo" alt="...">
+                            <img src="<?= esc_url($mangiareImmagine2_url) ?>" class="rounded-3 imgCibo" alt="...">
                         </div>
                         <div class="col colP">
                             <h5>Cosa mangiare</h5>
-                            <h3 class="pt-3">Qualcosina</h3>
-                            <p class="text-justify mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore dolores nobis eligendi dolorum, corrupti vel excepturi repellendus laudantium maxime laborum itaque quia quae velit facilis quas quasi deleniti quibusdam accusamus!</p>
+                            <h3 class="pt-3"><?php echo esc_html($mangiareTitolo2); ?></h3>
+                            <p class="text-justify mt-4"><?php echo esc_html($mangiareDescrizione2); ?></p>
                         </div>
                     </div>
                 </div>
@@ -222,12 +222,12 @@ if ($post_type == "servizi") {
                 <div id="mangiare" class="container-fluid ciboContainer text-light mt-5">
                     <div class="row rowCibo d-flex" id="cibo">
                         <div class="col">
-                            <img src="https://images.placesonline.com/photos/424012810201124_Jameos_1763008766.jpg?quality=80&w=700" class="rounded-3 imgCibo" alt="...">
+                            <img src="<?= esc_url($mangiareImmagine3_url) ?>" class="rounded-3 imgCibo" alt="...">
                         </div>
                         <div class="col colP">
                             <h5>Cosa mangiare</h5>
-                            <h3 class="pt-3">Nulla</h3>
-                            <p class="text-justify mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore dolores nobis eligendi dolorum, corrupti vel excepturi repellendus laudantium maxime laborum itaque quia quae velit facilis quas quasi deleniti quibusdam accusamus!</p>
+                            <h3 class="pt-3"><?php echo esc_html($mangiareTitolo3); ?></h3>
+                            <p class="text-justify mt-4"><?php echo esc_html($mangiareDescrizione3); ?></p>
                         </div>
                     </div>
                 </div>
