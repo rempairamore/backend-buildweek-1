@@ -101,7 +101,7 @@
         </section>
         <aside class="side text-center">
             <?php
-            get_sidebar();
+            // get_sidebar();
             ?>
 
         </aside>
