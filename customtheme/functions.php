@@ -290,6 +290,7 @@ function render_title_dashboard_widget(){
     <p>Aggiungi titolo e descrizione in Home Page</p>
     <label for="title">Titolo</label>
     <input type="text" name="title" id="title">
+    <br>
     <label for="description">Descrizione</label>
     <input type="text" name="description" id="description">
     <button>Modifica</button>
