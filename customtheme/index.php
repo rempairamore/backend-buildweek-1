@@ -98,7 +98,7 @@
         </aside>
 
         <section class="gallery text-center">
-            gallerydddpinguino
+            gallerydddpinguinooo
             <div class="d-lg-none">
                 small
                 <div class="mx-auto">
