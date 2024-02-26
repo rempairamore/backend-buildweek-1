@@ -459,6 +459,12 @@ function save_service_metabox_data($post_id, $post)
         $cosaVedereDescrizione4 = '';
     }
 
+    if (isset($_POST['service_image_1_id'])) {
+        $service_image_1_id = $_POST['service_image_1_id'];
+    } else {
+        $service_image_1_id = '';
+    }
+
 
     $newValues = array(
         'service_title' => $titolo,
@@ -470,6 +476,7 @@ function save_service_metabox_data($post_id, $post)
         'cosa_vedere_descrizione_2' => $cosaVedereDescrizione2,
         'cosa_vedere_descrizione_3' => $cosaVedereDescrizione3,
         'cosa_vedere_descrizione_4' => $cosaVedereDescrizione4,
+        'service_image_1_id' => $service_image_1_id,
 
 
 
