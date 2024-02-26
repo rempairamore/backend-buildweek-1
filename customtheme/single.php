@@ -45,7 +45,7 @@ if($post_type == "servizi"){?>
     <div style="position: relative;">
         <img class="imgArticle" src="https://www.ilturista.info/repo/images/no/isole-canarie.jpg" class="card-img" alt="...">
         <div>
-            <h1 class="articleTitle fw-bold text-light">Vacanze alle Canarie</h1>
+            <h1 class="articleTitle fw-bold text-light"><?php $post->service_title ?>/h1>
 
         </div>
     </div>
