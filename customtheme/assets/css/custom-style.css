@@ -47,7 +47,7 @@
 
 .gallery {
   grid-area: gallery;
-  background-color: aquamarine;
+  background-color: #f4f3ef;;
 }
 
 @media screen and (max-width: 768px) {
@@ -289,20 +289,20 @@ footer p{
   height: 400px;
 }
 /* ---------GALLERY SCROLL-------- */
-::-webkit-scrollbar {
+.gallery::-webkit-scrollbar {
   width: 20px;
 }
 /* Track */
-::-webkit-scrollbar-track {
+.gallery::-webkit-scrollbar-track {
   background-color: rgb(247, 243, 245); 
 }
 /* Handle */
-::-webkit-scrollbar-thumb {
+.gallery::-webkit-scrollbar-thumb {
   background: red;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+.gallery::-webkit-scrollbar-thumb:hover {
   background: #b30000; 
 }
 /* ------GALLERY END------------- */
