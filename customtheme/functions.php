@@ -530,6 +530,10 @@ function save_service_metabox_data($post_id, $post)
 
         update_post_meta($post_id, $key, $value);
     }
+
+
+    $custom_image_id = isset($_POST['custom_image_id']) ? sanitize_text_field($_POST['custom_image_id']) : '';
+    update_post_meta($post_id, 'custom_image_id', $custom_image_id);
 }
 
 
