@@ -283,6 +283,7 @@ footer p {
   margin: 1rem;
   padding: 1rem;
   max-width: 400px;
+  top: 25%;
   left: calc(50vw - 200px);
 }
 
