@@ -4,7 +4,7 @@
 
 
     <div class="hero overflow-hidden m-0 p-0">
-        <div id="carouselHome" class="carousel slide">
+        <div id="carouselHome" class="carousel slide" data-bs-ride="carousel">
 
 
             <?php
