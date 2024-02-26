@@ -98,6 +98,17 @@
         </aside>
         <section class="gallery text-center">
             galleryddd
+            <div class="row">
+                <div class="col">
+                    Column
+                </div>
+                <div class="col">
+                    Column
+                </div>
+                <div class="col">
+                    Column
+                </div>
+            </div>
         </section>
 
     </div>
