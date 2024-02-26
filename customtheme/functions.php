@@ -267,3 +267,31 @@ add_filter('the_content', 'convert_gallery_to_carousel');
 
 //----------------------------------------------------------------end wp-10---------------------------------------------------------------
 
+
+// ------------- wp 13 -------------
+
+// add title and description metabox
+// Registra il widget personalizzato per la dashboard
+function register_title_dashboard_widget()
+{
+    wp_add_dashboard_widget(
+        'titolo_dashboard_widget', // ID univoco per il widget
+        'Titolo e Descrizione', // Titolo del widget
+        'render_title_dashboard_widget', // Funzione per il contenuto del widget
+        $context = "side",
+        $priority = "high"
+    );
+}
+
+add_action('wp_dashboard_setup', 'register_title_dashboard_widget');
+
+function render_title_dashboard_widget(){
+    ?>
+    <p>Aggiungi titolo e descrizione in Home Page</p>
+    <label for="title">Titolo</label>
+    <input type="text" name="title" id="title">
+    <label for="description">Descrizione</label>
+    <input type="text" name="description" id="description">
+    <button>Modifica</button>
+
+<?php } ?>
