@@ -98,10 +98,8 @@
         </aside>
         <section class="gallery text-center">
             galleryddd
-            <section class="d-flex">
-
-            </section>
-            <!-- <div class="container">
+            
+            <div class="container">
                 <div class="row">
 
                     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
@@ -181,7 +179,7 @@
 
 
                 </div>
-            </div> -->
+            </div>
         </section>
 
     </div>
