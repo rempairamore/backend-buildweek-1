@@ -317,61 +317,61 @@ function callback_riempi_servizi($post)
         <br>
 
         <div>
-            <div class="cosa-vedere-container-box" style="border: 1px solid black;padding: 1rem;   display: flex;
-  flex-wrap: wrap;">
+            <div class="cosa-vedere-container-box" style="border: 1px solid black;padding: 1rem;">
                 <h5>Cosa vedere</h5>
-                <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
-                    <label for="cosa_vedere_titolo_1">Titolo 1</label>
-                    <br>
-                    <?php $cosaVedereTitolo1 = get_post_meta($post->ID, "cosa_vedere_titolo_1", true); ?>
-                    <input type="text" name="cosa_vedere_titolo_1" id="cosa_vedere_titolo_1" value="<?= $cosaVedereTitolo1 ?>">
-                    <br>
-                    <label for="cosa_vedere_descrizione_1">Descrizione 1</label>
-                    <br>
-                    <?php $cosaVedereDescrizione1 = get_post_meta($post->ID, "cosa_vedere_descrizione_1", true); ?>
-                    <input type="text" name="cosa_vedere_descrizione_1" id="cosa_vedere_descrizione_1" value="<?= $cosaVedereDescrizione1 ?>">
-                </div>
-                <!--  -->
-                <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
+                <div style=" display: flex, flex-wrap: wrap;">
+                    <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
+                        <label for="cosa_vedere_titolo_1">Titolo 1</label>
+                        <br>
+                        <?php $cosaVedereTitolo1 = get_post_meta($post->ID, "cosa_vedere_titolo_1", true); ?>
+                        <input type="text" name="cosa_vedere_titolo_1" id="cosa_vedere_titolo_1" value="<?= $cosaVedereTitolo1 ?>">
+                        <br>
+                        <label for="cosa_vedere_descrizione_1">Descrizione 1</label>
+                        <br>
+                        <?php $cosaVedereDescrizione1 = get_post_meta($post->ID, "cosa_vedere_descrizione_1", true); ?>
+                        <input type="text" name="cosa_vedere_descrizione_1" id="cosa_vedere_descrizione_1" value="<?= $cosaVedereDescrizione1 ?>">
+                    </div>
+                    <!--  -->
+                    <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
 
-                    <label for="cosa_vedere_titolo_2">Titolo 2</label>
-                    <br>
-                    <?php $cosaVedereTitolo2 = get_post_meta($post->ID, "cosa_vedere_titolo_2", true); ?>
-                    <input type="text" name="cosa_vedere_titolo_2" id="cosa_vedere_titolo_2" value="<?= $cosaVedereTitolo2 ?>">
-                    <br>
-                    <label for="cosa_vedere_descrizione_2">Descrizione 2</label>
-                    <br>
-                    <?php $cosaVedereDescrizione2 = get_post_meta($post->ID, "cosa_vedere_descrizione_2", true); ?>
-                    <input type="text" name="cosa_vedere_descrizione_2" id="cosa_vedere_descrizione_2" value="<?= $cosaVedereDescrizione2 ?>">
-                </div>
-                <!--  -->
-                <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
+                        <label for="cosa_vedere_titolo_2">Titolo 2</label>
+                        <br>
+                        <?php $cosaVedereTitolo2 = get_post_meta($post->ID, "cosa_vedere_titolo_2", true); ?>
+                        <input type="text" name="cosa_vedere_titolo_2" id="cosa_vedere_titolo_2" value="<?= $cosaVedereTitolo2 ?>">
+                        <br>
+                        <label for="cosa_vedere_descrizione_2">Descrizione 2</label>
+                        <br>
+                        <?php $cosaVedereDescrizione2 = get_post_meta($post->ID, "cosa_vedere_descrizione_2", true); ?>
+                        <input type="text" name="cosa_vedere_descrizione_2" id="cosa_vedere_descrizione_2" value="<?= $cosaVedereDescrizione2 ?>">
+                    </div>
+                    <!--  -->
+                    <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
 
-                    <label for=" cosa_vedere_titolo_3">Titolo 3</label>
-                    <br>
-                    <?php $cosaVedereTitolo3 = get_post_meta($post->ID, "cosa_vedere_titolo_3", true); ?>
-                    <input type="text" name="cosa_vedere_titolo_3" id="cosa_vedere_titolo_3" value="<?= $cosaVedereTitolo3 ?>">
-                    <br>
-                    <label for="cosa_vedere_descrizione_3">Descrizione 3</label>
-                    <br>
-                    <?php $cosaVedereDescrizione3 = get_post_meta($post->ID, "cosa_vedere_descrizione_3", true); ?>
-                    <input type="text" name="cosa_vedere_descrizione_3" id="cosa_vedere_descrizione_3" value="<?= $cosaVedereDescrizione3 ?>">
-                </div>
-                <!--  -->
-                <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
+                        <label for=" cosa_vedere_titolo_3">Titolo 3</label>
+                        <br>
+                        <?php $cosaVedereTitolo3 = get_post_meta($post->ID, "cosa_vedere_titolo_3", true); ?>
+                        <input type="text" name="cosa_vedere_titolo_3" id="cosa_vedere_titolo_3" value="<?= $cosaVedereTitolo3 ?>">
+                        <br>
+                        <label for="cosa_vedere_descrizione_3">Descrizione 3</label>
+                        <br>
+                        <?php $cosaVedereDescrizione3 = get_post_meta($post->ID, "cosa_vedere_descrizione_3", true); ?>
+                        <input type="text" name="cosa_vedere_descrizione_3" id="cosa_vedere_descrizione_3" value="<?= $cosaVedereDescrizione3 ?>">
+                    </div>
+                    <!--  -->
+                    <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
 
-                    <label for=" cosa_vedere_titolo_4">Titolo 4</label>
-                    <br>
-                    <?php $cosaVedereTitolo4 = get_post_meta($post->ID, "cosa_vedere_titolo_4", true); ?>
-                    <input type="text" name="cosa_vedere_titolo_4" id="cosa_vedere_titolo_4" value="<?= $cosaVedereTitolo4 ?>">
-                    <br>
-                    <label for="cosa_vedere_descrizione_4">Descrizione 4</label>
-                    <br>
-                    <?php $cosaVedereDescrizione4 = get_post_meta($post->ID, "cosa_vedere_descrizione_4", true); ?>
-                    <input type="text" name="cosa_vedere_descrizione_4" id="cosa_vedere_descrizione_4" value="<?= $cosaVedereDescrizione4 ?>">
+                        <label for=" cosa_vedere_titolo_4">Titolo 4</label>
+                        <br>
+                        <?php $cosaVedereTitolo4 = get_post_meta($post->ID, "cosa_vedere_titolo_4", true); ?>
+                        <input type="text" name="cosa_vedere_titolo_4" id="cosa_vedere_titolo_4" value="<?= $cosaVedereTitolo4 ?>">
+                        <br>
+                        <label for="cosa_vedere_descrizione_4">Descrizione 4</label>
+                        <br>
+                        <?php $cosaVedereDescrizione4 = get_post_meta($post->ID, "cosa_vedere_descrizione_4", true); ?>
+                        <input type="text" name="cosa_vedere_descrizione_4" id="cosa_vedere_descrizione_4" value="<?= $cosaVedereDescrizione4 ?>">
+                    </div>
+                    <!--  -->
                 </div>
-                <!--  -->
-
             </div>
 
         </div>
