@@ -86,7 +86,6 @@
                                         ...leggi</a></span>
                             </div>
                         </div>
-                       
                     </article>
 
 
