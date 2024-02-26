@@ -298,7 +298,7 @@ footer p{
 }
 /* Handle */
 .gallery::-webkit-scrollbar-thumb {
-  background: #f4f3ef;
+  background:  rgba(247, 243, 245, 0.404);
 }
 
 /* Handle on hover */
