@@ -310,7 +310,7 @@ function callback_riempi_servizi($post){
     <div>
         <label for="title">Titolo</label>
         <?php $titolo = get_post_meta($post->ID, "service_title", true); ?>
-        <input type="text" name="title" id="title" value="<?= $title ?>">
+        <input type="text" name="title" id="title" value="<?= $titolo ?>">
     </div>
 <?php  }
 
