@@ -280,7 +280,7 @@ footer p {
   position: absolute;
   z-index: 10;
   background-color: #f1f1f182;
-  margin-top: 2rem;
+  margin: 1rem;
   padding: 1rem;
   max-width: 400px;
   left: calc(50vw - 200px);
