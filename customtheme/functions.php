@@ -331,14 +331,23 @@ function callback_riempi_servizi($post)
                         <?php $cosaVedereDescrizione1 = get_post_meta($post->ID, "cosa_vedere_descrizione_1", true); ?>
                         <input type="text" name="cosa_vedere_descrizione_1" id="cosa_vedere_descrizione_1" value="<?= $cosaVedereDescrizione1 ?>">
                         <br>
-                        
+                        <div class="service-images">
+                            <label for="service_image_1">Immagine 1</label><br>
+                            <div class="image-preview">
+                                <?php
+                                $service_image_1_id = get_post_meta($post->ID, 'service_image_1_id', true);
+                                if (!empty($service_image_1_id)) {
+                                    echo wp_get_attachment_image($service_image_1_id, 'thumbnail');
+                                    echo '<input type="hidden" name="service_image_1_id" value="' . esc_attr($service_image_1_id) . '">';
+                                }
+                                ?>
+                            </div>
+                            <input type="button" value="Carica Immagine" class="button button-primary custom_media_button" data-field="service_image_1_id" style="margin-top: 5px;">
+                        </div>
                     </div>
                     <!--  -->
                     <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
-<p>diporcello</p>
-<p>diporcello</p>
-<p>diporcello</p>
-<p>diporcello</p>
+
 
                         <label for="cosa_vedere_titolo_2">Titolo 2</label>
                         <br>
