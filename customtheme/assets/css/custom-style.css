@@ -324,7 +324,7 @@ footer p{
 
 .titoloArticolo{
   color: white;
-  background-color: black;
+  background: linear-gradient(180deg, rgba(0,0,0,0.5215336134453781) 5%, rgba(0,0,0,1) 100%);
   padding: 0.5rem;
 }
 /* ---------ARTICLE PATCH END-------------- */
