@@ -17,7 +17,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
 
             <div class="title-head-btns">
                 <a href="<?php echo esc_url('/posts'); ?>"><button class="btn"> Blog</button></a>
-                <a href="<?php echo esc_url('/servizi/servizi'); ?>"><button class="btn"> Servizi</button></a>
+                <a href="<?php echo esc_url('/servizi/servizi/'); ?>"><button class="btn"> Servizi</button></a>
             </div>
 
             <?php
