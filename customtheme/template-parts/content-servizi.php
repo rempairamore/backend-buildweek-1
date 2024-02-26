@@ -1,7 +1,12 @@
 
-<?php get_header() ?>
+<?php get_header() ;
+$post_type = get_post_type();
+?>
 
-<?php the_title() ?>
+<?php if($post_type == "servizi") {
+     the_title() 
+}
+     ?>
 
 
 <?php get_footer() ?>
