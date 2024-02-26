@@ -322,7 +322,9 @@ footer p{
   color: #999;
 }
 
-.article-content{
-  padding: 10px;
+.titoloArticolo{
+  color: white;
+  background-color: black;
+  padding: 0.5rem;
 }
 /* ---------ARTICLE PATCH END-------------- */
