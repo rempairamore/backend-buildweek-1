@@ -100,7 +100,7 @@
             galleryddd
             <div class="row">
                 <div class="col">
-                    Column
+                    Columnnn
                 </div>
                 <div class="col">
                     Column
