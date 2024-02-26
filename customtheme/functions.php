@@ -331,7 +331,54 @@ function callback_riempi_servizi($post)
                         <?php $cosaVedereDescrizione1 = get_post_meta($post->ID, "cosa_vedere_descrizione_1", true); ?>
                         <input type="text" name="cosa_vedere_descrizione_1" id="cosa_vedere_descrizione_1" value="<?= $cosaVedereDescrizione1 ?>">
                         <br>
-                        
+
+
+
+                        $custom_image_id = get_post_meta($post->ID, 'custom_image_id', true);
+                        $custom_image_url = wp_get_attachment_image_url($custom_image_id, 'thumbnail');
+                        ?>
+                        <div class="custom-image-container">
+                            <div class="image-preview">
+                                <?php if ($custom_image_url) : ?>
+                                    <img src="<?php echo esc_url($custom_image_url); ?>" alt="Custom Image">
+                                <?php endif; ?>
+                            </div>
+                            <input type="hidden" name="custom_image_id" id="custom_image_id" value="<?php echo esc_attr($custom_image_id); ?>">
+                            <button type="button" class="button button-primary" id="upload_image_button">Carica Immagine</button>
+                            <button type="button" class="button" id="remove_image_button">Rimuovi Immagine</button>
+                        </div>
+                        <script>
+                            jQuery(document).ready(function($) {
+                                // Upload dell'immagine
+                                $('#upload_image_button').click(function(e) {
+                                    e.preventDefault();
+                                    var custom_uploader = wp.media({
+                                        title: 'Carica Immagine',
+                                        button: {
+                                            text: 'Seleziona Immagine'
+                                        },
+                                        multiple: false
+                                    });
+                                    custom_uploader.on('select', function() {
+                                        var attachment = custom_uploader.state().get('selection').first().toJSON();
+                                        $('#custom_image_id').val(attachment.id);
+                                        $('.image-preview img').attr('src', attachment.url);
+                                    });
+                                    custom_uploader.open();
+                                });
+
+                                // Rimozione dell'immagine
+                                $('#remove_image_button').click(function() {
+                                    $('#custom_image_id').val('');
+                                    $('.image-preview img').attr('src', '');
+                                });
+                            });
+                        </script>
+
+
+
+
+
                     </div>
                     <!--  -->
                     <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
