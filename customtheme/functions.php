@@ -30,7 +30,7 @@ function ale_theme_support()
 
 add_action('after_setup_theme', 'ale_theme_support');
 
-add_image_size( 'custom-size-thumbnail', 280, 180);
+add_image_size('custom-size-thumbnail', 280, 180);
 
 //end add features
 
@@ -39,7 +39,8 @@ add_image_size( 'custom-size-thumbnail', 280, 180);
 // Immagini per carosello
 // Aggiungi campi personalizzati nel pannello amministratore per selezionare le immagini dalla libreria multimediale
 add_action('add_meta_boxes', 'custom_image_meta_box');
-function custom_image_meta_box() {
+function custom_image_meta_box()
+{
     add_meta_box(
         'custom_image_meta_box',
         'Seleziona le immagini per il carosello',
@@ -51,12 +52,13 @@ function custom_image_meta_box() {
 }
 
 // Renderizza il contenuto della meta box
-function render_custom_image_meta_box($post) {
+function render_custom_image_meta_box($post)
+{
     // Recupera gli ID delle immagini salvati come metadati del post
     $image1_id = get_post_meta($post->ID, 'image1_id', true);
     $image2_id = get_post_meta($post->ID, 'image2_id', true);
     $image3_id = get_post_meta($post->ID, 'image3_id', true);
-    ?>
+?>
     <p>Seleziona le immagini per il carosello:</p>
     <input type="button" id="upload_image_button1" class="button" value="Carica/Seleziona Immagine 1">
     <input type="hidden" id="image1_id" name="image1_id" value="<?php echo esc_attr($image1_id); ?>">
@@ -69,47 +71,48 @@ function render_custom_image_meta_box($post) {
     <div id="image3_preview"><?php echo wp_get_attachment_image($image3_id, 'thumbnail'); ?></div>
 
     <script>
-    jQuery(document).ready(function($){
-        $('#upload_image_button1').click(function() {
-            var send_attachment_bkp = wp.media.editor.send.attachment;
-            wp.media.editor.send.attachment = function(props, attachment) {
-                $('#image1_id').val(attachment.id);
-                $('#image1_preview').html('<img src="' + attachment.url + '" />');
-                wp.media.editor.send.attachment = send_attachment_bkp;
-            }
-            wp.media.editor.open($(this));
-            return false;
-        });
+        jQuery(document).ready(function($) {
+            $('#upload_image_button1').click(function() {
+                var send_attachment_bkp = wp.media.editor.send.attachment;
+                wp.media.editor.send.attachment = function(props, attachment) {
+                    $('#image1_id').val(attachment.id);
+                    $('#image1_preview').html('<img src="' + attachment.url + '" />');
+                    wp.media.editor.send.attachment = send_attachment_bkp;
+                }
+                wp.media.editor.open($(this));
+                return false;
+            });
 
-        $('#upload_image_button2').click(function() {
-            var send_attachment_bkp = wp.media.editor.send.attachment;
-            wp.media.editor.send.attachment = function(props, attachment) {
-                $('#image2_id').val(attachment.id);
-                $('#image2_preview').html('<img src="' + attachment.url + '" />');
-                wp.media.editor.send.attachment = send_attachment_bkp;
-            }
-            wp.media.editor.open($(this));
-            return false;
-        });
+            $('#upload_image_button2').click(function() {
+                var send_attachment_bkp = wp.media.editor.send.attachment;
+                wp.media.editor.send.attachment = function(props, attachment) {
+                    $('#image2_id').val(attachment.id);
+                    $('#image2_preview').html('<img src="' + attachment.url + '" />');
+                    wp.media.editor.send.attachment = send_attachment_bkp;
+                }
+                wp.media.editor.open($(this));
+                return false;
+            });
 
-        $('#upload_image_button3').click(function() {
-            var send_attachment_bkp = wp.media.editor.send.attachment;
-            wp.media.editor.send.attachment = function(props, attachment) {
-                $('#image3_id').val(attachment.id);
-                $('#image3_preview').html('<img src="' + attachment.url + '" />');
-                wp.media.editor.send.attachment = send_attachment_bkp;
-            }
-            wp.media.editor.open($(this));
-            return false;
+            $('#upload_image_button3').click(function() {
+                var send_attachment_bkp = wp.media.editor.send.attachment;
+                wp.media.editor.send.attachment = function(props, attachment) {
+                    $('#image3_id').val(attachment.id);
+                    $('#image3_preview').html('<img src="' + attachment.url + '" />');
+                    wp.media.editor.send.attachment = send_attachment_bkp;
+                }
+                wp.media.editor.open($(this));
+                return false;
+            });
         });
-    });
     </script>
-    <?php
+<?php
 }
 
 // Salva gli ID delle immagini come metadati del post
 add_action('save_post', 'save_custom_image_meta_data');
-function save_custom_image_meta_data($post_id) {
+function save_custom_image_meta_data($post_id)
+{
     if (isset($_POST['image1_id'])) {
         update_post_meta($post_id, 'image1_id', esc_attr($_POST['image1_id']));
     }
@@ -235,10 +238,11 @@ add_filter('the_content', 'modify_content_animations');
 
 
 // Modify content to convert gallery into carousel
-function convert_gallery_to_carousel($content) {
+function convert_gallery_to_carousel($content)
+{
     // Find galleries in the content
     preg_match_all('/\[gallery.*ids=.(.*).\]/', $content, $matches);
-    
+
     // Check if there are any galleries found
     if (!empty($matches[1])) {
         foreach ($matches[1] as $ids) {
@@ -251,12 +255,12 @@ function convert_gallery_to_carousel($content) {
                 $carousel_items .= '<div class="carousel-item"><img src="' . esc_url($image_url) . '" class="d-block w-100" alt=""></div>';
             }
             // Replace gallery shortcode with carousel HTML
-            $carousel_html = '<div id="gallery-carousel" class="carousel slide" data-ride="carousel"><div class="carousel-inner">' . $carousel_items . 
-            '</div><a class="carousel-control-prev" href="#gallery-carousel" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#gallery-carousel" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>';
+            $carousel_html = '<div id="gallery-carousel" class="carousel slide" data-ride="carousel"><div class="carousel-inner">' . $carousel_items .
+                '</div><a class="carousel-control-prev" href="#gallery-carousel" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#gallery-carousel" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>';
             $content = str_replace('[gallery ids="' . $ids . '"]', $carousel_html, $content);
         }
     }
-    
+
     return $content;
 }
 add_filter('the_content', 'convert_gallery_to_carousel');
@@ -285,13 +289,16 @@ function register_title_dashboard_widget()
 
 add_action('wp_dashboard_setup', 'register_title_dashboard_widget');
 
-function render_title_dashboard_widget(){
-    ?>
+function render_title_dashboard_widget()
+{
+?>
     <p>Aggiungi titolo e descrizione in Home Page</p>
     <label for="title">Titolo</label>
+    <br>
     <input type="text" name="title" id="title">
     <br>
     <label for="description">Descrizione</label>
+    <br>
     <input type="text" name="description" id="description">
     <br>
     <button>Modifica</button>
