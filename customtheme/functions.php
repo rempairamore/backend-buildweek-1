@@ -290,6 +290,57 @@ add_action('init', 'custom_post_types');
 
 ?>
 
+<?php 
+function registra_metabox_servizi(){
+    add_meta_box(
+        "servizi_metabox",
+        "Modifica Servizi",
+        "callback_riempi_servizi",
+        "servizi",
+        "normal",
+        "high"
+    );
+}
+add_action("add_meta_boxes_servizi", "registra_metabox_servizi");
+
+
+function callback_riempi_servizi($post){
+    wp_nonce_field(basename(__FILE__), 'servizi_nonce');
+    ?>
+    <div>
+        <label for="title">Titolo</label>
+        <?php $titolo = get_post_meta($post->ID, "service_title", true); ?>
+        <input type="text" name="title" id="title" value="<?= $title ?>">
+    </div>
+<?php  }
+
+
+add_action("save_post", "save_service_metabox_data", 10, 2);
+
+function save_service_metabox_data($post_id, $post){
+    if(!isset($_POST['servizi_nonce']) || !wp_verify_nonce($_POST['servizi_nonce'], basename(__FILE__))){
+        return $post_id;
+    }
+    $post_slug = "servizi";
+
+    if($post_slug != $post->post_type){
+        return;
+    }
+
+    $titolo = '';
+    if(isset($_POST['title'])){
+        $titolo = htmlspecialchars($_POST['title']);
+    } else {
+        $titolo = '';
+    }
+    update_post_meta($post_id, 'service_title', $titolo);
+}
+
+
+
+?>
+
+ 
 
 
 
