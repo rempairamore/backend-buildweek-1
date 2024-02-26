@@ -98,8 +98,11 @@
         </aside>
         <section class="gallery text-center">
             galleryddd
+            <div class="d-block d-sm-none">
+                small
+            </div>
             
-            <div class="container">
+            <div class="container d-none d-sm-block">
                 <div class="row">
 
                     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
