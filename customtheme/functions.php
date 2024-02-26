@@ -319,29 +319,56 @@ function callback_riempi_servizi($post)
         <div>
             <p>Cosa vedere</p>
             <div class="d-flex">
-                <label for="cosa_vedere_titolo_1">Titolo 1</label>
-                <br>
-                <?php $cosaVedereTitolo1 = get_post_meta($post->ID, "cosa_vedere_titolo_1", true); ?>
-                <input type="text" name="cosa_vedere_titolo_1" id="cosa_vedere_titolo_1" value="<?= $cosaVedereTitolo1 ?>">
-                <br>
+                <div>
+                    <label for="cosa_vedere_titolo_1">Titolo 1</label>
+                    <br>
+                    <?php $cosaVedereTitolo1 = get_post_meta($post->ID, "cosa_vedere_titolo_1", true); ?>
+                    <input type="text" name="cosa_vedere_titolo_1" id="cosa_vedere_titolo_1" value="<?= $cosaVedereTitolo1 ?>">
+                    <br><br>
+                    <label for="cosa_vedere_descrizione_1">Descrizione 1</label>
+                    <br>
+                    <?php $cosaVedereDescrizione1 = get_post_meta($post->ID, "cosa_vedere_descrizione_1", true); ?>
+                    <input type="text" name="cosa_vedere_descrizione_1" id="cosa_vedere_descrizione_1" value="<?= $cosaVedereDescrizione1 ?>">
+                </div>
                 <!--  -->
-                <label for="cosa_vedere_titolo_2">Titolo 2</label>
-                <br>
-                <?php $cosaVedereTitolo2 = get_post_meta($post->ID, "cosa_vedere_titolo_2", true); ?>
-                <input type="text" name="cosa_vedere_titolo_2" id="cosa_vedere_titolo_2" value="<?= $cosaVedereTitolo2 ?>">
-                <br>
+                <div>
+
+                    <label for="cosa_vedere_titolo_2">Titolo 2</label>
+                    <br>
+                    <?php $cosaVedereTitolo2 = get_post_meta($post->ID, "cosa_vedere_titolo_2", true); ?>
+                    <input type="text" name="cosa_vedere_titolo_2" id="cosa_vedere_titolo_2" value="<?= $cosaVedereTitolo2 ?>">
+                    <br>
+                    <label for="cosa_vedere_descrizione_2">Descrizione 2</label>
+
+                    <?php $cosaVedereDescrizione2 = get_post_meta($post->ID, "cosa_vedere_descrizione_2", true); ?>
+                    <input type="text" name="cosa_vedere_descrizione_2" id="cosa_vedere_descrizione_2" value="<?= $cosaVedereDescrizione2 ?>">
+                </div>
                 <!--  -->
-                <label for="cosa_vedere_titolo_3">Titolo 3</label>
-                <br>
-                <?php $cosaVedereTitolo3 = get_post_meta($post->ID, "cosa_vedere_titolo_3", true); ?>
-                <input type="text" name="cosa_vedere_titolo_3" id="cosa_vedere_titolo_3" value="<?= $cosaVedereTitolo3 ?>">
-                <br>
+                <div>
+
+                    <label for="cosa_vedere_titolo_3">Titolo 3</label>
+                    <br>
+                    <?php $cosaVedereTitolo3 = get_post_meta($post->ID, "cosa_vedere_titolo_3", true); ?>
+                    <input type="text" name="cosa_vedere_titolo_3" id="cosa_vedere_titolo_3" value="<?= $cosaVedereTitolo3 ?>">
+                    <br>
+                    <label for="cosa_vedere_descrizione_3">Descrizione 3</label>
+
+                    <?php $cosaVedereDescrizione3 = get_post_meta($post->ID, "cosa_vedere_descrizione_3", true); ?>
+                    <input type="text" name="cosa_vedere_descrizione_3" id="cosa_vedere_descrizione_3" value="<?= $cosaVedereDescrizione3 ?>">
+                </div>
                 <!--  -->
-                <label for="cosa_vedere_titolo_4">Titolo 4</label>
-                <br>
-                <?php $cosaVedereTitolo4 = get_post_meta($post->ID, "cosa_vedere_titolo_4", true); ?>
-                <input type="text" name="cosa_vedere_titolo_4" id="cosa_vedere_titolo_4" value="<?= $cosaVedereTitolo4 ?>">
-                <br>
+                <div>
+
+                    <label for="cosa_vedere_titolo_4">Titolo 4</label>
+                    <br>
+                    <?php $cosaVedereTitolo4 = get_post_meta($post->ID, "cosa_vedere_titolo_4", true); ?>
+                    <input type="text" name="cosa_vedere_titolo_4" id="cosa_vedere_titolo_4" value="<?= $cosaVedereTitolo4 ?>">
+                    <br>
+                    <label for="cosa_vedere_descrizione_4">Descrizione 4</label>
+
+                    <?php $cosaVedereDescrizione4 = get_post_meta($post->ID, "cosa_vedere_descrizione_4", true); ?>
+                    <input type="text" name="cosa_vedere_descrizione_4" id="cosa_vedere_descrizione_4" value="<?= $cosaVedereDescrizione4 ?>">
+                </div>
                 <!--  -->
 
             </div>
@@ -403,6 +430,35 @@ function save_service_metabox_data($post_id, $post)
         $cosaVedereTitolo4 = '';
     }
 
+    $cosaVedereDescrizione1 = '';
+    if (isset($_POST['cosa_vedere_descrizione_1'])) {
+        $cosaVedereDescrizione1 = htmlspecialchars($_POST['cosa_vedere_descrizione_1']);
+    } else {
+        $cosaVedereDescrizione1 = '';
+    }
+
+    $cosaVedereDescrizione2 = '';
+    if (isset($_POST['cosa_vedere_descrizione_2'])) {
+        $cosaVedereDescrizione2 = htmlspecialchars($_POST['cosa_vedere_descrizione_2']);
+    } else {
+        $cosaVedereDescrizione2 = '';
+    }
+
+    $cosaVedereDescrizione3 = '';
+    if (isset($_POST['cosa_vedere_descrizione_3'])) {
+        $cosaVedereDescrizione3 = htmlspecialchars($_POST['cosa_vedere_descrizione_3']);
+    } else {
+        $cosaVedereDescrizione3 = '';
+    }
+
+
+    $cosaVedereDescrizione4 = '';
+    if (isset($_POST['cosa_vedere_descrizione_4'])) {
+        $cosaVedereDescrizione4 = htmlspecialchars($_POST['cosa_vedere_descrizione_4']);
+    } else {
+        $cosaVedereDescrizione4 = '';
+    }
+
 
     $newValues = array(
         'service_title' => $titolo,
@@ -410,6 +466,12 @@ function save_service_metabox_data($post_id, $post)
         'cosa_vedere_titolo_2' => $cosaVedereTitolo2,
         'cosa_vedere_titolo_3' => $cosaVedereTitolo3,
         'cosa_vedere_titolo_4' => $cosaVedereTitolo4,
+        'cosa_vedere_descrizione_1' => $cosaVedereDescrizione1,
+        'cosa_vedere_descrizione_2' => $cosaVedereDescrizione2,
+        'cosa_vedere_descrizione_3' => $cosaVedereDescrizione3,
+        'cosa_vedere_descrizione_4' => $cosaVedereDescrizione4,
+
+
 
 
     );

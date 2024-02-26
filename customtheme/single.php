@@ -46,6 +46,12 @@ if ($post_type == "servizi") {
     $cosaVedereTitolo2 = get_post_meta(get_the_ID(), 'cosa_vedere_titolo_2', true);
     $cosaVedereTitolo3 = get_post_meta(get_the_ID(), 'cosa_vedere_titolo_3', true);
     $cosaVedereTitolo4 = get_post_meta(get_the_ID(), 'cosa_vedere_titolo_4', true);
+    $cosaVedereDescrizione1 = get_post_meta(get_the_ID(), 'cosa_vedere_descrizione_1', true);
+    $cosaVedereDescrizione2 = get_post_meta(get_the_ID(), 'cosa_vedere_descrizione_2', true);
+    $cosaVedereDescrizione3 = get_post_meta(get_the_ID(), 'cosa_vedere_descrizione_3', true);
+    $cosaVedereDescrizione4 = get_post_meta(get_the_ID(), 'cosa_vedere_descrizione_4', true);
+
+
 
 
     ?>
@@ -96,7 +102,7 @@ if ($post_type == "servizi") {
                     <img src="https://static2-viaggi.corriereobjects.it/wp-content/uploads/2023/05/canarie-cosa-vedere-cosa-fare.jpg?v=1683531579" class="card-img-top h-100" alt="...">
                     <div class="card-body">
                         <h5><?php echo esc_html($cosaVedereTitolo1); ?></h5>
-                        <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text text-muted"><?php echo esc_html($cosaVedereDescrizione1); ?></p>
                     </div>
                 </div>
             </div>
@@ -105,7 +111,7 @@ if ($post_type == "servizi") {
                     <img src="https://images.placesonline.com/photos/424012810201124_Jameos_1763008766.jpg?quality=80&w=700" class="card-img-top h-100" alt="...">
                     <div class="card-body">
                         <h5><?php echo esc_html($cosaVedereTitolo2); ?></h5>
-                        <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text text-muted"><?php echo esc_html($cosaVedereDescrizione2); ?></p>
                     </div>
                 </div>
             </div>
@@ -114,7 +120,7 @@ if ($post_type == "servizi") {
                     <img src="https://allecanarie.it/wp-content/uploads/2023/01/cosa-vedere-a-gran-canaria-in-7-giorni.jpg" class="card-img-top h-100" alt="...">
                     <div class="card-body">
                         <h5><?php echo esc_html($cosaVedereTitolo3); ?></h5>
-                        <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text text-muted"><?php echo esc_html($cosaVedereDescrizione3); ?></p>
                     </div>
                 </div>
             </div>
@@ -123,7 +129,7 @@ if ($post_type == "servizi") {
                     <img src="https://allecanarie.it/wp-content/uploads/2023/01/cosa-vedere-a-gran-canaria-in-7-giorni.jpg" class="card-img-top h-100" alt="...">
                     <div class="card-body">
                         <h5><?php echo esc_html($cosaVedereTitolo4); ?></h5>
-                        <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text text-muted"><?php echo esc_html($cosaVedereDescrizione4); ?></p>
                     </div>
                 </div>
             </div>
