@@ -279,3 +279,100 @@ footer p{
 }
 /* --------FOOTER END------------ */
 
+/* Francesco Pagina */
+
+.articleTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 5rem;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.imgArticle {
+  object-fit: cover;
+  height: 20rem;
+  width: 100%;
+}
+
+.navbarArticle {
+  border-bottom: 1px solid rgb(156, 225, 225);
+  text-transform: uppercase;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pageLink:hover {
+  color: rgb(16, 189, 189);
+}
+
+.ciboContainer {
+background-color: #002D72;
+height: 50rem;
+}
+
+#cibo {
+padding: 160px 100px;
+}
+
+.imgCibo {
+width: 35rem;
+height: 30rem;
+object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+.articleTitle {
+    font-size: 3rem; 
+}
+
+#carouselExampleControls .imgCibo {
+  width: 100%; 
+height: auto; 
+object-fit: cover; 
+}
+
+.rowCibo {
+margin-top: 2rem;
+display: flex;
+flex-direction: column;
+display: flex;
+justify-content: center;
+}
+
+.colP {
+margin-top: 2rem;
+}
+
+.ciboContainer {
+height: auto;
+}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+#carouselExampleControls .imgCibo {
+  width: 100%; 
+height: auto; 
+object-fit: cover; 
+}
+
+.rowCibo {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+ }
+
+ .colP {
+ margin-top: 2rem;
+ }
+
+ .ciboContainer {
+  height: auto;
+ }
+}
+
+/* Francesco pagina */
