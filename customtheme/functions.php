@@ -299,7 +299,7 @@ function render_title_dashboard_widget()
     <br>
     <label for="description">Descrizione</label>
     <br>
-    <input type="text" name="description" id="description">
+    <textarea type="text" name="description" id="description"></textarea>
     <br>
     <button>Modifica</button>
 
