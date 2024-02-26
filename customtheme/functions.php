@@ -331,25 +331,7 @@ function callback_riempi_servizi($post)
                         <?php $cosaVedereDescrizione1 = get_post_meta($post->ID, "cosa_vedere_descrizione_1", true); ?>
                         <input type="text" name="cosa_vedere_descrizione_1" id="cosa_vedere_descrizione_1" value="<?= $cosaVedereDescrizione1 ?>">
                         <br>
-                        <div class="service-images">
-                            <label for="service_image_1">Immagine 1</label><br>
-                            <div class="image-preview">
-                                <?php
-                                $service_image_1_id = get_post_meta($post->ID, 'service_image_1_id', true);
-                                if (!empty($service_image_1_id)) {
-                                    echo wp_get_attachment_image($service_image_1_id, 'thumbnail');
-                                    echo '<input type="hidden" name="service_image_1_id" value="' . esc_attr($service_image_1_id) . '">';
-                                }
-                                ?>
-                            </div>
-                            <input type="button" value="Carica Immagine" class="button button-primary custom_media_button" data-field="service_image_1_id" style="margin-top: 5px;">
-                        </div>
-
-
-
-                        <!-- Repeat the above two blocks for service_image_3 and service_image_4 -->
-
-
+                        
                     </div>
                     <!--  -->
                     <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
@@ -363,20 +345,6 @@ function callback_riempi_servizi($post)
                         <br>
                         <?php $cosaVedereDescrizione2 = get_post_meta($post->ID, "cosa_vedere_descrizione_2", true); ?>
                         <input type="text" name="cosa_vedere_descrizione_2" id="cosa_vedere_descrizione_2" value="<?= $cosaVedereDescrizione2 ?>">
-                        <br>
-                        <div class="service-images">
-                            <label for="service_image_2">Immagine 2</label><br>
-                            <div class="image-preview">
-                                <?php
-                                $service_image_2_id = get_post_meta($post->ID, 'service_image_2_id', true);
-                                if (!empty($service_image_2_id)) {
-                                    echo wp_get_attachment_image($service_image_2_id, 'thumbnail');
-                                    echo '<input type="hidden" name="service_image_2_id" value="' . esc_attr($service_image_2_id) . '">';
-                                }
-                                ?>
-                            </div>
-                            <input type="button" value="Carica Immagine" class="button button-primary custom_media_button" data-field="service_image_2_id" style="margin-top: 5px;">
-                        </div>
                     </div>
                     <!--  -->
                     <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
@@ -390,20 +358,6 @@ function callback_riempi_servizi($post)
                         <br>
                         <?php $cosaVedereDescrizione3 = get_post_meta($post->ID, "cosa_vedere_descrizione_3", true); ?>
                         <input type="text" name="cosa_vedere_descrizione_3" id="cosa_vedere_descrizione_3" value="<?= $cosaVedereDescrizione3 ?>">
-                        <br>
-                        <div class="service-images">
-                            <label for="service_image_3">Immagine 3</label><br>
-                            <div class="image-preview">
-                                <?php
-                                $service_image_3_id = get_post_meta($post->ID, 'service_image_3_id', true);
-                                if (!empty($service_image_3_id)) {
-                                    echo wp_get_attachment_image($service_image_3_id, 'thumbnail');
-                                    echo '<input type="hidden" name="service_image_3_id" value="' . esc_attr($service_image_3_id) . '">';
-                                }
-                                ?>
-                            </div>
-                            <input type="button" value="Carica Immagine" class="button button-primary custom_media_button" data-field="service_image_3_id" style="margin-top: 5px;">
-                        </div>
                     </div>
                     <!--  -->
                     <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
@@ -417,21 +371,6 @@ function callback_riempi_servizi($post)
                         <br>
                         <?php $cosaVedereDescrizione4 = get_post_meta($post->ID, "cosa_vedere_descrizione_4", true); ?>
                         <input type="text" name="cosa_vedere_descrizione_4" id="cosa_vedere_descrizione_4" value="<?= $cosaVedereDescrizione4 ?>">
-                        <br>
-                        <div class="service-images">
-                            <label for="service_image_4">Immagine quattro
-                            </label><br>
-                            <div class="image-preview">
-                                <?php
-                                $service_image_4_id = get_post_meta($post->ID, 'service_image_4_id', true);
-                                if (!empty($service_image_4_id)) {
-                                    echo wp_get_attachment_image($service_image_4_id, 'thumbnail');
-                                    echo '<input type="hidden" name="service_image_4_id" value="' . esc_attr($service_image_4_id) . '">';
-                                }
-                                ?>
-                            </div>
-                            <input type="button" value="Carica Immagine" class="button button-primary custom_media_button" data-field="service_image_4_id" style="margin-top: 5px;">
-                        </div>
                     </div>
                     <!--  -->
                 </div>
@@ -442,35 +381,6 @@ function callback_riempi_servizi($post)
 
 
     </div>
-
-
-    <script>
-        jQuery(document).ready(function($) {
-            var custom_media_frame;
-            $('.custom_media_button').click(function(e) {
-                e.preventDefault();
-                var field = $(this).data('field');
-                if (custom_media_frame) {
-                    custom_media_frame.open();
-                    return;
-                }
-                custom_media_frame = wp.media.frames.custom_media_frame = wp.media({
-                    title: 'Seleziona Immagine',
-                    button: {
-                        text: 'Seleziona'
-                    },
-                    multiple: false // Allow only one image selection at a time
-                });
-                custom_media_frame.on('select', function() {
-                    var attachment = custom_media_frame.state().get('selection').first().toJSON();
-                    $('#' + field).val(attachment.id);
-                    $('.' + field + '_preview').html('<img src="' + attachment.url + '" alt="" style="max-width: 100px; max-height: 100px;">');
-                });
-                custom_media_frame.open();
-            });
-        });
-    </script>
-
 <?php  }
 
 
