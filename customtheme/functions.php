@@ -335,7 +335,7 @@ function callback_riempi_servizi($post)
                     </div>
                     <!--  -->
                     <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
-
+<p>diporcello</p>
                         <label for="cosa_vedere_titolo_2">Titolo 2</label>
                         <br>
                         <?php $cosaVedereTitolo2 = get_post_meta($post->ID, "cosa_vedere_titolo_2", true); ?>
