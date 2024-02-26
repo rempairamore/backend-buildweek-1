@@ -634,18 +634,18 @@ function callback_riempi_servizi($post)
                     $localita_image_url_2 = wp_get_attachment_image_url($localita_image_2, 'thumbnail');
                     ?>
                     <div class="custom-image-container">
-                        <div class="image-preview-2">
+                        <div class="localita-image-preview-2">
                             <?php if ($localita_image_url_2) : ?>
                                 <img src="<?php echo esc_url($localita_image_url_2); ?>" alt="Custom Image" style="max-width: 200px; max-height: 100px;">
                             <?php endif; ?>
                         </div>
                         <input type="hidden" name="localita_image_2" id="localita_image_2" value="<?php echo esc_attr($localita_image_2); ?>">
-                        <button type="button" class="button button-primary" id="cosa_fare_image_button_2">Carica Immagine</button>
+                        <button type="button" class="button button-primary" id="localita_image_button_2">Carica Immagine</button>
                     </div>
                     <script>
                         jQuery(document).ready(function($) {
                             // Upload dell'immagine
-                            $('#cosa_fare_image_button_2').click(function(e) {
+                            $('#localita_image_button_2').click(function(e) {
                                 e.preventDefault();
                                 var custom_uploader = wp.media({
                                     title: 'Carica Immagine',
@@ -657,7 +657,7 @@ function callback_riempi_servizi($post)
                                 custom_uploader.on('select', function() {
                                     var attachment = custom_uploader.state().get('selection').first().toJSON();
                                     $('#localita_image_2').val(attachment.id);
-                                    $('.image-preview-2 img').attr('src', attachment.url);
+                                    $('.localita-image-preview-2 img').attr('src', attachment.url);
                                 });
                                 custom_uploader.open();
                             });
@@ -688,18 +688,18 @@ function callback_riempi_servizi($post)
                     $localita_image_url_3 = wp_get_attachment_image_url($localita_image_3, 'thumbnail');
                     ?>
                     <div class="custom-image-container">
-                        <div class="image-preview-3">
+                        <div class="localita-image-preview-2">
                             <?php if ($localita_image_url_3) : ?>
                                 <img src="<?php echo esc_url($localita_image_url_3); ?>" alt="Custom Image" style="max-width: 200px; max-height: 100px;">
                             <?php endif; ?>
                         </div>
                         <input type="hidden" name="localita_image_3" id="localita_image_3" value="<?php echo esc_attr($localita_image_3); ?>">
-                        <button type="button" class="button button-primary" id="cosa_fare_image_button_3">Carica Immagine</button>
+                        <button type="button" class="button button-primary" id="localita_image_button_3">Carica Immagine</button>
                     </div>
                     <script>
                         jQuery(document).ready(function($) {
                             // Upload dell'immagine
-                            $('#cosa_fare_image_button_3').click(function(e) {
+                            $('#localita_image_button_3').click(function(e) {
                                 e.preventDefault();
                                 var custom_uploader = wp.media({
                                     title: 'Carica Immagine',
@@ -711,7 +711,7 @@ function callback_riempi_servizi($post)
                                 custom_uploader.on('select', function() {
                                     var attachment = custom_uploader.state().get('selection').first().toJSON();
                                     $('#localita_image_3').val(attachment.id);
-                                    $('.image-preview-3 img').attr('src', attachment.url);
+                                    $('.localita-image-preview-3 img').attr('src', attachment.url);
                                 });
                                 custom_uploader.open();
                             });
@@ -745,18 +745,18 @@ function callback_riempi_servizi($post)
                     $localita_image_url_4 = wp_get_attachment_image_url($localita_image_4, 'thumbnail');
                     ?>
                     <div class="custom-image-container">
-                        <div class="image-preview-4">
+                        <div class="localita-image-preview-4">
                             <?php if ($localita_image_url_4) : ?>
                                 <img src="<?php echo esc_url($localita_image_url_4); ?>" alt="Custom Image" style="max-width: 200px; max-height: 100px;">
                             <?php endif; ?>
                         </div>
                         <input type="hidden" name="localita_image_4" id="localita_image_4" value="<?php echo esc_attr($localita_image_4); ?>">
-                        <button type="button" class="button button-primary" id="cosa_fare_image_button_4">Carica Immagine</button>
+                        <button type="button" class="button button-primary" id="localita_image_button_4">Carica Immagine</button>
                     </div>
                     <script>
                         jQuery(document).ready(function($) {
                             // Upload dell'immagine
-                            $('#cosa_fare_image_button_4').click(function(e) {
+                            $('#localita_image_button_4').click(function(e) {
                                 e.preventDefault();
                                 var custom_uploader = wp.media({
                                     title: 'Carica Immagine',
@@ -768,7 +768,7 @@ function callback_riempi_servizi($post)
                                 custom_uploader.on('select', function() {
                                     var attachment = custom_uploader.state().get('selection').first().toJSON();
                                     $('#localita_image_4').val(attachment.id);
-                                    $('.image-preview-4 img').attr('src', attachment.url);
+                                    $('.localita-image-preview-4 img').attr('src', attachment.url);
                                 });
                                 custom_uploader.open();
                             });
