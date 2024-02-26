@@ -290,7 +290,7 @@ footer p{
 }
 /* ---------GALLERY SCROLL-------- */
 .gallery::-webkit-scrollbar {
-  width: 20px;
+  width: 5px;
 }
 /* Track */
 .gallery::-webkit-scrollbar-track {
@@ -298,7 +298,7 @@ footer p{
 }
 /* Handle */
 .gallery::-webkit-scrollbar-thumb {
-  background: red;
+  background: #f4f3ef;
 }
 
 /* Handle on hover */
