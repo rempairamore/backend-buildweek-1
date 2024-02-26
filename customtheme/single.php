@@ -42,14 +42,28 @@ if ($post_type != 'servizi') {
 if ($post_type == "servizi") {
 
     $service_title = get_post_meta(get_the_ID(), 'service_title', true);
+    
     $cosaVedereTitolo1 = get_post_meta(get_the_ID(), 'cosa_vedere_titolo_1', true);
     $cosaVedereTitolo2 = get_post_meta(get_the_ID(), 'cosa_vedere_titolo_2', true);
     $cosaVedereTitolo3 = get_post_meta(get_the_ID(), 'cosa_vedere_titolo_3', true);
     $cosaVedereTitolo4 = get_post_meta(get_the_ID(), 'cosa_vedere_titolo_4', true);
+    
     $cosaVedereDescrizione1 = get_post_meta(get_the_ID(), 'cosa_vedere_descrizione_1', true);
     $cosaVedereDescrizione2 = get_post_meta(get_the_ID(), 'cosa_vedere_descrizione_2', true);
     $cosaVedereDescrizione3 = get_post_meta(get_the_ID(), 'cosa_vedere_descrizione_3', true);
     $cosaVedereDescrizione4 = get_post_meta(get_the_ID(), 'cosa_vedere_descrizione_4', true);
+    
+    $cosaVedereImmagine1_id = get_post_meta(get_the_ID(), 'cosa_vedere_image_1', true);
+    $cosaVedereImmagine2_id = get_post_meta(get_the_ID(), 'cosa_vedere_image_2', true);
+    $cosaVedereImmagine3_id = get_post_meta(get_the_ID(), 'cosa_vedere_image_3', true);
+    $cosaVedereImmagine4_id = get_post_meta(get_the_ID(), 'cosa_vedere_image_4', true);
+
+    $cosaVedereImmagine1_url = wp_get_attachment_image_url($cosaVedereImmagine1_id, 'full');
+    $cosaVedereImmagine2_url = wp_get_attachment_image_url($cosaVedereImmagine2_id, 'full');
+    $cosaVedereImmagine3_url = wp_get_attachment_image_url($cosaVedereImmagine3_id, 'full');
+    $cosaVedereImmagine4_url = wp_get_attachment_image_url($cosaVedereImmagine4_id, 'full');
+
+
 
 
 
@@ -99,8 +113,11 @@ if ($post_type == "servizi") {
         <div class="row rowVedere row-sm-cols-1 row-md-cols-2 row-lg-cols-2 g-5 justify-content-center">
             <div class="col">
                 <div class="card shadow-sm h-100" style="width: 18rem;">
-                    <img src="https://static2-viaggi.corriereobjects.it/wp-content/uploads/2023/05/canarie-cosa-vedere-cosa-fare.jpg?v=1683531579" class="card-img-top h-100" alt="...">
-                    <div class="card-body">
+                   
+                
+                <img src=" <?= esc_url($image_url) ?> " class="card-img-top h-100" alt="..."> 
+                
+                <div class="card-body">
                         <h5><?php echo esc_html($cosaVedereTitolo1); ?></h5>
                         <p class="card-text text-muted"><?php echo esc_html($cosaVedereDescrizione1); ?></p>
                     </div>
