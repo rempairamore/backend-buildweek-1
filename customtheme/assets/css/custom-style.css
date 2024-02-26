@@ -289,3 +289,26 @@ footer p{
   height: 400px;
 }
 /* ------GALLERY END------------- */
+/* ---------ARTICLE PATCH START-------------- */
+article a{
+  text-decoration: none;
+}
+article a:link {
+  color: #999;
+}
+ 
+ /* visited link */
+ article a:visited {
+   color: #999999ac;
+ }
+ 
+ /* mouse hover link */
+ article a:hover {
+   color: #b2b2b2;
+ }
+ 
+ /* selected link */
+ article a:active {
+   color: #b2b2b2;
+ }
+/* ---------ARTICLE PATCH END-------------- */
