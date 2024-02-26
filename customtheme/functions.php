@@ -309,7 +309,7 @@ function callback_riempi_servizi($post)
 {
     wp_nonce_field(basename(__FILE__), 'servizi_nonce');
 ?>
- <div>
+    <div>
         <label for="title">Titolo</label>
         <br>
         <?php $titolo = get_post_meta($post->ID, "service_title", true); ?>
@@ -320,64 +320,67 @@ function callback_riempi_servizi($post)
             <div class="cosa-vedere-container-box" style="border: 1px solid black;padding: 1rem;">
                 <h5>Cosa vedere</h5>
                 <div style="display: flex; flex-wrap: wrap;">
-                    <?php for ($i = 1; $i <= 4; $i++) : ?>
-                        <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
-                            <label for="cosa_vedere_titolo_<?php echo $i; ?>">Titolo <?php echo $i; ?></label>
-                            <br>
-                            <?php $cosaVedereTitolo = get_post_meta($post->ID, "cosa_vedere_titolo_$i", true); ?>
-                            <input type="text" name="cosa_vedere_titolo_<?php echo $i; ?>" id="cosa_vedere_titolo_<?php echo $i; ?>" value="<?= $cosaVedereTitolo ?>">
-                            <br>
-                            <label for="cosa_vedere_descrizione_<?php echo $i; ?>">Descrizione <?php echo $i; ?></label>
-                            <br>
-                            <?php $cosaVedereDescrizione = get_post_meta($post->ID, "cosa_vedere_descrizione_$i", true); ?>
-                            <input type="text" name="cosa_vedere_descrizione_<?php echo $i; ?>" id="cosa_vedere_descrizione_<?php echo $i; ?>" value="<?= $cosaVedereDescrizione ?>">
-                            <br>
-                            <div class="service-images">
-                                <label for="service_image_<?php echo $i; ?>">Immagine <?php echo $i; ?></label><br>
-                                <div class="image-preview">
-                                    <?php
-                                    $service_image_id = get_post_meta($post->ID, "service_image" . $i . "id", true);
-                                    if (!empty($service_image_id)) {
-                                        echo wp_get_attachment_image($service_image_id, 'thumbnail');
-                                        echo '<input type="hidden" name="service_image_' . $i . '_id" value="' . esc_attr($service_image_id) . '">';
-                                    }
-                                    ?>
-                                </div>
-                                <input type="button" value="Carica Immagine" class="button button-primary custom_media_button" data-field="service_image_<?php echo $i; ?>_id" style="margin-top: 5px;">
-                            </div>
-                        </div>
-                    <?php endfor; ?>
+                    <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
+                        <label for="cosa_vedere_titolo_1">Titolo 1</label>
+                        <br>
+                        <?php $cosaVedereTitolo1 = get_post_meta($post->ID, "cosa_vedere_titolo_1", true); ?>
+                        <input type="text" name="cosa_vedere_titolo_1" id="cosa_vedere_titolo_1" value="<?= $cosaVedereTitolo1 ?>">
+                        <br>
+                        <label for="cosa_vedere_descrizione_1">Descrizione 1</label>
+                        <br>
+                        <?php $cosaVedereDescrizione1 = get_post_meta($post->ID, "cosa_vedere_descrizione_1", true); ?>
+                        <input type="text" name="cosa_vedere_descrizione_1" id="cosa_vedere_descrizione_1" value="<?= $cosaVedereDescrizione1 ?>">
+                        <br>
+                        
+                    </div>
+                    <!--  -->
+                    <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
+
+                        <label for="cosa_vedere_titolo_2">Titolo 2</label>
+                        <br>
+                        <?php $cosaVedereTitolo2 = get_post_meta($post->ID, "cosa_vedere_titolo_2", true); ?>
+                        <input type="text" name="cosa_vedere_titolo_2" id="cosa_vedere_titolo_2" value="<?= $cosaVedereTitolo2 ?>">
+                        <br>
+                        <label for="cosa_vedere_descrizione_2">Descrizione 2</label>
+                        <br>
+                        <?php $cosaVedereDescrizione2 = get_post_meta($post->ID, "cosa_vedere_descrizione_2", true); ?>
+                        <input type="text" name="cosa_vedere_descrizione_2" id="cosa_vedere_descrizione_2" value="<?= $cosaVedereDescrizione2 ?>">
+                    </div>
+                    <!--  -->
+                    <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
+
+                        <label for=" cosa_vedere_titolo_3">Titolo 3</label>
+                        <br>
+                        <?php $cosaVedereTitolo3 = get_post_meta($post->ID, "cosa_vedere_titolo_3", true); ?>
+                        <input type="text" name="cosa_vedere_titolo_3" id="cosa_vedere_titolo_3" value="<?= $cosaVedereTitolo3 ?>">
+                        <br>
+                        <label for="cosa_vedere_descrizione_3">Descrizione 3</label>
+                        <br>
+                        <?php $cosaVedereDescrizione3 = get_post_meta($post->ID, "cosa_vedere_descrizione_3", true); ?>
+                        <input type="text" name="cosa_vedere_descrizione_3" id="cosa_vedere_descrizione_3" value="<?= $cosaVedereDescrizione3 ?>">
+                    </div>
+                    <!--  -->
+                    <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
+
+                        <label for=" cosa_vedere_titolo_4">Titolo 4</label>
+                        <br>
+                        <?php $cosaVedereTitolo4 = get_post_meta($post->ID, "cosa_vedere_titolo_4", true); ?>
+                        <input type="text" name="cosa_vedere_titolo_4" id="cosa_vedere_titolo_4" value="<?= $cosaVedereTitolo4 ?>">
+                        <br>
+                        <label for="cosa_vedere_descrizione_4">Descrizione 4</label>
+                        <br>
+                        <?php $cosaVedereDescrizione4 = get_post_meta($post->ID, "cosa_vedere_descrizione_4", true); ?>
+                        <input type="text" name="cosa_vedere_descrizione_4" id="cosa_vedere_descrizione_4" value="<?= $cosaVedereDescrizione4 ?>">
+                    </div>
+                    <!--  -->
                 </div>
             </div>
-        </div>
-    </div>
 
-    <script>
-        jQuery(document).ready(function($) {
-            var custom_media_frame;
-            $('.custom_media_button').click(function(e) {
-                e.preventDefault();
-                var field = $(this).data('field');
-                if (custom_media_frame) {
-                    custom_media_frame.open();
-                    return;
-                }
-                custom_media_frame = wp.media.frames.custom_media_frame = wp.media({
-                    title: 'Seleziona Immagine',
-                    button: {
-                        text: 'Seleziona'
-                    },
-                    multiple: false // Allow only one image selection at a time
-                });
-                custom_media_frame.on('select', function() {
-                    var attachment = custom_media_frame.state().get('selection').first().toJSON();
-                    $('#' + field).val(attachment.id);
-                    $('.' + field + '_preview').html('<img src="' + attachment.url + '" alt="" style="max-width: 100px; max-height: 100px;">');
-                });
-                custom_media_frame.open();
-            });
-        });
-    </script>
+        </div>
+
+
+
+    </div>
 <?php  }
 
 
@@ -459,12 +462,6 @@ function save_service_metabox_data($post_id, $post)
         $cosaVedereDescrizione4 = '';
     }
 
-    if (isset($_POST['service_image_1_id'])) {
-        $service_image_1_id = $_POST['service_image_1_id'];
-    } else {
-        $service_image_1_id = '';
-    }
-
 
     $newValues = array(
         'service_title' => $titolo,
@@ -476,7 +473,6 @@ function save_service_metabox_data($post_id, $post)
         'cosa_vedere_descrizione_2' => $cosaVedereDescrizione2,
         'cosa_vedere_descrizione_3' => $cosaVedereDescrizione3,
         'cosa_vedere_descrizione_4' => $cosaVedereDescrizione4,
-        'service_image_1_id' => $service_image_1_id,
 
 
 
