@@ -302,4 +302,23 @@ footer p {
   text-align: center;
 }
 
+.title-head-btns button{
+  border: 1px solid rgb(60, 63, 236);
+  color: rgb(60, 63, 236);
+  margin: 20px;
+  border-radius: 3rem;
+  padding: 1rem 2rem;
+  
+}
+
+.title-head-btns button:hover{
+  background-color: rgb(60, 63, 236);
+  color: rgb(170, 171, 255);
+  margin: 20px;
+  border-radius: 3rem;
+  padding: 1rem 2rem;
+  
+}
+
+
 /* end task 13 */
