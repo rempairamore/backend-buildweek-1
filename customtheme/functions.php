@@ -319,9 +319,9 @@ function callback_riempi_servizi($post)
         <div>
             <div class="cosa-vedere-container-box" style="border: 1px solid black;padding: 1rem;">
                 <h5>Cosa vedere</h5>
-                <div style=" display: flex, flex-wrap: wrap;">
+                <div style="display: flex; flex-wrap: wrap;">
                     <div class="cosa-vedere-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
-                        <label for="cosa_vedere_titolo_1">Titolo 1</label>
+                        <label for="cosa_vedere_titolo_1">Titolbo 1</label>
                         <br>
                         <?php $cosaVedereTitolo1 = get_post_meta($post->ID, "cosa_vedere_titolo_1", true); ?>
                         <input type="text" name="cosa_vedere_titolo_1" id="cosa_vedere_titolo_1" value="<?= $cosaVedereTitolo1 ?>">
