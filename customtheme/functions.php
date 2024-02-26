@@ -395,7 +395,7 @@ function callback_riempi_servizi($post)
                         <div class="custom-image-container">
                             <div class="image-preview-2">
                                 <?php if ($cosa_vedere_image_url_2) : ?>
-                                    <img src="<?php echo esc_url($cosa_vedere_image_url_2); ?>" alt="Custom Image">
+                                    <img src="<?php echo esc_url($cosa_vedere_image_url_2); ?>" alt="Custom Image" style="max-width: 200px; max-height: 100px;">
                                 <?php endif; ?>
                             </div>
                             <input type="hidden" name="cosa_vedere_image_2" id="cosa_vedere_image_2" value="<?php echo esc_attr($cosa_vedere_image_2); ?>">
