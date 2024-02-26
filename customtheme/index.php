@@ -98,7 +98,7 @@
         </aside>
         <section class="gallery text-center">
             galleryddd
-            <div class="d-none d-sm-block d-md-none">
+            <div class="d-lg-none d-xl-block">
                 small
                 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -126,7 +126,7 @@
             
             <div class="container d-none d-sm-block">
                 <div class="row">
-
+                    <!-- andrebbero mantenuti i 3 div (colonne) e le immagini vanno divise tra di esse -->
                     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                         <img
                         src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
