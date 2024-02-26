@@ -100,7 +100,7 @@
             galleryddd
             <div class="row">
                 <div class="col">
-                    Columnnn
+                    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.my-personaltrainer.it%2Fmypet%2Fgatto-europeo.html&psig=AOvVaw083V6Q7GjILvQ8qFEG4hJQ&ust=1709034668980000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLiJyL_4yIQDFQAAAAAdAAAAABAE" alt="Girl in a jacket" width="500" height="600">
                 </div>
                 <div class="col">
                     Columnnnn
