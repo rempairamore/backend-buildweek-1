@@ -289,4 +289,9 @@ footer p{
   height: 200px;
   object-fit: cover;
 } */
+.align-middle{
+  background-color: blue;
+  height: 100px;
+  width: 100px;
+}
 /* ------GALLERY END------------- */
