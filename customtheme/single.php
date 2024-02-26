@@ -15,7 +15,7 @@ if (have_posts()) {
             </div>
         </div>
         <div class="row mt-5 p-5">
-            <div class="col-8">
+            <div class="col-sm-8">
                 <div class="article-content">
                     <?php
                     if (has_post_thumbnail()) {
@@ -28,7 +28,7 @@ if (have_posts()) {
                     ?>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-sm-4">
                 <?php get_sidebar(); ?>
             </div>
         </div>
