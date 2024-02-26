@@ -288,23 +288,21 @@ footer p{
 .gallery .carousel-inner{
   height: 400px;
 }
-::-webkit-scrollbar {
+/* ---------GALLERY SCROLL-------- */
+.gallery::-webkit-scrollbar {
   width: 20px;
 }
-
 /* Track */
-::-webkit-scrollbar-track {
+.gallery::-webkit-scrollbar-track {
   background-color: grey; 
-
 }
- 
 /* Handle */
-::-webkit-scrollbar-thumb {
+.gallery::-webkit-scrollbar-thumb {
   background: red;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+.gallery::-webkit-scrollbar-thumb:hover {
   background: #b30000; 
 }
 /* ------GALLERY END------------- */
