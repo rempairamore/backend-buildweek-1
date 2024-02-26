@@ -550,7 +550,182 @@ function callback_riempi_servizi($post)
 
         <br><br><br><br>
 
+        <div class="mangiare-container-box" style="border: 1px solid black;padding: 1rem;">
+            <h4>Località</h4>
+            <div style="display: flex; flex-wrap: wrap;">
+                <div class="mangiare-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
+                    <label for="mangiare_titolo_1">Titolo 1</label>
+                    <br>
+                    <?php $mangiareTitolo1 = get_post_meta($post->ID, "mangiare_titolo_1", true); ?>
+                    <input type="text" name="mangiare_titolo_1" id="mangiare_titolo_1" value="<?= $mangiareTitolo1 ?>">
+                    <br>
+                    <label for="mangiare_descrizione_1">Descrizione 1</label>
+                    <br>
+                    <?php $mangiareDescrizione1 = get_post_meta($post->ID, "mangiare_descrizione_1", true); ?>
+                    <input type="text" name="mangiare_descrizione_1" id="mangiare_descrizione_1" value="<?= $mangiareDescrizione1 ?>">
+                    <br>
+                    <br>
 
+                    <?php
+                    $mangiare_image_1 = get_post_meta($post->ID, 'mangiare_image_1', true);
+                    $mangiare_image_url_1 = wp_get_attachment_image_url($mangiare_image_1, 'thumbnail');
+                    ?>
+                    <div class="custom-image-container">
+                        <div class="mangiare-image-preview-1">
+                            <?php if ($mangiare_image_url_1) : ?>
+                                <img src="<?php echo esc_url($mangiare_image_url_1); ?>" alt="Custom Image" style="max-width: 200px; max-height: 100px;">
+                            <?php endif; ?>
+                        </div>
+                        <input type="hidden" name="mangiare_image_1" id="mangiare_image_1" value="<?php echo esc_attr($mangiare_image_1); ?>">
+                        <button type="button" class="button button-primary" id="mangiare_image_button_1">Carica Immagine</button>
+                    </div>
+                    <script>
+                        jQuery(document).ready(function($) {
+                            // Upload dell'immagine
+                            $('#mangiare_image_button_1').click(function(e) {
+                                e.preventDefault();
+                                var custom_uploader = wp.media({
+                                    title: 'Carica Immagine',
+                                    button: {
+                                        text: 'Seleziona Immagine'
+                                    },
+                                    multiple: false
+                                });
+                                custom_uploader.on('select', function() {
+                                    var attachment = custom_uploader.state().get('selection').first().toJSON();
+                                    $('#mangiare_image_1').val(attachment.id);
+                                    $('.mangiare-image-preview-1 img').attr('src', attachment.url);
+                                });
+                                custom_uploader.open();
+                            });
+
+
+                        });
+                    </script>
+
+
+
+
+
+                </div>
+                <!--  -->
+                <div class="mangiare-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
+
+                    <label for="mangiare_titolo_2">Titolo 2</label>
+                    <br>
+                    <?php $mangiareTitolo2 = get_post_meta($post->ID, "mangiare_titolo_2", true); ?>
+                    <input type="text" name="mangiare_titolo_2" id="mangiare_titolo_2" value="<?= $mangiareTitolo2 ?>">
+                    <br>
+                    <label for="mangiare_descrizione_2">Descrizione 2</label>
+                    <br>
+                    <?php $mangiareDescrizione2 = get_post_meta($post->ID, "mangiare_descrizione_2", true); ?>
+                    <input type="text" name="mangiare_descrizione_2" id="mangiare_descrizione_2" value="<?= $mangiareDescrizione2 ?>">
+                    <br>
+                    <br>
+                    <?php
+                    $mangiare_image_2 = get_post_meta($post->ID, 'mangiare_image_2', true);
+                    $mangiare_image_url_2 = wp_get_attachment_image_url($mangiare_image_2, 'thumbnail');
+                    ?>
+                    <div class="custom-image-container">
+                        <div class="mangiare-image-preview-2">
+                            <?php if ($mangiare_image_url_2) : ?>
+                                <img src="<?php echo esc_url($mangiare_image_url_2); ?>" alt="Custom Image" style="max-width: 200px; max-height: 100px;">
+                            <?php endif; ?>
+                        </div>
+                        <input type="hidden" name="mangiare_image_2" id="mangiare_image_2" value="<?php echo esc_attr($mangiare_image_2); ?>">
+                        <button type="button" class="button button-primary" id="mangiare_image_button_2">Carica Immagine</button>
+                    </div>
+                    <script>
+                        jQuery(document).ready(function($) {
+                            // Upload dell'immagine
+                            $('#mangiare_image_button_2').click(function(e) {
+                                e.preventDefault();
+                                var custom_uploader = wp.media({
+                                    title: 'Carica Immagine',
+                                    button: {
+                                        text: 'Seleziona Immagine'
+                                    },
+                                    multiple: false
+                                });
+                                custom_uploader.on('select', function() {
+                                    var attachment = custom_uploader.state().get('selection').first().toJSON();
+                                    $('#mangiare_image_2').val(attachment.id);
+                                    $('.mangiare-image-preview-2 img').attr('src', attachment.url);
+                                });
+                                custom_uploader.open();
+                            });
+
+
+                        });
+                    </script>
+                </div>
+                <!--  -->
+                <div class="mangiare-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
+
+                    <label for=" mangiare_titolo_3">Titolo 3</label>
+                    <br>
+                    <?php $mangiareTitolo3 = get_post_meta($post->ID, "mangiare_titolo_3", true); ?>
+                    <input type="text" name="mangiare_titolo_3" id="mangiare_titolo_3" value="<?= $mangiareTitolo3 ?>">
+                    <br>
+                    <label for="mangiare_descrizione_3">Descrizione 3</label>
+                    <br>
+                    <?php $mangiareDescrizione3 = get_post_meta($post->ID, "mangiare_descrizione_3", true); ?>
+                    <input type="text" name="mangiare_descrizione_3" id="mangiare_descrizione_3" value="<?= $mangiareDescrizione3 ?>">
+
+
+                    <br>
+                    <br>
+
+                    <?php
+                    $mangiare_image_3 = get_post_meta($post->ID, 'mangiare_image_3', true);
+                    $mangiare_image_url_3 = wp_get_attachment_image_url($mangiare_image_3, 'thumbnail');
+                    ?>
+                    <div class="custom-image-container">
+                        <div class="mangiare-image-preview-2">
+                            <?php if ($mangiare_image_url_3) : ?>
+                                <img src="<?php echo esc_url($mangiare_image_url_3); ?>" alt="Custom Image" style="max-width: 200px; max-height: 100px;">
+                            <?php endif; ?>
+                        </div>
+                        <input type="hidden" name="mangiare_image_3" id="mangiare_image_3" value="<?php echo esc_attr($mangiare_image_3); ?>">
+                        <button type="button" class="button button-primary" id="mangiare_image_button_3">Carica Immagine</button>
+                    </div>
+                    <script>
+                        jQuery(document).ready(function($) {
+                            // Upload dell'immagine
+                            $('#mangiare_image_button_3').click(function(e) {
+                                e.preventDefault();
+                                var custom_uploader = wp.media({
+                                    title: 'Carica Immagine',
+                                    button: {
+                                        text: 'Seleziona Immagine'
+                                    },
+                                    multiple: false
+                                });
+                                custom_uploader.on('select', function() {
+                                    var attachment = custom_uploader.state().get('selection').first().toJSON();
+                                    $('#mangiare_image_3').val(attachment.id);
+                                    $('.mangiare-image-preview-3 img').attr('src', attachment.url);
+                                });
+                                custom_uploader.open();
+                            });
+
+
+                        });
+                    </script>
+
+
+
+
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <br> <br><br><br>
 
 
 
@@ -799,180 +974,48 @@ function callback_riempi_servizi($post)
 
 
 
-        <div class="mangiare-container-box" style="border: 1px solid black;padding: 1rem;">
-            <h4>Località</h4>
+
+
+
+
+
+
+
+
+
+        <div class="info-utili-container-box" style="border: 1px solid black;padding: 1rem;">
+            <h4>Info Utili</h4>
             <div style="display: flex; flex-wrap: wrap;">
-                <div class="mangiare-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
-                    <label for="mangiare_titolo_1">Titolo 1</label>
+                <div class="info-utili-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
+                    <label for="documento">Documenti</label>
                     <br>
-                    <?php $mangiareTitolo1 = get_post_meta($post->ID, "mangiare_titolo_1", true); ?>
-                    <input type="text" name="mangiare_titolo_1" id="mangiare_titolo_1" value="<?= $mangiareTitolo1 ?>">
+                    <?php $documento = get_post_meta($post->ID, "documento", true); ?>
+                    <input type="text" name="documento" id="documento" value="<?= $documento ?>">
                     <br>
-                    <label for="mangiare_descrizione_1">Descrizione 1</label>
-                    <br>
-                    <?php $mangiareDescrizione1 = get_post_meta($post->ID, "mangiare_descrizione_1", true); ?>
-                    <input type="text" name="mangiare_descrizione_1" id="mangiare_descrizione_1" value="<?= $mangiareDescrizione1 ?>">
-                    <br>
-                    <br>
-
-                    <?php
-                    $mangiare_image_1 = get_post_meta($post->ID, 'mangiare_image_1', true);
-                    $mangiare_image_url_1 = wp_get_attachment_image_url($mangiare_image_1, 'thumbnail');
-                    ?>
-                    <div class="custom-image-container">
-                        <div class="mangiare-image-preview-1">
-                            <?php if ($mangiare_image_url_1) : ?>
-                                <img src="<?php echo esc_url($mangiare_image_url_1); ?>" alt="Custom Image" style="max-width: 200px; max-height: 100px;">
-                            <?php endif; ?>
-                        </div>
-                        <input type="hidden" name="mangiare_image_1" id="mangiare_image_1" value="<?php echo esc_attr($mangiare_image_1); ?>">
-                        <button type="button" class="button button-primary" id="mangiare_image_button_1">Carica Immagine</button>
-                    </div>
-                    <script>
-                        jQuery(document).ready(function($) {
-                            // Upload dell'immagine
-                            $('#mangiare_image_button_1').click(function(e) {
-                                e.preventDefault();
-                                var custom_uploader = wp.media({
-                                    title: 'Carica Immagine',
-                                    button: {
-                                        text: 'Seleziona Immagine'
-                                    },
-                                    multiple: false
-                                });
-                                custom_uploader.on('select', function() {
-                                    var attachment = custom_uploader.state().get('selection').first().toJSON();
-                                    $('#mangiare_image_1').val(attachment.id);
-                                    $('.mangiare-image-preview-1 img').attr('src', attachment.url);
-                                });
-                                custom_uploader.open();
-                            });
-
-
-                        });
-                    </script>
-
-
-
-
 
                 </div>
-                <!--  -->
-                <div class="mangiare-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
-
-                    <label for="mangiare_titolo_2">Titolo 2</label>
+                <div class="info-utili-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
+                    <label for="orario">orario</label>
                     <br>
-                    <?php $mangiareTitolo2 = get_post_meta($post->ID, "mangiare_titolo_2", true); ?>
-                    <input type="text" name="mangiare_titolo_2" id="mangiare_titolo_2" value="<?= $mangiareTitolo2 ?>">
+                    <?php $orario = get_post_meta($post->ID, "orario", true); ?>
+                    <input type="text" name="orario" id="orario" value="<?= $orario ?>">
                     <br>
-                    <label for="mangiare_descrizione_2">Descrizione 2</label>
-                    <br>
-                    <?php $mangiareDescrizione2 = get_post_meta($post->ID, "mangiare_descrizione_2", true); ?>
-                    <input type="text" name="mangiare_descrizione_2" id="mangiare_descrizione_2" value="<?= $mangiareDescrizione2 ?>">
-                    <br>
-                    <br>
-                    <?php
-                    $mangiare_image_2 = get_post_meta($post->ID, 'mangiare_image_2', true);
-                    $mangiare_image_url_2 = wp_get_attachment_image_url($mangiare_image_2, 'thumbnail');
-                    ?>
-                    <div class="custom-image-container">
-                        <div class="mangiare-image-preview-2">
-                            <?php if ($mangiare_image_url_2) : ?>
-                                <img src="<?php echo esc_url($mangiare_image_url_2); ?>" alt="Custom Image" style="max-width: 200px; max-height: 100px;">
-                            <?php endif; ?>
-                        </div>
-                        <input type="hidden" name="mangiare_image_2" id="mangiare_image_2" value="<?php echo esc_attr($mangiare_image_2); ?>">
-                        <button type="button" class="button button-primary" id="mangiare_image_button_2">Carica Immagine</button>
-                    </div>
-                    <script>
-                        jQuery(document).ready(function($) {
-                            // Upload dell'immagine
-                            $('#mangiare_image_button_2').click(function(e) {
-                                e.preventDefault();
-                                var custom_uploader = wp.media({
-                                    title: 'Carica Immagine',
-                                    button: {
-                                        text: 'Seleziona Immagine'
-                                    },
-                                    multiple: false
-                                });
-                                custom_uploader.on('select', function() {
-                                    var attachment = custom_uploader.state().get('selection').first().toJSON();
-                                    $('#mangiare_image_2').val(attachment.id);
-                                    $('.mangiare-image-preview-2 img').attr('src', attachment.url);
-                                });
-                                custom_uploader.open();
-                            });
-
-
-                        });
-                    </script>
                 </div>
-                <!--  -->
-                <div class="mangiare-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
-
-                    <label for=" mangiare_titolo_3">Titolo 3</label>
+                <div class="info-utili-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
+                    <label for="lingua">Lingua</label>
                     <br>
-                    <?php $mangiareTitolo3 = get_post_meta($post->ID, "mangiare_titolo_3", true); ?>
-                    <input type="text" name="mangiare_titolo_3" id="mangiare_titolo_3" value="<?= $mangiareTitolo3 ?>">
+                    <?php $lingua = get_post_meta($post->ID, "lingua", true); ?>
+                    <input type="text" name="lingua" id="lingua" value="<?= $lingua ?>">
                     <br>
-                    <label for="mangiare_descrizione_3">Descrizione 3</label>
-                    <br>
-                    <?php $mangiareDescrizione3 = get_post_meta($post->ID, "mangiare_descrizione_3", true); ?>
-                    <input type="text" name="mangiare_descrizione_3" id="mangiare_descrizione_3" value="<?= $mangiareDescrizione3 ?>">
-
-
-                    <br>
-                    <br>
-
-                    <?php
-                    $mangiare_image_3 = get_post_meta($post->ID, 'mangiare_image_3', true);
-                    $mangiare_image_url_3 = wp_get_attachment_image_url($mangiare_image_3, 'thumbnail');
-                    ?>
-                    <div class="custom-image-container">
-                        <div class="mangiare-image-preview-2">
-                            <?php if ($mangiare_image_url_3) : ?>
-                                <img src="<?php echo esc_url($mangiare_image_url_3); ?>" alt="Custom Image" style="max-width: 200px; max-height: 100px;">
-                            <?php endif; ?>
-                        </div>
-                        <input type="hidden" name="mangiare_image_3" id="mangiare_image_3" value="<?php echo esc_attr($mangiare_image_3); ?>">
-                        <button type="button" class="button button-primary" id="mangiare_image_button_3">Carica Immagine</button>
-                    </div>
-                    <script>
-                        jQuery(document).ready(function($) {
-                            // Upload dell'immagine
-                            $('#mangiare_image_button_3').click(function(e) {
-                                e.preventDefault();
-                                var custom_uploader = wp.media({
-                                    title: 'Carica Immagine',
-                                    button: {
-                                        text: 'Seleziona Immagine'
-                                    },
-                                    multiple: false
-                                });
-                                custom_uploader.on('select', function() {
-                                    var attachment = custom_uploader.state().get('selection').first().toJSON();
-                                    $('#mangiare_image_3').val(attachment.id);
-                                    $('.mangiare-image-preview-3 img').attr('src', attachment.url);
-                                });
-                                custom_uploader.open();
-                            });
-
-
-                        });
-                    </script>
-
-
-
-
-
-
                 </div>
-
+                <div class="info-utili-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
+                    <label for="valuta">Valuta</label>
+                    <br>
+                    <?php $valuta = get_post_meta($post->ID, "valuta", true); ?>
+                    <input type="text" name="valuta" id="valuta" value="<?= $valuta ?>">
+                    <br>
+                </div>
             </div>
-
-
-
         </div>
     <?php  }
 
@@ -1056,6 +1099,38 @@ function save_service_metabox_data($post_id, $post)
     }
 
 
+
+    $documento = '';
+    if (isset($_POST['documento'])) {
+        $documento = htmlspecialchars($_POST['documento']);
+    } else {
+        $documento = '';
+    }
+
+    $valuta = '';
+    if (isset($_POST['valuta'])) {
+        $valuta = htmlspecialchars($_POST['valuta']);
+    } else {
+        $valuta = '';
+    }
+
+
+    $orario = '';
+    if (isset($_POST['orario'])) {
+        $orario = htmlspecialchars($_POST['orario']);
+    } else {
+        $orario = '';
+    }
+
+
+    $lingua = '';
+    if (isset($_POST['lingua'])) {
+        $lingua = htmlspecialchars($_POST['lingua']);
+    } else {
+        $lingua = '';
+    }
+
+
     $newValues = array(
         'service_title' => $titolo,
         'cosa_vedere_titolo_1' => $cosaVedereTitolo1,
@@ -1066,6 +1141,12 @@ function save_service_metabox_data($post_id, $post)
         'cosa_vedere_descrizione_2' => $cosaVedereDescrizione2,
         'cosa_vedere_descrizione_3' => $cosaVedereDescrizione3,
         'cosa_vedere_descrizione_4' => $cosaVedereDescrizione4,
+        'documento' => $documento,
+        'valuta' => $valuta,
+        'orario' => $orario,
+        'lingua' => $lingua,
+
+
 
 
 
@@ -1304,7 +1385,6 @@ function save_service_metabox_data($post_id, $post)
 
     $mangiare_image_3 = isset($_POST['mangiare_image_3']) ? sanitize_text_field($_POST['mangiare_image_3']) : '';
     update_post_meta($post_id, 'mangiare_image_3', $mangiare_image_3);
-
 }
 
 

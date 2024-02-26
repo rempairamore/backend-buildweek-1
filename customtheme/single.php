@@ -103,6 +103,14 @@ if ($post_type == "servizi") {
     $mangiareImmagine3_url = wp_get_attachment_image_url($mangiareImmagine3_id, 'full');
 
 
+
+    $documento = get_post_meta(get_the_ID(), 'documento', true);
+    $valuta = get_post_meta(get_the_ID(), 'valuta', true);
+    $orario = get_post_meta(get_the_ID(), 'orario', true);
+    $lingua = get_post_meta(get_the_ID(), 'lingua', true);
+
+
+
     ?>
 
 
@@ -301,22 +309,22 @@ if ($post_type == "servizi") {
             <div class="col">
                 <img src="https://www.iconbunny.com/icons/media/catalog/product/1/5/1552.9-identity-card-icon-iconbunny.jpg" style="width: 5rem;">
                 <h5 class="mt-2">Documenti</h5>
-                <p style="white-space: nowrap;">Carta di identità</p>
+                <p style="white-space: nowrap;"><?php echo esc_html($documento); ?></p>
             </div>
             <div class="col mx-sm-0 mx-md-0 mx-lg-5">
                 <img src="https://static.vecteezy.com/ti/vettori-gratis/p1/8907246-fuso-orario-linea-cerchio-sfondo-icona-vettoriale.jpg" style="width: 5rem; white-space: nowrap;">
                 <h5 class="mt-2">Orario</h5>
-                <p style="white-space: nowrap;">-1 ora</p>
+                <p style="white-space: nowrap;"><?php echo esc_html($orario); ?></p>
             </div>
             <div class="col me-sm-0 me-md-0 me-lg-5">
                 <img src="https://icon-library.com/images/languages-icon/languages-icon-3.jpg" style="width: 5rem;">
                 <h5 class="mt-2">Lingua</h5>
-                <p style="white-space: nowrap;">Spagnolo</p>
+                <p style="white-space: nowrap;"><?php echo esc_html($lingua); ?></p>
             </div>
             <div class="col">
                 <img src="https://png.pngtree.com/png-vector/20190507/ourmid/pngtree-vector-wallet-icon-png-image_1025642.jpg" style="width: 5rem;">
                 <h5 class="mt-2">Valuta</h5>
-                <p style="white-space: nowrap;">Dollaro ($)</p>
+                <p style="white-space: nowrap;"><?php echo esc_html($valuta); ?></p>
             </div>
         </div>
     </div>
