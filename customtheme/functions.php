@@ -497,6 +497,47 @@ function callback_riempi_servizi($post)
                         <br>
                         <?php $cosaVedereDescrizione4 = get_post_meta($post->ID, "cosa_vedere_descrizione_4", true); ?>
                         <input type="text" name="cosa_vedere_descrizione_4" id="cosa_vedere_descrizione_4" value="<?= $cosaVedereDescrizione4 ?>">
+                    
+                    
+                        <?php
+                        $cosa_vedere_image_4 = get_post_meta($post->ID, 'cosa_vedere_image_4', true);
+                        $cosa_vedere_image_url_4 = wp_get_attachment_image_url($cosa_vedere_image_4, 'thumbnail');
+                        ?>
+                        <div class="custom-image-container">
+                            <div class="image-preview-4">
+                                <?php if ($cosa_vedere_image_url_4) : ?>
+                                    <img src="<?php echo esc_url($cosa_vedere_image_url_4); ?>" alt="Custom Image" style="max-width: 200px; max-height: 100px;">
+                                <?php endif; ?>
+                            </div>
+                            <input type="hidden" name="cosa_vedere_image_4" id="cosa_vedere_image_4" value="<?php echo esc_attr($cosa_vedere_image_4); ?>">
+                            <button type="button" class="button button-primary" id="cosa_fare_image_button_4">Carica Immagine</button>
+                        </div>
+                        <script>
+                            jQuery(document).ready(function($) {
+                                // Upload dell'immagine
+                                $('#cosa_fare_image_button_4').click(function(e) {
+                                    e.preventDefault();
+                                    var custom_uploader = wp.media({
+                                        title: 'Carica Immagine',
+                                        button: {
+                                            text: 'Seleziona Immagine'
+                                        },
+                                        multiple: false
+                                    });
+                                    custom_uploader.on('select', function() {
+                                        var attachment = custom_uploader.state().get('selection').first().toJSON();
+                                        $('#cosa_vedere_image_4').val(attachment.id);
+                                        $('.image-preview-4 img').attr('src', attachment.url);
+                                    });
+                                    custom_uploader.open();
+                                });
+
+
+                            });
+                        </script>
+                    
+                    
+                    
                     </div>
                     <!--  -->
                 </div>
