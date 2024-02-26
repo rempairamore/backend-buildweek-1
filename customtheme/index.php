@@ -7,12 +7,17 @@
 
         <div class="title-box-hero">
             <h1>Maldive</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus magni doloremque incidunt excepturi provident commodi officiis deleniti molestiae, sequi in deserunt ipsum quae praesentium eius fugit similique adipisci, sed obcaecati dolores reiciendis nulla, exercitationem blanditiis. Facere eaque commodi ipsa id?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div id="carouselHome" class="carousel slide" data-bs-ride="carousel">
 
+            <div class="title-head-btns">
+                <a href="<?php echo esc_url('/posts'); ?>"><button class="btn"> Blog</button></a>
+                <a href="<?php echo esc_url('/servizi'); ?>"><button class="btn"> Servizi</button></a>
+            </div>
 
             <?php
+
             global $wpdb;
             $table_name = $wpdb->prefix . 'immagini_carosello';
 
