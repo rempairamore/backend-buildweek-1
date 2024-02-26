@@ -124,7 +124,7 @@
                 </div>
             </div>
             
-            <div class="container d-none d-sm-block">
+            <div class="container d-none d-lg-block d-xl-none">
                 <div class="row">
                     <!-- andrebbero mantenuti i 3 div (colonne) e le immagini vanno divise tra di esse -->
                     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
