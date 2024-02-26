@@ -63,6 +63,18 @@ if ($post_type == "servizi") {
     $cosaVedereImmagine3_url = wp_get_attachment_image_url($cosaVedereImmagine3_id, 'full');
     $cosaVedereImmagine4_url = wp_get_attachment_image_url($cosaVedereImmagine4_id, 'full');
 
+
+        
+    $localitaTitolo1 = get_post_meta(get_the_ID(), 'localita_titolo_1', true);
+    $localitaTitolo2 = get_post_meta(get_the_ID(), 'localita_titolo_2', true);
+    $localitaTitolo3 = get_post_meta(get_the_ID(), 'localita_titolo_3', true);
+    $localitaTitolo4 = get_post_meta(get_the_ID(), 'localita_titolo_4', true);
+    
+    $localitaDescrizione1 = get_post_meta(get_the_ID(), 'localita_descrizione_1', true);
+    $localitaDescrizione2 = get_post_meta(get_the_ID(), 'localita_descrizione_2', true);
+    $localitaDescrizione3 = get_post_meta(get_the_ID(), 'localita_descrizione_3', true);
+    $localitaDescrizione4 = get_post_meta(get_the_ID(), 'localita_descrizione_4', true);
+
     $localitaImmagine1_id = get_post_meta(get_the_ID(), 'localita_image_1', true);
     $localitaImmagine2_id = get_post_meta(get_the_ID(), 'localita_image_2', true);
     $localitaImmagine3_id = get_post_meta(get_the_ID(), 'localita_image_3', true);
@@ -229,8 +241,8 @@ if ($post_type == "servizi") {
                 <div class="card shadow-sm h-100" style="width: 18rem;">
                     <img src="<?= esc_url($localitaImmagine1_url) ?>" class="card-img-top h-100" alt="...">
                     <div class="card-body">
-                        <h5>Gran canaria</h5>
-                        <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5><?php echo esc_html($localitaTitolo1); ?></h5>
+                        <p class="card-text text-muted"><?php echo esc_html($localitaDescrizione1); ?></p>
                     </div>
                 </div>
             </div>
@@ -238,8 +250,8 @@ if ($post_type == "servizi") {
                 <div class="card shadow-sm h-100" style="width: 18rem;">
                 <img src="<?= esc_url($localitaImmagine2_url) ?>" class="card-img-top h-100" alt="...">
                     <div class="card-body">
-                        <h5>Tenerife</h5>
-                        <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5><?php echo esc_html($localitaTitolo2); ?></h5>
+                        <p class="card-text text-muted"><?php echo esc_html($localitaDescrizione2); ?></p>
                     </div>
                 </div>
             </div>
@@ -247,8 +259,8 @@ if ($post_type == "servizi") {
                 <div class="card shadow-sm h-100" style="width: 18rem;">
                 <img src="<?= esc_url($localitaImmagine3_url) ?>" class="card-img-top h-100" alt="...">
                     <div class="card-body">
-                        <h5>Lanzarote</h5>
-                        <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5><?php echo esc_html($localitaTitolo3); ?></h5>
+                        <p class="card-text text-muted"><?php echo esc_html($localitaDescrizione3); ?></p>
                     </div>
                 </div>
             </div>
@@ -256,8 +268,8 @@ if ($post_type == "servizi") {
                 <div class="card shadow-sm h-100" style="width: 18rem;">
                 <img src="<?= esc_url($localitaImmagine4_url) ?>" class="card-img-top h-100" alt="...">
                     <div class="card-body">
-                        <h5>Fuerteventura</h5>
-                        <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5><?php echo esc_html($localitaTitolo4); ?></h5>
+                        <p class="card-text text-muted"><?php echo esc_html($localitaDescrizione4); ?></p>
                     </div>
                 </div>
             </div>
