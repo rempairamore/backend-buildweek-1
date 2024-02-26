@@ -43,6 +43,10 @@ if ($post_type == "servizi") {
 
     $service_title = get_post_meta(get_the_ID(), 'service_title', true);
     $cosaVedereTitolo1 = get_post_meta(get_the_ID(), 'cosa_vedere_titolo_1', true);
+    $cosaVedereTitolo2 = get_post_meta(get_the_ID(), 'cosa_vedere_titolo_2', true);
+    $cosaVedereTitolo3 = get_post_meta(get_the_ID(), 'cosa_vedere_titolo_3', true);
+    $cosaVedereTitolo4 = get_post_meta(get_the_ID(), 'cosa_vedere_titolo_4', true);
+
 
     ?>
 
