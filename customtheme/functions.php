@@ -336,7 +336,7 @@ function callback_riempi_servizi($post)
                                 <label for="service_image_<?php echo $i; ?>">Immagine <?php echo $i; ?></label><br>
                                 <div class="image-preview">
                                     <?php
-                                    $service_image_id = get_post_meta($post->ID, "service_image_$i_id", true);
+                                    $service_image_id = get_post_meta($post->ID, "service_image_" . $i . "_id", true);
                                     if (!empty($service_image_id)) {
                                         echo wp_get_attachment_image($service_image_id, 'thumbnail');
                                         echo '<input type="hidden" name="service_image_' . $i . '_id" value="' . esc_attr($service_image_id) . '">';
