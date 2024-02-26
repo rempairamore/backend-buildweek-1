@@ -1,1 +1,1 @@
-<?php get_template_part('template_parts', 'servizi') ?>
+<?php get_template_part('template_parts/content', 'servizi') ?>
