@@ -263,33 +263,7 @@ add_filter('the_content', 'convert_gallery_to_carousel');
 
 
 
-// javascript code for animations
-?>
-<script>
-    // Function to handle animations when elements enter the viewport
-    function handleAnimations(entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate'); // Add a CSS class to trigger the animation
-                observer.unobserve(entry.target); // Stop observing once animated
-            }
-        });
-    }
-
-    // Create an Intersection Observer
-    const observer = new IntersectionObserver(handleAnimations, {
-        root: null,
-        threshold: 0.2, // Adjust threshold as needed
-    });
-
-    // Observe elements with the specified class
-    document.querySelectorAll('.custom-image-wrapper, .custom-list-wrapper, .custom-article-wrapper').forEach(element => {
-        observer.observe(element);
-    });
-
-</script>
 
 
-<?php
 //----------------------------------------------------------------end wp-10---------------------------------------------------------------
 
