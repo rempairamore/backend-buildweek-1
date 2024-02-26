@@ -303,6 +303,7 @@ footer p {
 }
 
 .title-head-btns button{
+  background-color: rgb(220, 221, 250);
   border: 1px solid rgb(60, 63, 236);
   color: rgb(60, 63, 236);
   margin: 20px;
@@ -313,7 +314,7 @@ footer p {
 
 .title-head-btns button:hover{
   background-color: rgb(60, 63, 236);
-  color: rgb(170, 171, 255);
+  color: rgb(210, 210, 239);
   margin: 20px;
   border-radius: 3rem;
   padding: 1rem 2rem;
