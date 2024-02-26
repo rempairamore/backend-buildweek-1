@@ -71,8 +71,8 @@
                             ?>
                         </div>
                         <div class="p-2 article-info-home">
-                            <h5 class="article-title-home" href="<?php the_permalink(); ?>">
-                                <?php the_title(); ?>
+                            <h5 class="article-title-home">
+                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             </h5>
                             <p class="article-author-home">
                                 <?php the_author(); ?>
