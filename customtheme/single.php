@@ -115,7 +115,7 @@ if ($post_type == "servizi") {
                 <div class="card shadow-sm h-100" style="width: 18rem;">
                    
                 
-                <img src=" <?= esc_url($image_url) ?> " class="card-img-top h-100" alt="..."> 
+                <img src=" <?= esc_url($cosaVedereImmagine1_url) ?> " class="card-img-top h-100" alt="..."> 
                 
                 <div class="card-body">
                         <h5><?php echo esc_html($cosaVedereTitolo1); ?></h5>
