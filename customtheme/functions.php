@@ -419,7 +419,8 @@ function callback_riempi_servizi($post)
                         <input type="text" name="cosa_vedere_descrizione_4" id="cosa_vedere_descrizione_4" value="<?= $cosaVedereDescrizione4 ?>">
                         <br>
                         <div class="service-images">
-                            <label for="service_image_4">Immagine 4</label><br>
+                            <label for="service_image_4">Immagine quattro
+                            </label><br>
                             <div class="image-preview">
                                 <?php
                                 $service_image_4_id = get_post_meta($post->ID, 'service_image_4_id', true);
