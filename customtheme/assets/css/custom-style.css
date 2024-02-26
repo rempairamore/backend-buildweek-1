@@ -51,6 +51,7 @@
 
 @media screen and (max-width: 768px) {
   .griglia {
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
       "articoli articoli articoli"
       "gallery gallery gallery"
@@ -293,5 +294,6 @@ footer p{
   background-color: blue;
   height: 100px;
   width: 100px;
+  align-self: center;
 }
 /* ------GALLERY END------------- */

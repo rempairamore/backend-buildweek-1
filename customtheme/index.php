@@ -98,9 +98,9 @@
         </aside>
         <section class="gallery text-center">
             galleryddd
-            <div class="align-middle">
+            <section class="d-flex">
 
-            </div>
+            </section>
             <!-- <div class="container">
                 <div class="row">
 
