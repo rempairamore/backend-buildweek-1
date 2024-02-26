@@ -46,7 +46,7 @@
 
 .gallery {
   grid-area: gallery;
-  background-color: red;
+  background-color: aquamarine;
 }
 
 @media screen and (max-width: 768px) {
@@ -280,7 +280,9 @@ footer p{
 /* --------FOOTER END------------ */
 
 /* ------GALLERY STAR------------- */
-.gallery{
+.gallery div[class="col"]{
   background-color: blue;
+  width: 200px;
+  height: 200px;
 }
 /* ------GALLERY END------------- */
