@@ -52,7 +52,7 @@
 
 @media screen and (max-width: 768px) {
   .griglia {
-    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-rows: minmax(100px, max-content) 1fr 0.5fr;
     grid-template-areas:
       "articoli articoli articoli"
       "gallery gallery gallery"
