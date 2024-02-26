@@ -125,7 +125,7 @@ if ($post_type == "servizi") {
             </div>
             <div class="col">
                 <div class="card shadow-sm h-100" style="width: 18rem;">
-                    <img src="https://images.placesonline.com/photos/424012810201124_Jameos_1763008766.jpg?quality=80&w=700" class="card-img-top h-100" alt="...">
+                <img src=" <?= esc_url($cosaVedereImmagine2_url) ?> " class="card-img-top h-100" alt="..."> 
                     <div class="card-body">
                         <h5><?php echo esc_html($cosaVedereTitolo2); ?></h5>
                         <p class="card-text text-muted"><?php echo esc_html($cosaVedereDescrizione2); ?></p>
@@ -134,7 +134,7 @@ if ($post_type == "servizi") {
             </div>
             <div class="col">
                 <div class="card shadow-sm h-100" style="width: 18rem;">
-                    <img src="https://allecanarie.it/wp-content/uploads/2023/01/cosa-vedere-a-gran-canaria-in-7-giorni.jpg" class="card-img-top h-100" alt="...">
+                <img src=" <?= esc_url($cosaVedereImmagine3_url) ?> " class="card-img-top h-100" alt="..."> 
                     <div class="card-body">
                         <h5><?php echo esc_html($cosaVedereTitolo3); ?></h5>
                         <p class="card-text text-muted"><?php echo esc_html($cosaVedereDescrizione3); ?></p>
@@ -143,7 +143,7 @@ if ($post_type == "servizi") {
             </div>
             <div class="col">
                 <div class="card shadow-sm h-100" style="width: 18rem;">
-                    <img src="https://allecanarie.it/wp-content/uploads/2023/01/cosa-vedere-a-gran-canaria-in-7-giorni.jpg" class="card-img-top h-100" alt="...">
+                <img src=" <?= esc_url($cosaVedereImmagine4_url) ?> " class="card-img-top h-100" alt="..."> 
                     <div class="card-body">
                         <h5><?php echo esc_html($cosaVedereTitolo4); ?></h5>
                         <p class="card-text text-muted"><?php echo esc_html($cosaVedereDescrizione4); ?></p>
