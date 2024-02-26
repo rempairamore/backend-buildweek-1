@@ -65,7 +65,7 @@
 
                     <article
                         class="single-article-home d-flex flex-column align-items-center align-items-lg-start col-12 col-lg-6 col-xxl-4 p-3 <?php ($count == 3) ? print("d-lg-none d-xxl-block") : "" ?>">
-                        <div class="">
+                        <div class="shadow-lg p-3 mb-5 bg-body rounded stile">
                             <div class="article-thumbnail-home">
                                 <a href="<?php the_permalink(); ?>">
                                     <?php

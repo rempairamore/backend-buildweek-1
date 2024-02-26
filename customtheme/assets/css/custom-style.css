@@ -297,22 +297,23 @@ footer p{
   color: #999;
 }
  
- /* visited link */
- .article-title-home a:visited {
+/* visited link */
+.article-title-home a:visited {
    color: #999999ac;
- }
+}
  
- /* mouse hover link */
- .article-title-home a:hover {
+/* mouse hover link */
+.article-title-home a:hover {
    color: #b2b2b2;
- }
+}
  
- /* selected link */
- .article-title-home a:active {
+/* selected link */
+.article-title-home a:active {
    color: #b2b2b2;
- }
+}
 
- .single-article-home{
-  
- }
+.stile{
+  border: 1px solid #a09f9f38;
+  padding: 10px;
+}
 /* ---------ARTICLE PATCH END-------------- */
