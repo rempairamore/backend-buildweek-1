@@ -42,6 +42,8 @@ if ($post_type != 'servizi') {
 if ($post_type == "servizi") {
 
     $service_title = get_post_meta(get_the_ID(), 'service_title', true);
+    $cosaVedereTitolo1 = get_post_meta(get_the_ID(), 'cosa_vedere_titolo_1', true);
+
     ?>
 
 
@@ -89,7 +91,7 @@ if ($post_type == "servizi") {
                 <div class="card shadow-sm h-100" style="width: 18rem;">
                     <img src="https://static2-viaggi.corriereobjects.it/wp-content/uploads/2023/05/canarie-cosa-vedere-cosa-fare.jpg?v=1683531579" class="card-img-top h-100" alt="...">
                     <div class="card-body">
-                        <h5>PLaya playa</h5>
+                        <h5><?php echo esc_html($cosaVedereTitolo1); ?></h5>
                         <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
