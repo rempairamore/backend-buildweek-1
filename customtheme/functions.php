@@ -321,7 +321,7 @@ function crea_tabella_titolo_e_descrizione() {
         // Query per creare la tabella
         $query_creazione_tabella = "
             CREATE TABLE $nome_tabella (
-                id smallint(1) NOT NULL AUTO_INCREMENT,
+                id int(1) NOT NULL AUTO_INCREMENT,
                 titolo varchar(64) NOT NULL,
                 descrizione text NOT NULL,
                 PRIMARY KEY  (id)
