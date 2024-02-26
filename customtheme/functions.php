@@ -290,8 +290,9 @@ add_action('init', 'custom_post_types');
 
 ?>
 
-<?php 
-function registra_metabox_servizi(){
+<?php
+function registra_metabox_servizi()
+{
     add_meta_box(
         "servizi_metabox",
         "Modifica Servizi",
@@ -304,43 +305,74 @@ function registra_metabox_servizi(){
 add_action("add_meta_boxes_servizi", "registra_metabox_servizi");
 
 
-function callback_riempi_servizi($post){
+function callback_riempi_servizi($post)
+{
     wp_nonce_field(basename(__FILE__), 'servizi_nonce');
-    ?>
+?>
     <div>
         <label for="title">Titolo</label>
+        <br>
         <?php $titolo = get_post_meta($post->ID, "service_title", true); ?>
         <input type="text" name="title" id="title" value="<?= $titolo ?>">
+        <br>
+
+        <div>
+            <p>Cosa vedere</p>
+            <label for="cosa_vedere_titolo_1">Titolo 1</label>
+            <br>
+            <?php $cosaVedereTitolo1 = get_post_meta($post->ID, "cosa_vedere_titolo_1", true); ?>
+            <input type="text" name="cosa_vedere_titolo_1" id="cosa_vedere_titolo_1" value="<?= $cosaVedereTitolo1 ?>">
+            <br>
+            
+        </div>
+
+
+
     </div>
 <?php  }
 
 
 add_action("save_post", "save_service_metabox_data", 10, 2);
 
-function save_service_metabox_data($post_id, $post){
-    if(!isset($_POST['servizi_nonce']) || !wp_verify_nonce($_POST['servizi_nonce'], basename(__FILE__))){
+function save_service_metabox_data($post_id, $post)
+{
+    if (!isset($_POST['servizi_nonce']) || !wp_verify_nonce($_POST['servizi_nonce'], basename(__FILE__))) {
         return $post_id;
     }
     $post_slug = "servizi";
 
-    if($post_slug != $post->post_type){
+    if ($post_slug != $post->post_type) {
         return;
     }
 
     $titolo = '';
-    if(isset($_POST['title'])){
+    if (isset($_POST['title'])) {
         $titolo = htmlspecialchars($_POST['title']);
     } else {
         $titolo = '';
     }
-    update_post_meta($post_id, 'service_title', $titolo);
+    
+    $cosaVedereTitolo1 = '';
+    if (isset($_POST['cosa_vedere_titolo_1'])) {
+        $cosaVedereTitolo1 = htmlspecialchars($_POST['cosa_vedere_titolo_1']);
+    } else {
+        $cosaVedereTitolo1 = '';
+    }
+
+
+
+    $newValues = array(
+        'service_title' => $titolo,
+        'cosa_vedere_titolo_1' => $cosaVedereTitolo1
+    );
+
+    foreach ($newValues as $key => $value) {
+
+        update_post_meta($post_id, $key, $value );
+    }
+
 }
 
 
 
 ?>
-
- 
-
-
-
