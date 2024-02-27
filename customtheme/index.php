@@ -66,7 +66,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
                     <div class="card-body">
                         <h5 class="card-title text-center">Sconti Primavera in Europa</h5>
                         <p class="card-text">Approfitta ora degli sconti fino al 30% sui nostri tour primaverili in Europa. Offerta limitata per esplorare le capitali europee in fiore</p>
-                        <div class="text-center mb-4">
+                        <div class="text-center mb-2">
                             <a href="#" class="btn btn-primary">Scopri di più</a>
                         </div>
                     </div>
@@ -79,7 +79,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
                     <div class="card-body">
                         <h5 class="card-title text-center">Promozione Crociere 2024</h5>
                         <p class="card-text">Risparmia il 20% prenotando ora la tua crociera per il 2024. Scopri itinerari esclusivi e vivi un'esperienza indimenticabile a bordo.</p>
-                        <div class="text-center mb-4">
+                        <div class="text-center mb-2">
                                 <a href="#" class="btn btn-primary">Scopri di più</a>
                         </div>
                     </div>
@@ -93,7 +93,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
                         <h5 class="card-title text-center">Avventura in Montagna</h5>
                         <p class="card-text">Vivi l'avventura con la nostra offerta su misura per gli amanti della montagna: per ogni pacchetto prenotato, un ski pass omaggio per goderti al meglio le piste!</p>
                     </div>
-                    <div class="text-center mb-4">
+                    <div class="text-center mb-2">
                         <a href="#" class="btn btn-primary">Scopri di più</a>
                     </div>
                 </div>
