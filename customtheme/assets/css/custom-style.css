@@ -346,7 +346,7 @@ footer p {
 
 .title-box-hero {
   position: absolute;
-  z-index: 10;
+  /* z-index: 10; */
   background-color: #f1f1f182;
   margin: 10%;
   padding: 4rem 2rem;
