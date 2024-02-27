@@ -348,11 +348,11 @@ footer p {
   position: absolute;
   z-index: 10;
   background-color: #f1f1f182;
-  margin: 1rem;
-  padding: 1rem;
-  max-width: 400px;
-  top: 25%;
-  left: calc(50vw - 200px);
+  margin: 10%;
+  padding: 4rem 2rem;
+  width: 100%;
+  top: 15%;
+  left: calc(50vw - 50%);
 }
 
 @media screen and (max-width: 400px) {
@@ -372,8 +372,8 @@ footer p {
 
 .title-head-btns button{
   background-color: rgb(220, 221, 250);
-  border: 1px solid rgb(60, 63, 236);
-  color: rgb(60, 63, 236);
+  border: 1px solid rgb(90, 91, 139);;
+  color: rgb(90, 91, 139);;
   margin: 20px;
   border-radius: 3rem;
   padding: 1rem 2rem;
@@ -381,7 +381,7 @@ footer p {
 }
 
 .title-head-btns button:hover{
-  background-color: rgb(60, 63, 236);
+  background-color: rgb(90, 91, 139);;
   color: rgb(210, 210, 239);
   margin: 20px;
   border-radius: 3rem;
