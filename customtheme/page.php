@@ -105,8 +105,29 @@ global $wp_query;
     <?php
         
     
-}else{
-    the_content();
+}else{?>
+    <div style="position: relative;">
+            
+    <img class="imgArticle" src="https://static2-viaggi.corriereobjects.it/wp-content/uploads/2015/06/kirkjufell-islanda-istock.jpg.webp?v=1689967365" alt="...">
+
+<div class="titoloArticolo text-center position-absolute bottom-0 start-0 w-100">
+    <h1><?php echo $wp_query->query->s; ?></h1>
+</div>
+</div>
+
+
+<div class="container">
+<div class="row p-5">
+    <div class="col-sm-8">
+        <?php the_content();  ?>
+    </div>
+    <div class="col-sm-4">
+        <?php dynamic_sidebar('right-sidebar'); ?>
+    </div>
+
+</div>
+</div> 
+<?php 
 }
 ?>
 
