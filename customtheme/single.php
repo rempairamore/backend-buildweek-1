@@ -33,7 +33,7 @@ if ($post_type != 'servizi') {
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <?php get_sidebar(); ?>
+                        <?php dynamic_sidebar('right-sidebar'); ?>
                     </div>
 
                 </div>
