@@ -521,4 +521,7 @@ object-fit: cover;
 .serach-article-content a:active {
    color: #b2b2b2;
 }
+.serach-article-content .author{
+  font-size: 0.8rem;
+}
 /* ------SEARCH END------------- */
