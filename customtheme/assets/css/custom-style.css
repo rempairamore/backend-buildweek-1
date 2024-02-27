@@ -389,12 +389,19 @@ footer p {
   
 }
 
-
 /* end task 13 */
 
+.cosa-vedere-box,
+.cosa-vedere-container-box{
+  border: 1px solid black;
+  padding: 1rem;
+}
 
+.cosa-vedere-container-box{
+  display: flex;
+  flex-wrap: wrap;
+}
 
-/* DA CANCELLAREEEE COPIA DI FRANCESCO PAGINA */
 /* Francesco Pagina */
 
 .articleTitle {
@@ -492,17 +499,3 @@ object-fit: cover;
 }
 
 /* Francesco pagina */
-/* END DA CANCELLAREEEE COPIA DI FRANCESCO PAGINA */
-
-
-.cosa-vedere-box,
-.cosa-vedere-container-box{
-  border: 1px solid black;
-  padding: 1rem;
-}
-
-.cosa-vedere-container-box{
-  display: flex;
-  flex-wrap: wrap;
-}
-
