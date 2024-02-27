@@ -59,7 +59,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
 
         <div class="row mt-5">
             <!-- Card 1 -->
-            <div class="col-sm-12 col-md-4 mb-4">
+            <div class="col-sm-12 col-md-4 mb-2">
                 <div class="card bg-light">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/1.png" class="card-img-top rounded-circle mx-auto d-block mt-3" alt="..." style="width: 100px; height: 100px;">
                     <div class="card-body">
@@ -72,7 +72,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
                 </div>
             </div>
             <!-- Card 2 -->
-            <div class="col-sm-12 col-md-4 mb-4">
+            <div class="col-sm-12 col-md-4 mb-2">
                 <div class="card bg-se">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/2.png" class="card-img-top rounded-circle mx-auto d-block mt-3" alt="..." style="width: 100px; height: 100px;">
                     <div class="card-body">
@@ -85,7 +85,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
                 </div>
             </div>
             <!-- Card 3 -->
-            <div class="col-sm-12 col-md-4 mb-4">
+            <div class="col-sm-12 col-md-4 mb-2">
                 <div class="card">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/3.png" class="card-img-top rounded-circle mx-auto d-block mt-3" alt="..." style="width: 100px; height: 100px;">
                     <div class="card-body">
