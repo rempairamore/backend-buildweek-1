@@ -28,7 +28,16 @@
                             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                             <p class="author">Autore: <?php the_author(); ?> <span><i class="bi bi-calendar-week"></i> <?php the_date("d-m-o"); ?></span></p>
                             <?php the_excerpt(); ?>
-                            <?php the_tags(); ?>
+                            <?php
+                            $tags = get_the_tags();
+                            if ($tags) {
+                                echo '<div>';
+                                foreach ($tags as $tag) {
+                                    echo '<a class="article-tag" href="' . esc_url(get_tag_link($tag->term_id)) . '">' . $tag->name . '</a> ';
+                                }
+                                echo '</div>';
+                            }
+                            ?>
                         </div>
                         <!-- Se i commenti sono abilitati o se ci sono almeno un commento, visualizzali -->
                     <?php
