@@ -1,0 +1,39 @@
+name: Deploy on Feature Branch
+
+on:
+  push:
+    branches:
+      - 'WP-*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up SSH Key
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Read Environment from env.txt
+      id: read-env
+      run: |
+        echo "Reading environment..."
+        ENV=$(cat env.txt | grep ENV= | cut -d '"' -f 2)
+        echo "Environment: $ENV"
+        echo "::set-output name=environment::$ENV"
+        
+    - name: Update Theme Name in style.css
+      run: |
+        ENV_NAME=${{ steps.read-env.outputs.environment }}
+        sed -i "2s/Theme Name:.*/Theme Name: $ENV_NAME/" ./customtheme/style.css
+
+    - name: Deploy to Server
+      run: |
+        ENV=${{ steps.read-env.outputs.environment }}
+        FOLDER="/var/www/wordpress/wp-content/themes/$ENV"
+        echo "Deploying to $FOLDER"
+        rsync -avz -e "ssh -o StrictHostKeyChecking=no" --delete ./customtheme/* root@172.232.217.119:$FOLDER
+
