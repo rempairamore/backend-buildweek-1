@@ -26,12 +26,7 @@
                     ?>
                         <div class="serach-article-content">
                             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                            <p><?php echo '<div>Category: ' . get_the_category_list( ', ' ) . '</div>'; ?></p>
-                            <div class="d-flex">
-                                <p class="author">Autore: <?php the_author(); ?></p> <p><i class="bi bi-calendar-week"></i> <?php the_date("d-m-o"); ?></p>
-                            </div>
-                            
-                            <?php the_excerpt(); ?>
+                            <p><?php echo '<div>Categoria: ' . get_the_category_list( ', ' ) . '</div>'; ?></p>
                             <?php
                             $tags = get_the_tags();
                             if ($tags) {
@@ -42,6 +37,11 @@
                                 echo '</div>';
                             }
                             ?>
+                            <?php the_excerpt(); ?>
+
+                            <div class="author d-flex justify-content-between">
+                                <p>Autore: <?php the_author(); ?></p> <p><i class="bi bi-calendar-week"></i> <?php the_date("d-m-o"); ?></p>
+                            </div>
                         </div>
                         <!-- Se i commenti sono abilitati o se ci sono almeno un commento, visualizzali -->
                     <?php
