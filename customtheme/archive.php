@@ -24,21 +24,28 @@
                             while (have_posts()) {
                                 the_post();
                     ?>
-                        <div class="serach-article-content mb-5">
+                        <div class="serach-article-content">
                             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                            <p><?php echo '<div>Category: ' . get_the_category_list( ', ' ) . '</div>'; ?></p>
-                            <p class="author">Autore: <?php the_author(); ?> <span><i class="bi bi-calendar-week"></i> <?php the_date("d-m-o"); ?></span></p>
+                            <p><?php echo '<div>Categoria: ' . get_the_category_list( ', ' ) . '</div>'; ?></p>
+                            
+                            <div class="mb-2">
+                                <?php
+                                $tags = get_the_tags();
+                                if ($tags) {
+                                    echo '<div>';
+                                    foreach ($tags as $tag) {
+                                        echo '<a class="article-tag" href="' . esc_url(get_tag_link($tag->term_id)) . '">'  . '<span class="badge text-bg-success">' . $tag->name . '</span>' . '</a> ';
+                                    }
+                                    echo '</div>';
+                                }
+                                ?>
+                            </div>
+
                             <?php the_excerpt(); ?>
-                            <?php
-                            $tags = get_the_tags();
-                            if ($tags) {
-                                echo '<div>';
-                                foreach ($tags as $tag) {
-                                    echo '<a class="article-tag" href="' . esc_url(get_tag_link($tag->term_id)) . '">'  . '<span class="badge text-bg-success">' . $tag->name . '</span>' . '</a> ';
-                                }                                }
-                                echo '</div>';
-                            }
-                            ?>
+
+                            <div class="author d-flex justify-content-between">
+                                <p>Autore: <?php the_author(); ?></p> <p><i class="bi bi-calendar-week"></i> <?php the_date("d-m-o"); ?></p>
+                            </div>
                         </div>
                         <!-- Se i commenti sono abilitati o se ci sono almeno un commento, visualizzali -->
                     <?php
