@@ -5,9 +5,6 @@
     // echo "<pre>";
     // print_r($wp_query);
     // echo "</pre>";
-    if (have_posts()) {
-        while (have_posts()) {
-            the_post();
 ?>
             <div style="position: relative;">
             
@@ -18,13 +15,22 @@
                 </div>
             </div>
 
+          
             <div class="container">
                 <div class="row p-5">
                     <div class="col-sm-8">
+                    <?php
+                        if (have_posts()) {
+                            while (have_posts()) {
+                                the_post();
+                    ?>
                         <div class="article-content">
                             <?php the_title(); ?>
-                           
+                            <?php the_excerpt(); ?>
                         </div>
+                    <?php
+                        }
+                    ?>
                     </div>
                     <div class="col-sm-4">
                         <?php dynamic_sidebar('right-sidebar'); ?>
@@ -33,5 +39,5 @@
                 </div>
             </div> 
     <?php
-        }
+        
     }
