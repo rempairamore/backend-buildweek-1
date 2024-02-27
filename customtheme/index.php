@@ -61,7 +61,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
             <!-- Card 1 -->
             <div class="col-sm-12 col-md-4 mb-4">
                 <div class="card">
-                <img src="./assets/img/1.png" class="card-img-top rounded-circle mx-auto d-block mt-3" alt="..." style="width: 100px; height: 100px;">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/1.png" class="card-img-top rounded-circle mx-auto d-block mt-3" alt="..." style="width: 100px; height: 100px;">
                 <div class="card-body">
                     <h5 class="card-title text-center">Sconti Primavera in Europa</h5>
                     <p class="card-text">Approfitta ora degli sconti fino al 30% sui nostri tour primaverili in Europa. Offerta limitata per esplorare le capitali europee in fiore</p>
@@ -71,7 +71,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
             <!-- Card 2 -->
             <div class="col-sm-12 col-md-4 mb-4">
                 <div class="card">
-                <img src="../assets/img/2.png" class="card-img-top rounded-circle mx-auto d-block mt-3" alt="..." style="width: 100px; height: 100px;">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/2.png" class="card-img-top rounded-circle mx-auto d-block mt-3" alt="..." style="width: 100px; height: 100px;">
                 <div class="card-body">
                     <h5 class="card-title text-center">Promozione Crociere 2024</h5>
                     <p class="card-text">Risparmia il 20% prenotando ora la tua crociera per il 2024. Scopri itinerari esclusivi e vivi un'esperienza indimenticabile a bordo.</p>
@@ -81,7 +81,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
             <!-- Card 3 -->
             <div class="col-sm-12 col-md-4 mb-4">
                 <div class="card">
-                <img src="assets/img/3.png" class="card-img-top rounded-circle mx-auto d-block mt-3" alt="..." style="width: 100px; height: 100px;">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/3.png" class="card-img-top rounded-circle mx-auto d-block mt-3" alt="..." style="width: 100px; height: 100px;">
                 <div class="card-body">
                     <h5 class="card-title text-center">Avventura in Montagna</h5>
                     <p class="card-text">Vivi l'avventura con la nostra offerta su misura per gli amanti della montagna: per ogni pacchetto prenotato, un ski pass omaggio per goderti al meglio le piste!</p>
