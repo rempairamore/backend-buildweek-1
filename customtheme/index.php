@@ -3,20 +3,21 @@
 <main>
 <?php 
 $titolo = urldecode($wpdb->get_var($wpdb->prepare("SELECT title FROM wp_titolo_e_descrizione WHERE id = 1")));
+$titolo = str_replace("\\", "", $titolo);
 $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM wp_titolo_e_descrizione WHERE id = 1")));
-
+$descrizione = str_replace("\\", "", $descrizione);
  ?>
 
     <div class="hero overflow-hidden m-0 p-0 relative">
 
         <div class="title-box-hero">
             <h1><?= $titolo ?> </h1>
-            <p><?= $descrizione ?></p>
+            <h4><?= $descrizione ?></h4>
         </div>
         <div id="carouselHome" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
             <div class="title-head-btns">
-                <a href="<?php echo esc_url('/posts'); ?>"><button class="btn"> Blog</button></a>
+                <a href="<?php echo esc_url('/blog'); ?>"><button class="btn"> Blog</button></a>
                 <a href="<?php echo esc_url('http://buildweek.duckdns.org/servizi/serivizi/'); ?>"><button class="btn"> Servizi</button></a>
             </div>
 
@@ -67,7 +68,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
                         <h5 class="card-title text-center">Sconti Primavera in Europa</h5>
                         <p class="card-text">Approfitta ora degli sconti fino al 30% sui nostri tour primaverili in Europa. Offerta limitata per esplorare le capitali europee in fiore</p>
                         <div class="text-center mb-2">
-                            <a href="#" class="btn btn-primary">Scopri di più</a>
+                            <a href="http://buildweek.duckdns.org/sconti-primavera-in-europa/" class="btn btn-primary">Scopri di più</a>
                         </div>
                     </div>
                 </div>
@@ -80,7 +81,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
                         <h5 class="card-title text-center">Promozione Crociere 2024</h5>
                         <p class="card-text">Risparmia il 20% prenotando ora la tua crociera per il 2024. Scopri itinerari esclusivi e vivi un'esperienza indimenticabile a bordo.</p>
                         <div class="text-center mb-2">
-                                <a href="#" class="btn btn-primary">Scopri di più</a>
+                                <a href="http://buildweek.duckdns.org/promozione-crociere-2024/" class="btn btn-primary">Scopri di più</a>
                         </div>
                     </div>
                 </div>
@@ -94,7 +95,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
                         <p class="card-text">Vivi l'avventura con la nostra offerta per gli amanti della montagna: per ogni pacchetto prenotato, un ski pass omaggio per goderti al meglio le piste!</p>
                     </div>
                     <div class="text-center mb-2">
-                        <a href="#" class="btn btn-primary">Scopri di più</a>
+                        <a href="http://buildweek.duckdns.org/avventura-in-montagna/" class="btn btn-primary">Scopri di più</a>
                     </div>
                 </div>
             </div>
@@ -134,12 +135,11 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                 </h5>
                                 <p class="article-author-home">
-                                    <?php the_author(); ?>
+                                <i class="bi bi-person"></i> By:  <?php the_author(); ?>
                                 </p>
                                 <!-- da fare un ternario per gli articoli senza data -->
-                                <p class="data"><i class="bi bi-calendar-week"></i> <?php the_date("d-m-o"); ?></p>
-                                <span class="ms-2"><a class="article-link-home" href="<?php the_permalink(); ?>">
-                                        ...leggi</a></span>
+                          
+                                <span class="ms-2"><a class="article-link-home" href="<?php the_permalink(); ?>"></a></span>
                             </div>
 
                     </article>
@@ -160,9 +160,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
         </aside>
 
         <section class="gallery text-center">
-            gallerydddpinguinooo
             <div class="d-lg-none">
-                small
                 <div class="mx-auto">
                     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
@@ -271,11 +269,10 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
 
                 </div>
             </div>
-            --modale eventuale---
+   
         </section>
 
     </div>
-    <h3>diodfvlòadfVB</h3>
 
 
 </main>
