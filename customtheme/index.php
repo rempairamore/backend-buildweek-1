@@ -16,7 +16,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
         <div id="carouselHome" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
             <div class="title-head-btns">
-                <a href="<?php echo esc_url('/posts'); ?>"><button class="btn"> Blog</button></a>
+                <a href="<?php echo esc_url('/blog'); ?>"><button class="btn"> Blog</button></a>
                 <a href="<?php echo esc_url('http://buildweek.duckdns.org/servizi/serivizi/'); ?>"><button class="btn"> Servizi</button></a>
             </div>
 
