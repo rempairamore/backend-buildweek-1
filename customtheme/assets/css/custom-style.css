@@ -40,7 +40,6 @@
 
 .side {
   grid-area: side;
-  background-color: #f4f3ef;
 }
 
 .gallery {
@@ -82,7 +81,6 @@
 
 /* Sidebar Widget Styling */
 #sidebar-widget {
-  background-color: #f8f9fa;
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
