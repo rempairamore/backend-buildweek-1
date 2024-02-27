@@ -1,7 +1,6 @@
 <?php
-$post_type = get_post_type();
 
-if ($post_type == 'page') {
+
     get_header();
 
     if (have_posts()) {
@@ -41,4 +40,3 @@ if ($post_type == 'page') {
     <?php
         }
     }
-}
