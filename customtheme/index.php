@@ -137,9 +137,8 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
                                     <?php the_author(); ?>
                                 </p>
                                 <!-- da fare un ternario per gli articoli senza data -->
-                                <p class="data"><i class="bi bi-calendar-week"></i> <?php the_date("d-m-o"); ?></p>
-                                <span class="ms-2"><a class="article-link-home" href="<?php the_permalink(); ?>">
-                                        ...leggi</a></span>
+                          
+                                <span class="ms-2"><a class="article-link-home" href="<?php the_permalink(); ?>"></a></span>
                             </div>
 
                     </article>
@@ -160,9 +159,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
         </aside>
 
         <section class="gallery text-center">
-            gallerydddpinguinooo
             <div class="d-lg-none">
-                small
                 <div class="mx-auto">
                     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
@@ -271,11 +268,10 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
 
                 </div>
             </div>
-            --modale eventuale---
+   
         </section>
 
     </div>
-    <h3>diodfvlòadfVB</h3>
 
 
 </main>
