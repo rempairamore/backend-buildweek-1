@@ -8,57 +8,34 @@ if ($post_type != 'servizi') {
         while (have_posts()) {
             the_post();
 ?>
-        <div style="position: relative;">
-            <?php if (has_post_thumbnail()) { ?>
-                <img class="imgArticle" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="...">
-            <?php } ?>
-            <div class="titoloArticolo text-center position-absolute bottom-0 start-0 w-100">
-                <h1><?php the_title(); ?></h1>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row p-5">
-                <div class="col-sm-8">
-                    <div class="article-content">
-                        <?php
-                        if (has_post_thumbnail()) {
-                            $content = apply_filters('the_content', get_the_content());
-                            $content = preg_replace('/<img[^>]+>/', '', $content, 1);
-                            echo $content;
-                        } else {
-                            the_content();
-                        }
-                        ?>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <?php get_sidebar(); ?>
-                </div>
             <div style="position: relative;">
                 <?php if (has_post_thumbnail()) { ?>
                     <img class="imgArticle" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="...">
                 <?php } ?>
-                <div>
-                    <h1 class="articleTitle fw-bold text-light"><?php the_title(); ?></h1>
+                <div class="titoloArticolo text-center position-absolute bottom-0 start-0 w-100">
+                    <h1><?php the_title(); ?></h1>
                 </div>
             </div>
-            <div class="row mt-5">
-                <div class="col-8">
-                    <div class="article-content">
-                        <?php
-                        if (has_post_thumbnail()) {
-                            $content = apply_filters('the_content', get_the_content());
-                            $content = preg_replace('/<img[^>]+>/', '', $content, 1);
-                            echo $content;
-                        } else {
-                            the_content();
-                        }
-                        ?>
+
+            <div class="container">
+                <div class="row p-5">
+                    <div class="col-sm-8">
+                        <div class="article-content">
+                            <?php
+                            if (has_post_thumbnail()) {
+                                $content = apply_filters('the_content', get_the_content());
+                                $content = preg_replace('/<img[^>]+>/', '', $content, 1);
+                                echo $content;
+                            } else {
+                                the_content();
+                            }
+                            ?>
+                        </div>
                     </div>
-                </div>
-                <div class="col-4">
-                    <?php get_sidebar(); ?>
+                    <div class="col-sm-4">
+                        <?php get_sidebar(); ?>
+                    </div>
+
                 </div>
             </div>
     <?php
@@ -69,17 +46,17 @@ if ($post_type != 'servizi') {
 if ($post_type == "servizi") {
 
     $service_title = get_post_meta(get_the_ID(), 'service_title', true);
-    
+
     $cosaVedereTitolo1 = get_post_meta(get_the_ID(), 'cosa_vedere_titolo_1', true);
     $cosaVedereTitolo2 = get_post_meta(get_the_ID(), 'cosa_vedere_titolo_2', true);
     $cosaVedereTitolo3 = get_post_meta(get_the_ID(), 'cosa_vedere_titolo_3', true);
     $cosaVedereTitolo4 = get_post_meta(get_the_ID(), 'cosa_vedere_titolo_4', true);
-    
+
     $cosaVedereDescrizione1 = get_post_meta(get_the_ID(), 'cosa_vedere_descrizione_1', true);
     $cosaVedereDescrizione2 = get_post_meta(get_the_ID(), 'cosa_vedere_descrizione_2', true);
     $cosaVedereDescrizione3 = get_post_meta(get_the_ID(), 'cosa_vedere_descrizione_3', true);
     $cosaVedereDescrizione4 = get_post_meta(get_the_ID(), 'cosa_vedere_descrizione_4', true);
-    
+
     $cosaVedereImmagine1_id = get_post_meta(get_the_ID(), 'cosa_vedere_image_1', true);
     $cosaVedereImmagine2_id = get_post_meta(get_the_ID(), 'cosa_vedere_image_2', true);
     $cosaVedereImmagine3_id = get_post_meta(get_the_ID(), 'cosa_vedere_image_3', true);
@@ -91,12 +68,12 @@ if ($post_type == "servizi") {
     $cosaVedereImmagine4_url = wp_get_attachment_image_url($cosaVedereImmagine4_id, 'full');
 
 
-        
+
     $localitaTitolo1 = get_post_meta(get_the_ID(), 'localita_titolo_1', true);
     $localitaTitolo2 = get_post_meta(get_the_ID(), 'localita_titolo_2', true);
     $localitaTitolo3 = get_post_meta(get_the_ID(), 'localita_titolo_3', true);
     $localitaTitolo4 = get_post_meta(get_the_ID(), 'localita_titolo_4', true);
-    
+
     $localitaDescrizione1 = get_post_meta(get_the_ID(), 'localita_descrizione_1', true);
     $localitaDescrizione2 = get_post_meta(get_the_ID(), 'localita_descrizione_2', true);
     $localitaDescrizione3 = get_post_meta(get_the_ID(), 'localita_descrizione_3', true);
@@ -116,7 +93,7 @@ if ($post_type == "servizi") {
     $mangiareTitolo1 = get_post_meta(get_the_ID(), 'mangiare_titolo_1', true);
     $mangiareTitolo2 = get_post_meta(get_the_ID(), 'mangiare_titolo_2', true);
     $mangiareTitolo3 = get_post_meta(get_the_ID(), 'mangiare_titolo_3', true);
-    
+
     $mangiareDescrizione1 = get_post_meta(get_the_ID(), 'mangiare_descrizione_1', true);
     $mangiareDescrizione2 = get_post_meta(get_the_ID(), 'mangiare_descrizione_2', true);
     $mangiareDescrizione3 = get_post_meta(get_the_ID(), 'mangiare_descrizione_3', true);
@@ -183,11 +160,11 @@ if ($post_type == "servizi") {
         <div class="row rowVedere row-sm-cols-1 row-md-cols-2 row-lg-cols-2 g-5 justify-content-center">
             <div class="col">
                 <div class="card shadow-sm h-100" style="width: 18rem;">
-                   
-                
-                <img src=" <?= esc_url($cosaVedereImmagine1_url) ?> " class="card-img-top h-100" alt="..."> 
-                
-                <div class="card-body">
+
+
+                    <img src=" <?= esc_url($cosaVedereImmagine1_url) ?> " class="card-img-top h-100" alt="...">
+
+                    <div class="card-body">
                         <h5><?php echo esc_html($cosaVedereTitolo1); ?></h5>
                         <p class="card-text text-muted"><?php echo esc_html($cosaVedereDescrizione1); ?></p>
                     </div>
@@ -195,7 +172,7 @@ if ($post_type == "servizi") {
             </div>
             <div class="col">
                 <div class="card shadow-sm h-100" style="width: 18rem;">
-                <img src=" <?= esc_url($cosaVedereImmagine2_url) ?> " class="card-img-top h-100" alt="..."> 
+                    <img src=" <?= esc_url($cosaVedereImmagine2_url) ?> " class="card-img-top h-100" alt="...">
                     <div class="card-body">
                         <h5><?php echo esc_html($cosaVedereTitolo2); ?></h5>
                         <p class="card-text text-muted"><?php echo esc_html($cosaVedereDescrizione2); ?></p>
@@ -204,7 +181,7 @@ if ($post_type == "servizi") {
             </div>
             <div class="col">
                 <div class="card shadow-sm h-100" style="width: 18rem;">
-                <img src=" <?= esc_url($cosaVedereImmagine3_url) ?> " class="card-img-top h-100" alt="..."> 
+                    <img src=" <?= esc_url($cosaVedereImmagine3_url) ?> " class="card-img-top h-100" alt="...">
                     <div class="card-body">
                         <h5><?php echo esc_html($cosaVedereTitolo3); ?></h5>
                         <p class="card-text text-muted"><?php echo esc_html($cosaVedereDescrizione3); ?></p>
@@ -213,7 +190,7 @@ if ($post_type == "servizi") {
             </div>
             <div class="col">
                 <div class="card shadow-sm h-100" style="width: 18rem;">
-                <img src=" <?= esc_url($cosaVedereImmagine4_url) ?> " class="card-img-top h-100" alt="..."> 
+                    <img src=" <?= esc_url($cosaVedereImmagine4_url) ?> " class="card-img-top h-100" alt="...">
                     <div class="card-body">
                         <h5><?php echo esc_html($cosaVedereTitolo4); ?></h5>
                         <p class="card-text text-muted"><?php echo esc_html($cosaVedereDescrizione4); ?></p>
@@ -291,34 +268,34 @@ if ($post_type == "servizi") {
                 <div class="card shadow-sm h-100" style="width: 18rem;">
                     <img src="<?= esc_url($localitaImmagine1_url) ?>" class="card-img-top h-100" alt="...">
                     <div class="card-body">
-                    <h5><?php echo esc_html($localitaTitolo1); ?></h5>
+                        <h5><?php echo esc_html($localitaTitolo1); ?></h5>
                         <p class="card-text text-muted"><?php echo esc_html($localitaDescrizione1); ?></p>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card shadow-sm h-100" style="width: 18rem;">
-                <img src="<?= esc_url($localitaImmagine2_url) ?>" class="card-img-top h-100" alt="...">
+                    <img src="<?= esc_url($localitaImmagine2_url) ?>" class="card-img-top h-100" alt="...">
                     <div class="card-body">
-                    <h5><?php echo esc_html($localitaTitolo2); ?></h5>
+                        <h5><?php echo esc_html($localitaTitolo2); ?></h5>
                         <p class="card-text text-muted"><?php echo esc_html($localitaDescrizione2); ?></p>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card shadow-sm h-100" style="width: 18rem;">
-                <img src="<?= esc_url($localitaImmagine3_url) ?>" class="card-img-top h-100" alt="...">
+                    <img src="<?= esc_url($localitaImmagine3_url) ?>" class="card-img-top h-100" alt="...">
                     <div class="card-body">
-                    <h5><?php echo esc_html($localitaTitolo3); ?></h5>
+                        <h5><?php echo esc_html($localitaTitolo3); ?></h5>
                         <p class="card-text text-muted"><?php echo esc_html($localitaDescrizione3); ?></p>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card shadow-sm h-100" style="width: 18rem;">
-                <img src="<?= esc_url($localitaImmagine4_url) ?>" class="card-img-top h-100" alt="...">
+                    <img src="<?= esc_url($localitaImmagine4_url) ?>" class="card-img-top h-100" alt="...">
                     <div class="card-body">
-                    <h5><?php echo esc_html($localitaTitolo4); ?></h5>
+                        <h5><?php echo esc_html($localitaTitolo4); ?></h5>
                         <p class="card-text text-muted"><?php echo esc_html($localitaDescrizione4); ?></p>
                     </div>
                 </div>
