@@ -14,9 +14,20 @@ get_header();
 $current_page_title = get_the_title();
 
 if (strtolower($current_page_title) === 'blog'){
-?>
-<?php
-    global $wp_query;
+
+
+// Define custom query parameters
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$args = array(
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'posts_per_page' => 5, // Number of posts per page
+    'paged' => $paged // Current page number
+);
+
+// Instantiate custom query
+$query = new WP_Query($args);
+global $wp_query;
     // echo "<pre>";
     // print_r($wp_query);
     // echo "</pre>";
@@ -34,47 +45,56 @@ if (strtolower($current_page_title) === 'blog'){
             <div class="container">
                 <div class="row p-5">
                     <div class="col-sm-8">
-                    <?php
-                        $args = array(
-                            'post_type' => 'post', // Tipo di post: articoli
-                            'post_status' => 'publish', // Stato del post: pubblicato
-                            'posts_per_page' => -1, // Numero di articoli da recuperare (-1 per tutti)
-                        );
-                        $query = new WP_Query($args);
+                        <?php
+                    // Output posts
+                        if ($query->have_posts()) :
+                            while ($query->have_posts()) : $query->the_post();
+                            ?>
+                                <div class="serach-article-content">
+                                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                    <p><?php echo '<div>Categoria: ' . get_the_category_list( ', ' ) . '</div>'; ?></p>
+                                    
+                                    <div class="mb-2">
+                                        <?php
+                                        $tags = get_the_tags();
+                                        if ($tags) {
+                                            echo '<div>';
+                                            foreach ($tags as $tag) {
+                                                echo '<a class="article-tag" href="' . esc_url(get_tag_link($tag->term_id)) . '">'  . '<span class="badge text-bg-success">' . $tag->name . '</span>' . '</a> ';
+                                            }
+                                            echo '</div>';
+                                        }
+                                        ?>
+                                    </div>
 
-                        // Verifica se ci sono articoli
-                        if ($query->have_posts()) {
-                            // Ciclo su ogni articolo
-                            while ($query->have_posts()) {
-                                $query->the_post();
-                    ?>
-                        <div class="serach-article-content">
-                            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                            <p><?php echo '<div>Categoria: ' . get_the_category_list( ', ' ) . '</div>'; ?></p>
-                            
-                            <div class="mb-2">
-                                <?php
-                                $tags = get_the_tags();
-                                if ($tags) {
-                                    echo '<div>';
-                                    foreach ($tags as $tag) {
-                                        echo '<a class="article-tag" href="' . esc_url(get_tag_link($tag->term_id)) . '">'  . '<span class="badge text-bg-success">' . $tag->name . '</span>' . '</a> ';
-                                    }
-                                    echo '</div>';
-                                }
-                                ?>
-                            </div>
+                                    <?php the_excerpt(); ?>
 
-                            <?php the_excerpt(); ?>
+                                    <div class="author d-flex justify-content-between">
+                                        <p>Autore: <?php the_author(); ?></p> <p><i class="bi bi-calendar-week"></i> <?php the_date("d-m-o"); ?></p>
+                                    </div>
+                                </div>
+                            <?php
+                            endwhile;
 
-                            <div class="author d-flex justify-content-between">
-                                <p>Autore: <?php the_author(); ?></p> <p><i class="bi bi-calendar-week"></i> <?php the_date("d-m-o"); ?></p>
-                            </div>
-                        </div>
-                        <!-- Se i commenti sono abilitati o se ci sono almeno un commento, visualizzali -->
-                    <?php
-                        }
-                    ?>
+                            // Custom pagination
+                            echo '<div class="pagination">';
+                            echo paginate_links(array(
+                                'total' => $query->max_num_pages,
+                                'current' => max(1, get_query_var('paged')),
+                                'prev_text' => ('« Previous'),
+                                'next_text' => ('Next »'),
+                            ));
+                            echo '</div>';
+
+                            // Reset post data
+                            wp_reset_postdata();
+                        else :
+                            // No posts found
+                            echo 'No posts found';
+                        endif;
+                        ?>
+                   
+                    
                     </div>
                     <div class="col-sm-4">
                         <?php dynamic_sidebar('right-sidebar'); ?>
@@ -84,7 +104,7 @@ if (strtolower($current_page_title) === 'blog'){
             </div> 
     <?php
         
-    }
+    
 }else{
     the_content();
 }
@@ -93,4 +113,6 @@ if (strtolower($current_page_title) === 'blog'){
 
 
 <?php get_footer(); ?>
+
+
 
