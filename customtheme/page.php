@@ -35,9 +35,18 @@ if (strtolower($current_page_title) === 'blog'){
                 <div class="row p-5">
                     <div class="col-sm-8">
                     <?php
-                        if (have_posts()) {
-                            while (have_posts()) {
-                                the_post();
+                        $args = array(
+                            'post_type' => 'post', // Tipo di post: articoli
+                            'post_status' => 'publish', // Stato del post: pubblicato
+                            'posts_per_page' => -1, // Numero di articoli da recuperare (-1 per tutti)
+                        );
+                        $query = new WP_Query($args);
+
+                        // Verifica se ci sono articoli
+                        if ($query->have_posts()) {
+                            // Ciclo su ogni articolo
+                            while ($query->have_posts()) {
+                                $query->the_post();
                     ?>
                         <div class="serach-article-content">
                             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
