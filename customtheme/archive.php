@@ -34,8 +34,8 @@
                             if ($tags) {
                                 echo '<div>';
                                 foreach ($tags as $tag) {
-                                    echo '<a class="article-tag" href="' . esc_url(get_tag_link($tag->term_id)) . '">' . $tag->name . '</a> ';
-                                }
+                                    echo '<a class="article-tag" href="' . esc_url(get_tag_link($tag->term_id)) . '">'  . '<span class="badge text-bg-success">' . $tag->name . '</span>' . '</a> ';
+                                }                                }
                                 echo '</div>';
                             }
                             ?>
