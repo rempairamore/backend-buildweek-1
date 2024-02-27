@@ -3,9 +3,9 @@
 <main>
 <?php 
 $titolo = urldecode($wpdb->get_var($wpdb->prepare("SELECT title FROM wp_titolo_e_descrizione WHERE id = 1")));
-$titolo = str_replace("/", "", $titolo);
+$titolo = str_replace("\\", "", $titolo);
 $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM wp_titolo_e_descrizione WHERE id = 1")));
-$descrizione = str_replace("/", "", $descrizione);
+$descrizione = str_replace("\\", "", $descrizione);
  ?>
 
     <div class="hero overflow-hidden m-0 p-0 relative">
