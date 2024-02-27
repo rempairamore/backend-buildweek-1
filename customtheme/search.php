@@ -2,7 +2,7 @@
     get_header();
 
     global $wp_query;
-    print_r($wp_query);
+    // print_r($wp_query);
     if (have_posts()) {
         while (have_posts()) {
             the_post();
