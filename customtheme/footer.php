@@ -1,5 +1,5 @@
     <footer class="container-fluid p-2">
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <section class="d-flex justify-content-center p-4 border-bottom">
     <div>
       <a href="https://www.facebook.com" class="me-4 text-reset">
         <i class="bi bi-facebook"></i>
@@ -19,21 +19,21 @@
     </div>
   </section>
         <div class="d-none d-sm-block">
-            <div class="d-flex justify-content-around">
+            <div class="d-flex justify-content-around mt-3">
                 <div>
                     <ul class="medium">
                         <li><h5>In Evidenza</h5></li>
-                        <li><a class="link" href="#">link</a></li>
-                        <li><a class="link" href="#">link</a></li>
-                        <li><a class="link" href="#">link</a></li>
+                        <li><a class="link" href="#">Chi siamo</a></li>
+                        <li><a class="link" href="#">Promozioni</a></li>
+                        <li><a class="link" href="#">Partners</a></li>
                     </ul>
                 </div>
                 <div>
                     <ul class="medium">
                         <li><h5>Info utili</h5></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
+                        <li><a href="#">Contatti</a></li>
+                        <li><a href="#">Servizi</a></li>
+                        <li><a href="#">Privacy</a></li>
                     </ul>
                 </div>
             </div>
@@ -50,9 +50,9 @@
                 <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <ul>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
+                        <li><a class="link" href="#">Chi siamo</a></li>
+                        <li><a class="link" href="#">Promozioni</a></li>
+                        <li><a class="link" href="#">Partners</a></li>
                         </ul>
                     </div>
                 </div>
@@ -66,9 +66,10 @@
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <ul class="border-bottom">
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
+                        <li><h5>Info utili</h5></li>
+                        <li><a href="#">Contatti</a></li>
+                        <li><a href="#">Servizi</a></li>
+                        <li><a href="#">Privacy</a></li>
                         </ul>
                     </div>
                 </div>
