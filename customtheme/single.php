@@ -8,6 +8,33 @@ if ($post_type != 'servizi') {
         while (have_posts()) {
             the_post();
 ?>
+        <div style="position: relative;">
+            <?php if (has_post_thumbnail()) { ?>
+                <img class="imgArticle" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="...">
+            <?php } ?>
+            <div class="titoloArticolo text-center position-absolute bottom-0 start-0 w-100">
+                <h1><?php the_title(); ?></h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row p-5">
+                <div class="col-sm-8">
+                    <div class="article-content">
+                        <?php
+                        if (has_post_thumbnail()) {
+                            $content = apply_filters('the_content', get_the_content());
+                            $content = preg_replace('/<img[^>]+>/', '', $content, 1);
+                            echo $content;
+                        } else {
+                            the_content();
+                        }
+                        ?>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <?php get_sidebar(); ?>
+                </div>
             <div style="position: relative;">
                 <?php if (has_post_thumbnail()) { ?>
                     <img class="imgArticle" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="...">
@@ -325,6 +352,7 @@ if ($post_type == "servizi") {
                 <img src="https://png.pngtree.com/png-vector/20190507/ourmid/pngtree-vector-wallet-icon-png-image_1025642.jpg" style="width: 5rem;">
                 <h5 class="mt-2">Valuta</h5>
                 <p style="white-space: nowrap;"><?php echo esc_html($valuta); ?></p>
+
             </div>
         </div>
     </div>

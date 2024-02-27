@@ -25,7 +25,8 @@
 .griglia {
   display: grid;
   grid-template-columns: 1fr 1fr 300px;
-  grid-template-rows: 1fr 1fr 300px;
+  /* grid-template-rows: 1fr 1fr 300px; */
+  grid-template-rows: minmax(100px, max-content) 500px 0px;
   grid-template-areas:
     "articoli articoli side"
     "gallery gallery side"
@@ -39,16 +40,17 @@
 
 .side {
   grid-area: side;
-  background-color: darkkhaki;
+  background-color: #f4f3ef;
 }
 
 .gallery {
   grid-area: gallery;
-  background-color: aquamarine;
+  background-color: #f4f3ef;;
 }
 
 @media screen and (max-width: 768px) {
   .griglia {
+    grid-template-rows: minmax(100px, max-content) 1fr 0.5fr;
     grid-template-areas:
       "articoli articoli articoli"
       "gallery gallery gallery"
@@ -274,6 +276,72 @@ footer p {
 }
 /* --------FOOTER END------------ */
 
+
+/* ------GALLERY START------------- */
+.gallery {
+  overflow-y: scroll;
+}
+.gallery .carousel-inner{
+  height: 400px;
+}
+/* ---------GALLERY SCROLL-------- */
+.gallery::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+.gallery::-webkit-scrollbar-track {
+  background-color: #d9d9d9;
+}
+/* Handle */
+.gallery::-webkit-scrollbar-thumb {
+  background: #989898;
+}
+
+/* Handle on hover */
+.gallery::-webkit-scrollbar-thumb:hover {
+  background: #7e7e7e;
+}
+/* ------GALLERY END------------- */
+/* ---------ARTICLE PATCH START-------------- */
+.article-title-home a{
+  text-decoration: none;
+}
+.article-title-home a:link {
+  color: black;
+}
+ 
+/* visited link */
+.article-title-home a:visited {
+   color: #999999ac;
+}
+ 
+/* mouse hover link */
+.article-title-home a:hover {
+   color: #b2b2b2;
+}
+ 
+/* selected link */
+.article-title-home a:active {
+   color: #b2b2b2;
+}
+
+.stile{
+  border: 1px solid #a09f9f38;
+  padding: 10px;
+}
+
+.data{
+  font-size: 0.8rem;
+  color: #b8b8b8;
+}
+
+.titoloArticolo{
+  color: white;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 70%);
+  padding: 0.5rem;
+}
+/* ---------ARTICLE PATCH END-------------- */
+
 /* task 13 */
 
 .title-box-hero {
@@ -437,3 +505,4 @@ object-fit: cover;
   display: flex;
   flex-wrap: wrap;
 }
+
