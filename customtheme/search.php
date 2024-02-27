@@ -29,8 +29,8 @@
                             <p class="author">Autore: <?php the_author(); ?> <span><i class="bi bi-calendar-week"></i> <?php the_date("d-m-o"); ?></span></p>
                             <?php the_excerpt(); ?>
                             <?php the_tags(); ?>
-
                         </div>
+                        <!-- Se i commenti sono abilitati o se ci sono almeno un commento, visualizzali -->
                     <?php
                         }
                     ?>
