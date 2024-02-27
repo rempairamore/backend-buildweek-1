@@ -37,7 +37,7 @@ if ($post_type == 'page') {
                     </div>
 
                 </div>
-            </div>
+            </div> 
     <?php
         }
     }
