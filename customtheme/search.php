@@ -1,7 +1,7 @@
 <?php
-
-
     get_header();
+
+    global $wp_query;
 
     if (have_posts()) {
         while (have_posts()) {
@@ -12,7 +12,7 @@
                     <img class="imgArticle" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="...">
                 <?php } ?>
                 <div class="titoloArticolo text-center position-absolute bottom-0 start-0 w-100">
-                    <h1><?php the_title(); ?></h1>serach
+                    <h1><?php the_search_query() ?></h1>
                 </div>
             </div>
 
