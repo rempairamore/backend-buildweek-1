@@ -134,7 +134,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                 </h5>
                                 <p class="article-author-home">
-                                    <?php the_author(); ?>
+                                <i class="bi bi-person"></i> By:  <?php the_author(); ?>
                                 </p>
                                 <!-- da fare un ternario per gli articoli senza data -->
                           
