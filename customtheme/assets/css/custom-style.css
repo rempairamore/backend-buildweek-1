@@ -524,10 +524,10 @@ footer p {
 
 /* carousel ultimi */
 
-.carousel-item.active img {
+/* .carousel-item.active img {
   object-fit: cover;
   width: 100%;
-}
+} */
 
 header {
   position: sticky !important;
