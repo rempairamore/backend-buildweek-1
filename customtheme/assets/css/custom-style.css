@@ -349,8 +349,8 @@ footer p {
   z-index: 10;
   background-color: #f1f1f182;
   margin: 1rem;
-  padding: 1rem;
-  max-width: 400px;
+  padding: 4rem 2rem;
+  max-width: 80%;
   top: 25%;
   left: calc(50vw - 200px);
 }
