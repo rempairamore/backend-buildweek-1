@@ -58,6 +58,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
     <section class="promozioni">
 
         <div class="row m-2">
+            <h3>Promozioni</h3>
             <!-- Card 1 -->
             <div class="col-sm-12 col-md-4 mb-1">
                 <div class="card bg-light">
