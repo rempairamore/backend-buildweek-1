@@ -119,7 +119,7 @@ if (strtolower($current_page_title) === 'blog') {
 
 
     <div class="container">
-        <div class="row p-5">
+        <div class="row p-5 gx-3">
             <div class="col-sm-8">
                 <?php the_content();  ?>
             </div>
