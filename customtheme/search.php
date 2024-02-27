@@ -26,6 +26,7 @@
                     ?>
                         <div class="serach-article-content">
                             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                            <p><?php echo '<div>Category: ' . get_the_category_list( ', ' ) . '</div>'; ?></p>
                             <p class="author">Autore: <?php the_author(); ?> <span><i class="bi bi-calendar-week"></i> <?php the_date("d-m-o"); ?></span></p>
                             <?php the_excerpt(); ?>
                             <?php
