@@ -552,7 +552,7 @@ function callback_riempi_servizi($post)
         <br><br><br><br>
 
         <div class="mangiare-container-box" style="border: 1px solid black;padding: 1rem;">
-            <h4>Località</h4>
+            <h4>Cibo</h4>
             <div style="display: flex; flex-wrap: wrap;">
                 <div class="mangiare-box" style="border: 1px solid black;padding: 1rem;margin: 0.25rem">
                     <label for="mangiare_titolo_1">Titolo 1</label>
