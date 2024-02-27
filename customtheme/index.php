@@ -103,7 +103,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
     </section>
 
 
-    <div class="griglia">
+    <div class="griglia mt-1">
         <section class="articoli d-flex row justify-content-evenly px-5">
 
             <?php
