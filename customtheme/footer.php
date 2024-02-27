@@ -1,4 +1,23 @@
     <footer class="container-fluid p-2">
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <div>
+      <a href="https://www.facebook.com" class="me-4 text-reset">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="https://twitter.com" class="me-4 text-reset">
+        <i class="bi bi-twitter-x"></i>
+      </a>
+      <a href="https://www.instagram.com" class="me-4 text-reset">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com" class="me-4 text-reset">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a href="https://www.youtube.com" class="me-4 text-reset">
+        <i class="bi bi-youtube"></i>
+      </a>
+    </div>
+  </section>
         <div class="d-none d-sm-block">
             <div class="d-flex justify-content-around">
                 <div>
