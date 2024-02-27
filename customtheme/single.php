@@ -31,6 +31,13 @@ if ($post_type != 'servizi') {
                             }
                             ?>
                         </div>
+                        <?php
+        // Se i commenti sono abilitati o se ci sono almeno un commento, visualizzali
+        if (comments_open() || get_comments_number()) :
+            comments_template();
+        endif;
+    endwhile; // Fine del loop principale
+    ?>
                     </div>
                     <div class="col-sm-4">
                         <?php dynamic_sidebar('right-sidebar'); ?>
