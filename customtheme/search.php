@@ -26,6 +26,7 @@
                     ?>
                         <div class="serach-article-content">
                             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                            <p><?php the_author(); ?></p>
                             <?php the_excerpt(); ?>
                         </div>
                     <?php
