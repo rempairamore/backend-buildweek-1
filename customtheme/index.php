@@ -1,13 +1,27 @@
 <?php get_header(); ?>
 
 <main>
+<?php 
+$titolo = urldecode($wpdb->get_var($wpdb->prepare("SELECT title FROM wp_titolo_e_descrizione WHERE id = 1")));
+$descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM wp_titolo_e_descrizione WHERE id = 1")));
 
+ ?>
 
-    <div class="container-fluid hero">
-        <div id="carouselHome" class="carousel slide">
+    <div class="hero overflow-hidden m-0 p-0 relative">
 
+        <div class="title-box-hero">
+            <h1><?= $titolo ?> </h1>
+            <p><?= $descrizione ?></p>
+        </div>
+        <div id="carouselHome" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+            <div class="title-head-btns">
+                <a href="<?php echo esc_url('/posts'); ?>"><button class="btn"> Blog</button></a>
+                <a href="<?php echo esc_url('http://buildweek.duckdns.org/servizi/serivizi/'); ?>"><button class="btn"> Servizi</button></a>
+            </div>
 
             <?php
+
             global $wpdb;
             $table_name = $wpdb->prefix . 'immagini_carosello';
 
@@ -18,13 +32,13 @@
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="<?php echo esc_url($image1_url); ?>" class="d-block w-100" alt="Immagine 1">
+                    <img src="<?php echo esc_url($image1_url); ?>" class="d-block h-100" alt="Immagine 1">
                 </div>
                 <div class="carousel-item">
-                    <img src="<?php echo esc_url($image2_url); ?>" class="d-block w-100" alt="Immagine 2">
+                    <img src="<?php echo esc_url($image2_url); ?>" class="d-block h-100" alt="Immagine 2">
                 </div>
                 <div class="carousel-item">
-                    <img src="<?php echo esc_url($image3_url); ?>" class="d-block w-100" alt="Immagine 3">
+                    <img src="<?php echo esc_url($image3_url); ?>" class="d-block h-100" alt="Immagine 3">
                 </div>
             </div>
 
@@ -62,7 +76,6 @@
                 while ($custom_query->have_posts()) {
                     $count++;
                     $custom_query->the_post(); ?>
-
                     <article
                         class="single-article-home d-flex flex-column align-items-center align-items-lg-start col-12 col-lg-6 col-xxl-4 p-3 <?php ($count == 3) ? print("d-lg-none d-xxl-block") : "" ?>">
                         <div class="shadow-lg p-3 mb-5 bg-body rounded stile">
@@ -85,11 +98,28 @@
                                 <span class="ms-2"><a class="article-link-home" href="<?php the_permalink(); ?>">
                                         ...leggi</a></span>
                             </div>
+
+                    <article class="single-article-home d-flex flex-column align-items-center align-items-lg-start col-12 col-lg-6 col-xxl-4 p-3 <?php ($count == 3) ? print("d-lg-none d-xxl-block") : "" ?>">
+                        <div class="article-thumbnail-home">
+                            <?php
+                            the_post_thumbnail('custom-size-thumbnail');
+                            ?>
+                        </div>
+                        <div class="p-2 article-info-home">
+                            <h5 class="article-title-home">
+                                <?php the_title(); ?>
+                            </h5>
+                            <p class="article-author-home">
+                                <?php the_author(); ?>
+                            </p>
+                            <span class="ms-2"><a class="article-link-home" href="<?php the_permalink(); ?>">
+                                    ...leggi</a></span>
+
                         </div>
                     </article>
 
 
-                <?php }
+            <?php }
             }
             ?>
 
@@ -98,7 +128,7 @@
         </section>
         <aside class="side text-center">
             <?php
-            get_sidebar();
+            dynamic_sidebar('right-sidebar');
             ?>
 
         </aside>
