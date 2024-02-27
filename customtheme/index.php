@@ -3,15 +3,16 @@
 <main>
 <?php 
 $titolo = urldecode($wpdb->get_var($wpdb->prepare("SELECT title FROM wp_titolo_e_descrizione WHERE id = 1")));
+$titolo = str_replace("/", "", $titolo);
 $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM wp_titolo_e_descrizione WHERE id = 1")));
-
+$descrizione = str_replace("/", "", $descrizione);
  ?>
 
     <div class="hero overflow-hidden m-0 p-0 relative">
 
         <div class="title-box-hero">
             <h1><?= $titolo ?> </h1>
-            <p><?= $descrizione ?></p>
+            <h4><?= $descrizione ?></h4>
         </div>
         <div id="carouselHome" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
