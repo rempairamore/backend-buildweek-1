@@ -25,7 +25,7 @@
                                 the_post();
                     ?>
                         <div class="article-content">
-                            <?php the_title(); ?>
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             <?php the_excerpt(); ?>
                         </div>
                     <?php
