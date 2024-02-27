@@ -499,3 +499,29 @@ object-fit: cover;
 }
 
 /* Francesco pagina */
+/* ------SEARCH START------------- */
+.serach-article-content a{
+  text-decoration: none;
+}
+.serach-article-content a:link {
+  color: black;
+}
+ 
+/* visited link */
+.serach-article-content a:visited {
+   color: #999999ac;
+}
+ 
+/* mouse hover link */
+.serach-article-content a:hover {
+   color: #b2b2b2;
+}
+ 
+/* selected link */
+.serach-article-content a:active {
+   color: #b2b2b2;
+}
+.serach-article-content .author{
+  font-size: 0.8rem;
+}
+/* ------SEARCH END------------- */
