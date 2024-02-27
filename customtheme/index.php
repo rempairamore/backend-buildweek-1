@@ -81,11 +81,14 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
             <!-- Card 3 -->
             <div class="col-sm-12 col-md-4 mb-4">
                 <div class="card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/3.png" class="card-img-top rounded-circle mx-auto d-block mt-3" alt="..." style="width: 100px; height: 100px;">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Avventura in Montagna</h5>
-                    <p class="card-text">Vivi l'avventura con la nostra offerta su misura per gli amanti della montagna: per ogni pacchetto prenotato, un ski pass omaggio per goderti al meglio le piste!</p>
-                </div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/3.png" class="card-img-top rounded-circle mx-auto d-block mt-3" alt="..." style="width: 100px; height: 100px;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Avventura in Montagna</h5>
+                        <p class="card-text">Vivi l'avventura con la nostra offerta su misura per gli amanti della montagna: per ogni pacchetto prenotato, un ski pass omaggio per goderti al meglio le piste!</p>
+                    </div>
+                    <div class="text-center">
+                        <a href="#" class="btn btn-primary">Scopri di più</a>
+                    </div>
                 </div>
             </div>
         </div>
