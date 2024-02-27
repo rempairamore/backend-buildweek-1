@@ -55,7 +55,7 @@ $descrizione = urldecode($wpdb->get_var($wpdb->prepare("SELECT description FROM 
     </div>
 
 
-    <section class="promozioni">
+    <section class="promozioni mt-1 mb-1">
 
         <div class="row m-2">
             <h3>Promozioni</h3>
