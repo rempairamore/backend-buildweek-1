@@ -534,3 +534,8 @@ header {
   top: 0 !important;
   z-index: 42 !important;
 }
+
+img.custom-logo {
+  width: 180px;
+    height: auto;
+  }
