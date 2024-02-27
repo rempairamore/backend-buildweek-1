@@ -17,15 +17,8 @@
                 if (have_posts()) {
                     while (have_posts()) {
                         the_post();
-                ?>
-                    <?php
-                        if (has_post_thumbnail()) {
-                            $content = apply_filters('the_content', get_the_content());
-                            $content = preg_replace('/<img[^>]+>/', '', $content, 1);
-                            echo $content;
-                        } else {
-                            the_content();
-                        }
+           
+                        the_title();
                     } ?>
             </div>
         </div>
